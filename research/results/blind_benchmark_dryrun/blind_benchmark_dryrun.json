@@ -1,0 +1,2689 @@
+{
+  "metadata": {
+    "date": "2026-07-21",
+    "master_seed": 20260721,
+    "n_inst": 20,
+    "n_dark": 7,
+    "n_null": 13,
+    "delta_range": [
+      0.2,
+      0.4
+    ],
+    "n_slots": 2,
+    "alpha_exp": 0.01,
+    "target_platform": "ibm_heron_r2",
+    "qiskit_version": "2.5.0",
+    "aer_version": "0.17.2",
+    "heron_params": {
+      "err_1q": 0.00029,
+      "err_2q": 0.002334,
+      "readout": 0.00123
+    },
+    "sealed_key_sha256": "5d9f37d9e6837640f70e7157bd213165d8626c06d9c13874959b91ad114a7599",
+    "manifest_sealed_key_sha256": "5d9f37d9e6837640f70e7157bd213165d8626c06d9c13874959b91ad114a7599",
+    "unblind_verified": true,
+    "estimator_config_sha256": "87a1da0d424211ac18644432930b848df704f3dcd9733b801bdfdd557b9378c4",
+    "z_gate": 4.003167570299946,
+    "n_shots": 2048,
+    "step1_artifact_sha256": "f1bff524ce759df8e30131f3071e8d785fb34e4f2a41bff83a3cd6fd24f88e1c",
+    "n_ref_step1": 341,
+    "power_factor": 2.4548561221082967,
+    "runtime_seconds": 316.1
+  },
+  "frozen_estimator_config": {
+    "estimator": "c7_frozen_flat_extension_certificate",
+    "decision_family": "depth2_retained_S1_correlators",
+    "correlator_null": {
+      "XX": 1.0,
+      "XY": 0.0,
+      "XZ": 0.0,
+      "YX": 0.0,
+      "YY": 0.0,
+      "YZ": 0.0,
+      "ZX": 0.0,
+      "ZY": 0.0,
+      "ZZ": 0.0
+    },
+    "offnull_pairs": [
+      "XY",
+      "XZ",
+      "YX",
+      "YY",
+      "YZ",
+      "ZX",
+      "ZY",
+      "ZZ"
+    ],
+    "m_offnull": 8,
+    "target_platform": "ibm_heron_r2",
+    "min_detectable_delta": 0.2,
+    "n_inst_declared": 20,
+    "alpha_exp": 0.01,
+    "alpha_step1": 0.05,
+    "z_alpha_over_2_step1": 1.959963986120195,
+    "z_beta": 1.644853625133699,
+    "bonferroni_tests": 160,
+    "z_gate": 4.003167570299946,
+    "power_factor": 2.4548561221082967,
+    "n_ref_step1": 341,
+    "n_shots": 2048,
+    "se_floor_var": 1e-06,
+    "step1_artifact_sha256": "f1bff524ce759df8e30131f3071e8d785fb34e4f2a41bff83a3cd6fd24f88e1c",
+    "step1_source": "artifact"
+  },
+  "public_manifest": {
+    "protocol": "c7_blind_benchmark",
+    "master_seed": 20260721,
+    "n_inst": 20,
+    "n_slots": 2,
+    "delta_range": [
+      0.2,
+      0.4
+    ],
+    "dark_prob": 0.5,
+    "sealed_key_sha256": "5d9f37d9e6837640f70e7157bd213165d8626c06d9c13874959b91ad114a7599",
+    "instances": [
+      {
+        "instance_id": 0,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 1,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 2,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 3,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 4,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 5,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 6,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 7,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 8,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 9,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 10,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 11,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 12,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 13,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 14,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 15,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 16,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 17,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 18,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 19,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      }
+    ]
+  },
+  "answer_key": [
+    {
+      "instance_id": 0,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 1,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 2,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 3,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 4,
+      "n_slots": 2,
+      "dark": true,
+      "axis": 5.3085273237410044,
+      "delta": 0.20140950710820307,
+      "slot": "inter"
+    },
+    {
+      "instance_id": 5,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 6,
+      "n_slots": 2,
+      "dark": true,
+      "axis": 4.713147692867258,
+      "delta": 0.36272360121998143,
+      "slot": "inter"
+    },
+    {
+      "instance_id": 7,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 8,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 9,
+      "n_slots": 2,
+      "dark": true,
+      "axis": 3.0869631733491456,
+      "delta": 0.3039863715959935,
+      "slot": "inter"
+    },
+    {
+      "instance_id": 10,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 11,
+      "n_slots": 2,
+      "dark": true,
+      "axis": 0.5195028622303054,
+      "delta": 0.2794566175643814,
+      "slot": "inter"
+    },
+    {
+      "instance_id": 12,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 13,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 14,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 15,
+      "n_slots": 2,
+      "dark": true,
+      "axis": 0.02716609771591618,
+      "delta": 0.30044116832259665,
+      "slot": "inter"
+    },
+    {
+      "instance_id": 16,
+      "n_slots": 2,
+      "dark": true,
+      "axis": 2.2795160908577525,
+      "delta": 0.2860153385029811,
+      "slot": "inter"
+    },
+    {
+      "instance_id": 17,
+      "n_slots": 2,
+      "dark": true,
+      "axis": 5.148781407162843,
+      "delta": 0.2388304220311373,
+      "slot": "inter"
+    },
+    {
+      "instance_id": 18,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 19,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    }
+  ],
+  "conditions": [
+    {
+      "condition": "noiseless",
+      "scores": {
+        "certificate": {
+          "n_dark": 7,
+          "n_null": 13,
+          "true_positives": 7,
+          "false_positives": 0,
+          "power": 1.0,
+          "fp_rate": 0.0
+        },
+        "marginal_qpt": {
+          "n_dark": 7,
+          "n_null": 13,
+          "true_positives": 0,
+          "false_positives": 0,
+          "power": 0.0,
+          "fp_rate": 0.0
+        },
+        "restricted_ptt": {
+          "n_dark": 7,
+          "n_null": 13,
+          "true_positives": 7,
+          "false_positives": 0,
+          "power": 1.0,
+          "fp_rate": 0.0
+        },
+        "full_ptt": {
+          "n_dark": 7,
+          "n_null": 13,
+          "true_positives": 7,
+          "false_positives": 0,
+          "power": 1.0,
+          "fp_rate": 0.0
+        },
+        "structured_lowmem": {
+          "n_dark": 7,
+          "n_null": 13,
+          "true_positives": 7,
+          "false_positives": 0,
+          "power": 1.0,
+          "fp_rate": 0.0
+        },
+        "heldout_depth3": {
+          "n_dark": 7,
+          "n_null": 13,
+          "true_positives": 7,
+          "false_positives": 0,
+          "power": 1.0,
+          "fp_rate": 0.0
+        }
+      },
+      "ledgers": {
+        "certificate": {
+          "method": "certificate",
+          "distinct_settings": 9,
+          "total_shots": 18432,
+          "settings_by_family": {
+            "depth2": 9
+          },
+          "extra": {}
+        },
+        "marginal_qpt": {
+          "method": "marginal_qpt",
+          "distinct_settings": 36,
+          "total_shots": 73728,
+          "settings_by_family": {
+            "atomic": 36
+          },
+          "extra": {
+            "offnull_family_size": 32,
+            "deterministic_identity_effects": 12
+          }
+        },
+        "restricted_ptt": {
+          "method": "restricted_ptt",
+          "distinct_settings": 324,
+          "total_shots": 663552,
+          "settings_by_family": {
+            "depth2_unitary_scan": 324
+          },
+          "extra": {
+            "operation_basis": "unitary-restricted (6x6 IC preps x 9 pairs)",
+            "offnull_family_size": 304
+          }
+        },
+        "full_ptt": {
+          "method": "full_ptt",
+          "distinct_settings": 144,
+          "total_shots": 294912,
+          "settings_by_family": {
+            "depth2_ic_instrument_scan": 144
+          },
+          "extra": {
+            "operation_basis_size": 256,
+            "executed_circuits": 144,
+            "offnull_family_size": 136
+          }
+        },
+        "structured_lowmem": {
+          "method": "structured_lowmem",
+          "distinct_settings": 9,
+          "total_shots": 18432,
+          "settings_by_family": {
+            "depth2": 9
+          },
+          "extra": {
+            "model": "bond-dim-2 comb (memory-order-2 prior)",
+            "fitted_params": 2
+          }
+        },
+        "heldout_depth3": {
+          "method": "heldout_depth3",
+          "distinct_settings": 9,
+          "total_shots": 18432,
+          "settings_by_family": {
+            "heldout_depth3": 9
+          },
+          "extra": {}
+        }
+      },
+      "verdicts": {
+        "certificate": [
+          {
+            "detected": false,
+            "max_abs_z": 2.0793175388334424,
+            "argmax_pair": "YX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.414904602513222,
+            "argmax_pair": "XZ",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.3706476187847392,
+            "argmax_pair": "YX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.3706476187847392,
+            "argmax_pair": "YY",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 7.158997922282926,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.034986308421271,
+            "argmax_pair": "ZZ",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 16.352863680971197,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.6805361419287979,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.7450750152417043,
+            "argmax_pair": "YY",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 15.772024604020164,
+            "argmax_pair": "YX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.8577185611308438,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 11.879800102297672,
+            "argmax_pair": "YX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.414904602513222,
+            "argmax_pair": "XZ",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.813415276887344,
+            "argmax_pair": "XY",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.9463412564292615,
+            "argmax_pair": "ZZ",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 13.363409026733402,
+            "argmax_pair": "YX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 9.623860134103898,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 11.00677560885683,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.5477003993383434,
+            "argmax_pair": "XY",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.0167224953636567,
+            "argmax_pair": "YX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          }
+        ],
+        "marginal_qpt": [
+          {
+            "detected": false,
+            "max_abs_z": 1.591974371691398,
+            "argmax": "s1_|+>_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.256703487133195,
+            "argmax": "s1_|1>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.9906609237278394,
+            "argmax": "s1_|+>_Z",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.7248241951807886,
+            "argmax": "s2_|+i>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.522979651353061,
+            "argmax": "s1_|->_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.2123475888953137,
+            "argmax": "s2_|0>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.90202717828397,
+            "argmax": "s1_|+>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.145356056219628,
+            "argmax": "s2_|+>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.700640638453482,
+            "argmax": "s1_|-i>_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.611795100297206,
+            "argmax": "s1_|->_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.8577185611308438,
+            "argmax": "s1_|+>_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.8577185611308438,
+            "argmax": "s2_|-i>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.636252910004848,
+            "argmax": "s1_|0>_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.90202717828397,
+            "argmax": "s2_|-i>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.301065874009604,
+            "argmax": "s1_|-i>_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.6562140434003054,
+            "argmax": "s1_|+i>_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.2344039895486834,
+            "argmax": "s1_|->_Z",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.145356056219628,
+            "argmax": "s2_|-i>_Z",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.611795100297206,
+            "argmax": "s1_|1>_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.522979651353061,
+            "argmax": "s1_|+>_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          }
+        ],
+        "restricted_ptt": [
+          {
+            "detected": false,
+            "max_abs_z": 2.700640638453482,
+            "argmax": "|+>||0>|ZX",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.546373142553462,
+            "argmax": "|->||->|YY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.011851974801259,
+            "argmax": "|0>||1>|ZY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.9673681756753885,
+            "argmax": "|->||+>|YX",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 10.097650955827007,
+            "argmax": "|1>||-i>|ZY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.368046332093503,
+            "argmax": "|->||->|YZ",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 19.48760913995411,
+            "argmax": "|->||+i>|ZY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.323489316991126,
+            "argmax": "|-i>||->|YY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.680225637095415,
+            "argmax": "|+>||+i>|ZX",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 15.82453891867404,
+            "argmax": "|+>||+i>|YY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.590980192872619,
+            "argmax": "|+>||+>|YX",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 12.271781544447443,
+            "argmax": "|+i>||+i>|XY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.76951375727177,
+            "argmax": "|1>||0>|YZ",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.522979651353061,
+            "argmax": "|-i>||-i>|YZ",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.546373142553462,
+            "argmax": "|-i>||+>|XZ",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 16.51251447856961,
+            "argmax": "|+i>||+>|XX",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 12.173547504367637,
+            "argmax": "|+>||+>|ZX",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 11.4417869894173,
+            "argmax": "|0>||+i>|ZY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.9228929394274124,
+            "argmax": "|+i>||1>|ZX",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.8588456170004948,
+            "argmax": "|->||1>|ZY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          }
+        ],
+        "full_ptt": [
+          {
+            "detected": false,
+            "max_abs_z": 2.9673681756753885,
+            "argmax": "|1>||0>|XX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.1898754142693058,
+            "argmax": "|+i>||+i>|ZX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.878426135567544,
+            "argmax": "|+>||+i>|YX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.7450750152417043,
+            "argmax": "|0>||+i>|ZX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 8.871981255279707,
+            "argmax": "|1>||+i>|ZY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.0563444674190663,
+            "argmax": "|+>||0>|XY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 18.921063852824524,
+            "argmax": "|+i>||+>|ZX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.700640638453482,
+            "argmax": "|+>||1>|ZX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.700640638453482,
+            "argmax": "|1>||+>|ZX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 15.877110256389763,
+            "argmax": "|+>||+i>|YY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.833967633728305,
+            "argmax": "|+i>||1>|XZ",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 10.478967646224653,
+            "argmax": "|+>||+i>|YY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.011851974801259,
+            "argmax": "|+>||0>|ZZ",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.5673836794699385,
+            "argmax": "|+i>||1>|YX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.833967633728305,
+            "argmax": "|+i>||+>|YZ",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 15.56253216824905,
+            "argmax": "|+i>||+i>|XY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 11.4417869894173,
+            "argmax": "|+>||+>|ZX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 11.78219712972224,
+            "argmax": "|+i>||+>|ZX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.9673681756753885,
+            "argmax": "|0>||+>|XX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.0563444674190663,
+            "argmax": "|1>||1>|ZX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          }
+        ],
+        "structured_lowmem": [
+          {
+            "detected": false,
+            "max_abs_z": 0.3977629278338114,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.009264485332524549,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.3898106292022714,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.052959948683422846,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 0.839833882608666,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.026240290708094537,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.1936576978667606,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.02681548870653512,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 8.034462701967971,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.19835760956407156,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.9906609237278394,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.05336357848560254,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 19.260071421435484,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.3919958854770762,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.3898106292022714,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.05590340539594418,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.1936576978667606,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.032241355506287456,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 13.81615634469133,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.29285479554621274,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 0.5303665045180701,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.012079411012551739,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 10.862414559748197,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.26116611721984806,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 0.9282728728701516,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.022714264354712906,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.5034308653611659,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.03629082846887118,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.0609516108714323,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.023518739411703703,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 12.666352879555996,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.2696745118586319,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 9.907762476425598,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.28636103046767347,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 7.434571449489105,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.21206476856011025,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 0.8840521121258064,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.019918044974971814,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.414904602513222,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.03304477405407936,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          }
+        ],
+        "heldout_depth3": [
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 2.301065874009604,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 2.345434878381737,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 2.167998050532357,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.90202717828397,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 6.701414336732275,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.7248241951807886,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 17.102631440212953,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 2.034986308421271,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.7248241951807886,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 14.990970924664204,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.3263945637130168,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 11.248086428398517,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 2.256703487133195,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 2.3898106292022714,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.9463412564292615,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 15.719567041165488,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 9.294006865683768,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 10.622505566933382,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 2.256703487133195,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 3.1008457842690547,
+            "gate": 4.003167570299946
+          }
+        ]
+      },
+      "drift": {
+        "n_probes": 14,
+        "worst_drift_z": 2.297244125984093,
+        "drift_gate_z": 3.0,
+        "consistent": true,
+        "half_shots": 1024,
+        "note": "i.i.d. simulator -> trivially consistent; hardware needs a martingale/block-bootstrap test (O7).",
+        "records": [
+          {
+            "instance": 4,
+            "pair": "YX",
+            "c_first": 0.0859375,
+            "c_second": 0.1015625,
+            "drift_z": 0.2511137282428356
+          },
+          {
+            "instance": 4,
+            "pair": "ZX",
+            "c_first": 0.111328125,
+            "c_second": 0.197265625,
+            "drift_z": 1.3930160295591525
+          },
+          {
+            "instance": 6,
+            "pair": "YX",
+            "c_first": -0.02734375,
+            "c_second": 0.013671875,
+            "drift_z": 0.6564033931653028
+          },
+          {
+            "instance": 6,
+            "pair": "ZX",
+            "c_first": 0.337890625,
+            "c_second": 0.40625,
+            "drift_z": 1.17927875227259
+          },
+          {
+            "instance": 9,
+            "pair": "YX",
+            "c_first": -0.2734375,
+            "c_second": -0.26953125,
+            "drift_z": 0.06493906533437625
+          },
+          {
+            "instance": 9,
+            "pair": "ZX",
+            "c_first": -0.029296875,
+            "c_second": -0.03515625,
+            "drift_z": 0.09379912342607127
+          },
+          {
+            "instance": 11,
+            "pair": "YX",
+            "c_first": 0.2734375,
+            "c_second": 0.23046875,
+            "drift_z": 0.7106055163164144
+          },
+          {
+            "instance": 11,
+            "pair": "ZX",
+            "c_first": -0.16015625,
+            "c_second": -0.11328125,
+            "drift_z": 0.7573253671297329
+          },
+          {
+            "instance": 15,
+            "pair": "YX",
+            "c_first": 0.228515625,
+            "c_second": 0.365234375,
+            "drift_z": 2.297244125984093
+          },
+          {
+            "instance": 15,
+            "pair": "ZX",
+            "c_first": -0.076171875,
+            "c_second": -0.0546875,
+            "drift_z": 0.34450822448287516
+          },
+          {
+            "instance": 16,
+            "pair": "YX",
+            "c_first": -0.123046875,
+            "c_second": -0.140625,
+            "drift_z": 0.2837378429385879
+          },
+          {
+            "instance": 16,
+            "pair": "ZX",
+            "c_first": -0.19140625,
+            "c_second": -0.17578125,
+            "drift_z": 0.25433124167789917
+          },
+          {
+            "instance": 17,
+            "pair": "YX",
+            "c_first": 0.109375,
+            "c_second": 0.130859375,
+            "drift_z": 0.34627756685763117
+          },
+          {
+            "instance": 17,
+            "pair": "ZX",
+            "c_first": 0.2109375,
+            "c_second": 0.234375,
+            "drift_z": 0.38468525631522243
+          }
+        ]
+      },
+      "total_circuits_executed": 10648,
+      "total_shots_executed": 21778432
+    },
+    {
+      "condition": "ibm_heron_approx",
+      "scores": {
+        "certificate": {
+          "n_dark": 7,
+          "n_null": 13,
+          "true_positives": 7,
+          "false_positives": 0,
+          "power": 1.0,
+          "fp_rate": 0.0
+        },
+        "marginal_qpt": {
+          "n_dark": 7,
+          "n_null": 13,
+          "true_positives": 0,
+          "false_positives": 0,
+          "power": 0.0,
+          "fp_rate": 0.0
+        },
+        "restricted_ptt": {
+          "n_dark": 7,
+          "n_null": 13,
+          "true_positives": 7,
+          "false_positives": 0,
+          "power": 1.0,
+          "fp_rate": 0.0
+        },
+        "full_ptt": {
+          "n_dark": 7,
+          "n_null": 13,
+          "true_positives": 7,
+          "false_positives": 0,
+          "power": 1.0,
+          "fp_rate": 0.0
+        },
+        "structured_lowmem": {
+          "n_dark": 7,
+          "n_null": 13,
+          "true_positives": 7,
+          "false_positives": 0,
+          "power": 1.0,
+          "fp_rate": 0.0
+        },
+        "heldout_depth3": {
+          "n_dark": 7,
+          "n_null": 13,
+          "true_positives": 7,
+          "false_positives": 0,
+          "power": 1.0,
+          "fp_rate": 0.0
+        }
+      },
+      "ledgers": {
+        "certificate": {
+          "method": "certificate",
+          "distinct_settings": 9,
+          "total_shots": 18432,
+          "settings_by_family": {
+            "depth2": 9
+          },
+          "extra": {}
+        },
+        "marginal_qpt": {
+          "method": "marginal_qpt",
+          "distinct_settings": 36,
+          "total_shots": 73728,
+          "settings_by_family": {
+            "atomic": 36
+          },
+          "extra": {
+            "offnull_family_size": 32,
+            "deterministic_identity_effects": 12
+          }
+        },
+        "restricted_ptt": {
+          "method": "restricted_ptt",
+          "distinct_settings": 324,
+          "total_shots": 663552,
+          "settings_by_family": {
+            "depth2_unitary_scan": 324
+          },
+          "extra": {
+            "operation_basis": "unitary-restricted (6x6 IC preps x 9 pairs)",
+            "offnull_family_size": 304
+          }
+        },
+        "full_ptt": {
+          "method": "full_ptt",
+          "distinct_settings": 144,
+          "total_shots": 294912,
+          "settings_by_family": {
+            "depth2_ic_instrument_scan": 144
+          },
+          "extra": {
+            "operation_basis_size": 256,
+            "executed_circuits": 144,
+            "offnull_family_size": 136
+          }
+        },
+        "structured_lowmem": {
+          "method": "structured_lowmem",
+          "distinct_settings": 9,
+          "total_shots": 18432,
+          "settings_by_family": {
+            "depth2": 9
+          },
+          "extra": {
+            "model": "bond-dim-2 comb (memory-order-2 prior)",
+            "fitted_params": 2
+          }
+        },
+        "heldout_depth3": {
+          "method": "heldout_depth3",
+          "distinct_settings": 9,
+          "total_shots": 18432,
+          "settings_by_family": {
+            "heldout_depth3": 9
+          },
+          "extra": {}
+        }
+      },
+      "verdicts": {
+        "certificate": [
+          {
+            "detected": false,
+            "max_abs_z": 1.9463412564292615,
+            "argmax_pair": "YZ",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.7691171975476474,
+            "argmax_pair": "XZ",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.2821453100138058,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.105183765127291,
+            "argmax_pair": "ZZ",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 8.825228600770885,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.90202717828397,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 17.86492923716828,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.3706476187847392,
+            "argmax_pair": "YX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.813415276887344,
+            "argmax_pair": "YZ",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 14.784733059870572,
+            "argmax_pair": "YX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.2821453100138058,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 11.977558412296508,
+            "argmax_pair": "YX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.636252910004848,
+            "argmax_pair": "XZ",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.1936576978667606,
+            "argmax_pair": "XZ",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.3706476187847392,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 14.681925997895286,
+            "argmax_pair": "YX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 10.288048852038672,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 9.15307780666276,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.7691171975476474,
+            "argmax_pair": "ZX",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.636252910004848,
+            "argmax_pair": "XZ",
+            "z_gate": 4.003167570299946,
+            "method": "certificate"
+          }
+        ],
+        "marginal_qpt": [
+          {
+            "detected": false,
+            "max_abs_z": 2.4341932555212598,
+            "argmax": "s2_|+>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.700640638453482,
+            "argmax": "s1_|->_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.301065874009604,
+            "argmax": "s2_|+i>_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.345434878381737,
+            "argmax": "s1_|-i>_Z",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.2123475888953137,
+            "argmax": "s1_|-i>_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.9463412564292615,
+            "argmax": "s2_|->_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.5673836794699385,
+            "argmax": "s2_|+>_Z",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.611795100297206,
+            "argmax": "s2_|+i>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.700640638453482,
+            "argmax": "s1_|+>_Z",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.3898106292022714,
+            "argmax": "s2_|+i>_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.7450750152417043,
+            "argmax": "s2_|-i>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.8577185611308438,
+            "argmax": "s1_|1>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.034986308421271,
+            "argmax": "s2_|->_Z",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.4341932555212598,
+            "argmax": "s2_|-i>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.167998050532357,
+            "argmax": "s1_|+i>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.4341932555212598,
+            "argmax": "s2_|+i>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.167998050532357,
+            "argmax": "s2_|+i>_Z",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.9906609237278394,
+            "argmax": "s1_|0>_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.4591656422390868,
+            "argmax": "s1_|0>_X",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.5673836794699385,
+            "argmax": "s1_|->_Y",
+            "gate": 4.319687930921653,
+            "method": "marginal_qpt",
+            "note": "atomic marginals are dark-invariant (Theorem 1)"
+          }
+        ],
+        "restricted_ptt": [
+          {
+            "detected": false,
+            "max_abs_z": 3.011851974801259,
+            "argmax": "|0>||0>|XY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 4.395815198451227,
+            "argmax": "|->||+>|XZ",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.2789419133224036,
+            "argmax": "|+>||->|YX",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.1898754142693058,
+            "argmax": "|1>||+>|ZX",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 9.388103693505967,
+            "argmax": "|+>||+>|ZX",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.7895173036625844,
+            "argmax": "|+i>||0>|ZY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 19.090226597637304,
+            "argmax": "|+>||-i>|ZY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.700640638453482,
+            "argmax": "|+i>||->|ZY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.878426135567544,
+            "argmax": "|1>||+i>|XZ",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 15.249958620144492,
+            "argmax": "|-i>||+i>|XY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.9228929394274124,
+            "argmax": "|1>||+i>|XZ",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 12.124490664607096,
+            "argmax": "|+i>||+i>|XY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.878426135567544,
+            "argmax": "|0>||+i>|YX",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.323489316991126,
+            "argmax": "|-i>||+i>|YZ",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.323489316991126,
+            "argmax": "|+>||+>|YY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 15.929738889606643,
+            "argmax": "|->||+>|YX",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 11.34486337704037,
+            "argmax": "|+i>||+i>|XY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 12.026496322193374,
+            "argmax": "|+>||+i>|ZY",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.145356056219628,
+            "argmax": "|+i>||+>|XZ",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.700640638453482,
+            "argmax": "|+>||->|XZ",
+            "gate": 4.792794983271747,
+            "method": "restricted_ptt"
+          }
+        ],
+        "full_ptt": [
+          {
+            "detected": false,
+            "max_abs_z": 2.6562140434003054,
+            "argmax": "|0>||+i>|XY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.011851974801259,
+            "argmax": "|+>||+>|YX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.7450750152417043,
+            "argmax": "|0>||0>|ZX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.9228929394274124,
+            "argmax": "|+i>||+>|XZ",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 8.965568844931092,
+            "argmax": "|+i>||+>|ZX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.1008457842690547,
+            "argmax": "|0>||+>|ZY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 18.696557891686695,
+            "argmax": "|0>||+i>|ZY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.9228929394274124,
+            "argmax": "|+i>||+i>|ZZ",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.4571897234556928,
+            "argmax": "|0>||+>|ZZ",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 15.458121091030009,
+            "argmax": "|+>||+i>|YY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.0563444674190663,
+            "argmax": "|0>||+>|XY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 13.16337278220791,
+            "argmax": "|+>||+i>|YY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.9673681756753885,
+            "argmax": "|+>||1>|XX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.323489316991126,
+            "argmax": "|1>||1>|YY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.167998050532357,
+            "argmax": "|+>||0>|ZY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 14.939332862946973,
+            "argmax": "|+>||+i>|YY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 10.862414559748197,
+            "argmax": "|0>||+i>|ZY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 10.862414559748197,
+            "argmax": "|1>||+i>|ZY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 2.6562140434003054,
+            "argmax": "|+i>||1>|XX",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 3.145356056219628,
+            "argmax": "|+>||1>|XY",
+            "gate": 4.628880942486015,
+            "method": "full_ptt"
+          }
+        ],
+        "structured_lowmem": [
+          {
+            "detected": false,
+            "max_abs_z": 1.8577185611308438,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.04216217411117754,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 0.8840521121258064,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.019918044974971814,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.0609516108714323,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.023457836229422487,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 0.1325830904585953,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.003088161777508183,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 6.610142661491317,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.20097504402973496,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 0.1325830904585953,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.003521046167445302,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 15.61482109163752,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.3271586402326954,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 0.5303665045180701,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.01188039556698871,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.1494190851157646,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.026565372087373914,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 13.866694742472099,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.2930728981547296,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 0.3093664452069741,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.009003461384075085,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 12.22264439584527,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.2930631358375087,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 0.839833882608666,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.023640075072090243,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.8577185611308438,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.043552935783159684,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 0.3977629278338114,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.009003461384075085,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 13.063621364586687,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.27773032312884727,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 10.526780093851553,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.2814550711788387,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": true,
+            "max_abs_z": 8.498712583344167,
+            "argmax": "ZX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.20197852913839667,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 1.3263945637130168,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.033673710253059895,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          },
+          {
+            "detected": false,
+            "max_abs_z": 0.7956180575337054,
+            "argmax": "YX_component",
+            "gate": 3.662259927289605,
+            "method": "structured_lowmem",
+            "delta_hat": 0.01824369305885684,
+            "note": "bond-dim-2 comb LS fit; O6 structured comparator"
+          }
+        ],
+        "heldout_depth3": [
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.4591656422390868,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.4591656422390868,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.9463412564292615,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 2.611795100297206,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 8.080774999697697,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.5477003993383434,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 17.210744562859542,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.9463412564292615,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.636252910004848,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 13.71522103909742,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 2.4341932555212598,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 11.587450803213942,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 2.345434878381737,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 2.7450750152417043,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 2.522979651353061,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 14.17093023715121,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 9.1061584256734,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": true,
+            "max_abs_z": 9.813005717629764,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.636252910004848,
+            "gate": 4.003167570299946
+          },
+          {
+            "method": "heldout_depth3",
+            "detected": false,
+            "max_abs_z": 1.9463412564292615,
+            "gate": 4.003167570299946
+          }
+        ]
+      },
+      "drift": {
+        "n_probes": 14,
+        "worst_drift_z": 1.4328557832196052,
+        "drift_gate_z": 3.0,
+        "consistent": true,
+        "half_shots": 1024,
+        "note": "i.i.d. simulator -> trivially consistent; hardware needs a martingale/block-bootstrap test (O7).",
+        "records": [
+          {
+            "instance": 4,
+            "pair": "YX",
+            "c_first": 0.154296875,
+            "c_second": 0.107421875,
+            "drift_z": 0.7567204112640702
+          },
+          {
+            "instance": 4,
+            "pair": "ZX",
+            "c_first": 0.177734375,
+            "c_second": 0.201171875,
+            "drift_z": 0.3819448151427894
+          },
+          {
+            "instance": 6,
+            "pair": "YX",
+            "c_first": -0.00390625,
+            "c_second": 0.01171875,
+            "drift_z": 0.2500095374053331
+          },
+          {
+            "instance": 6,
+            "pair": "ZX",
+            "c_first": 0.38671875,
+            "c_second": 0.37890625,
+            "drift_z": 0.13530827358663639
+          },
+          {
+            "instance": 9,
+            "pair": "YX",
+            "c_first": -0.232421875,
+            "c_second": -0.302734375,
+            "drift_z": 1.1684123378312818
+          },
+          {
+            "instance": 9,
+            "pair": "ZX",
+            "c_first": -0.017578125,
+            "c_second": -0.025390625,
+            "drift_z": 0.1250298134254863
+          },
+          {
+            "instance": 11,
+            "pair": "YX",
+            "c_first": 0.2734375,
+            "c_second": 0.197265625,
+            "drift_z": 1.254994331085933
+          },
+          {
+            "instance": 11,
+            "pair": "ZX",
+            "c_first": -0.119140625,
+            "c_second": -0.154296875,
+            "drift_z": 0.5679231202494014
+          },
+          {
+            "instance": 15,
+            "pair": "YX",
+            "c_first": 0.322265625,
+            "c_second": 0.263671875,
+            "drift_z": 0.9810273418398467
+          },
+          {
+            "instance": 15,
+            "pair": "ZX",
+            "c_first": 0.021484375,
+            "c_second": 0.01953125,
+            "drift_z": 0.03125658840247003
+          },
+          {
+            "instance": 16,
+            "pair": "YX",
+            "c_first": -0.142578125,
+            "c_second": -0.23046875,
+            "drift_z": 1.4328557832196052
+          },
+          {
+            "instance": 16,
+            "pair": "ZX",
+            "c_first": -0.2265625,
+            "c_second": -0.244140625,
+            "drift_z": 0.28939108219408943
+          },
+          {
+            "instance": 17,
+            "pair": "YX",
+            "c_first": 0.044921875,
+            "c_second": 0.11328125,
+            "drift_z": 1.0978375431202154
+          },
+          {
+            "instance": 17,
+            "pair": "ZX",
+            "c_first": 0.201171875,
+            "c_second": 0.22265625,
+            "drift_z": 0.35176082942701276
+          }
+        ]
+      },
+      "total_circuits_executed": 10648,
+      "total_shots_executed": 21778432
+    }
+  ],
+  "headlines": [
+    "[noiseless] certificate power 1.00 / FP 0.00 at 9 settings; marginal-QPT power 0.00 (blind by Theorem 1); full-PTT power 1.00 at 256 operation-basis ops.",
+    "[ibm_heron_approx] certificate power 1.00 / FP 0.00 at 9 settings; marginal-QPT power 0.00 (blind by Theorem 1); full-PTT power 1.00 at 256 operation-basis ops.",
+    "Resource separation: certificate 9 settings vs full-PTT 256 (=d^4k) vs restricted-PTT 324; the structured O6 comparator matches the certificate at 9 settings."
+  ]
+}

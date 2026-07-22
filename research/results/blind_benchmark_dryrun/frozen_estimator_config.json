@@ -1,0 +1,44 @@
+{
+  "config": {
+    "estimator": "c7_frozen_flat_extension_certificate",
+    "decision_family": "depth2_retained_S1_correlators",
+    "correlator_null": {
+      "XX": 1.0,
+      "XY": 0.0,
+      "XZ": 0.0,
+      "YX": 0.0,
+      "YY": 0.0,
+      "YZ": 0.0,
+      "ZX": 0.0,
+      "ZY": 0.0,
+      "ZZ": 0.0
+    },
+    "offnull_pairs": [
+      "XY",
+      "XZ",
+      "YX",
+      "YY",
+      "YZ",
+      "ZX",
+      "ZY",
+      "ZZ"
+    ],
+    "m_offnull": 8,
+    "target_platform": "ibm_heron_r2",
+    "min_detectable_delta": 0.2,
+    "n_inst_declared": 20,
+    "alpha_exp": 0.01,
+    "alpha_step1": 0.05,
+    "z_alpha_over_2_step1": 1.959963986120195,
+    "z_beta": 1.644853625133699,
+    "bonferroni_tests": 160,
+    "z_gate": 4.003167570299946,
+    "power_factor": 2.4548561221082967,
+    "n_ref_step1": 341,
+    "n_shots": 2048,
+    "se_floor_var": 1e-06,
+    "step1_artifact_sha256": "f1bff524ce759df8e30131f3071e8d785fb34e4f2a41bff83a3cd6fd24f88e1c",
+    "step1_source": "artifact"
+  },
+  "config_sha256": "87a1da0d424211ac18644432930b848df704f3dcd9733b801bdfdd557b9378c4"
+}

@@ -1,0 +1,832 @@
+{
+  "metadata": {
+    "date": "2026-07-21",
+    "alpha": 0.05,
+    "power": 0.95,
+    "z_alpha_over_2": 1.959963986120195,
+    "z_beta": 1.644853625133699,
+    "delta_grid": [
+      0.0,
+      0.05,
+      0.1,
+      0.15000000000000002,
+      0.2,
+      0.25,
+      0.30000000000000004,
+      0.35000000000000003,
+      0.4,
+      0.45,
+      0.5
+    ],
+    "delta0_grid": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "phi_kick_grid": [
+      0.0,
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1
+    ],
+    "n_atomic_stats": 48,
+    "baseline_convention": "N_total = N_exact x (1 + 48); each atomic statistic measured at the correlator shot budget (matched precision)",
+    "seed": 20260721,
+    "mc_trials": 40000
+  },
+  "platforms": {
+    "quantinuum_h2": {
+      "name": "Quantinuum H2 (trapped ion, QCCD)",
+      "citation": "Moses PRX 13 041052; DeCross PRX 15 021052",
+      "mid_circuit_model": "ion",
+      "notes": [
+        "1Q 2.5e-5, 2Q 1.83e-3, SPAM 1.6e-3 (Moses, verified)",
+        "SPAM split prep 6.0e-4 + readout 1.0e-3 (total verified)",
+        "S1 dephasing 3.0e-4 = midpoint of verified [2.2e-4,4.0e-4]",
+        "crosstalk 5.0e-6 (verified meas crosstalk 4.5e-6)",
+        "phi_kick inert for the ion model"
+      ],
+      "cptp_validation": [
+        {
+          "channel": "depol_1q(err_1q)",
+          "choi_min_eig": 1.2499999999943564e-05,
+          "tp_defect": 0.0
+        },
+        {
+          "channel": "depol_2q(err_2q)",
+          "choi_min_eig": 0.0004574999999996667,
+          "tp_defect": 0.0
+        },
+        {
+          "channel": "prep_depol",
+          "choi_min_eig": 0.00029999999999970746,
+          "tp_defect": 0.0
+        },
+        {
+          "channel": "ion_dephasing",
+          "choi_min_eig": 0.0,
+          "tp_defect": 0.0
+        },
+        {
+          "channel": "ion_crosstalk",
+          "choi_min_eig": 2.499999999740558e-06,
+          "tp_defect": 0.0
+        },
+        {
+          "channel": "full_comb_process",
+          "choi_min_eig": 1.5083940286544026e-06,
+          "tp_defect": 8.881784197065939e-16
+        }
+      ],
+      "sweep": [
+        {
+          "phi_kick": 0.0,
+          "slope_at_0": 0.9899032384283467,
+          "contrast_loss": 0.01009676157165329,
+          "C0": 0.0,
+          "E_curve": [
+            0.0,
+            0.04947454151603037,
+            0.09882542244411383,
+            0.14792929128337196,
+            0.1966634139345073,
+            0.24490598047113254,
+            0.2925364096011491,
+            0.33943565005717957,
+            0.3854864781627363,
+            0.43057379083036307,
+            0.47458489325940967
+          ],
+          "per_delta0": [
+            {
+              "delta0": 0.05,
+              "C0": 0.0,
+              "C1_noisy": 0.04947454151603037,
+              "C1_ideal": 0.04997916927067833,
+              "effect_delta": 0.04947454151603037,
+              "sigma1": 0.9987753850299769,
+              "N_exact_binomial": 5303,
+              "N_gaussian": 5309,
+              "N_total_with_baseline": 259847,
+              "mc_empirical_power": 0.949425
+            },
+            {
+              "delta0": 0.1,
+              "C0": 0.0,
+              "C1_noisy": 0.09882542244411383,
+              "C1_ideal": 0.09983341664682815,
+              "effect_delta": 0.09882542244411383,
+              "sigma1": 0.9951047863811843,
+              "N_exact_binomial": 1325,
+              "N_gaussian": 1331,
+              "N_total_with_baseline": 64925,
+              "mc_empirical_power": 0.947675
+            },
+            {
+              "delta0": 0.2,
+              "C0": 0.0,
+              "C1_noisy": 0.1966634139345073,
+              "C1_ideal": 0.19866933079506122,
+              "effect_delta": 0.1966634139345073,
+              "sigma1": 0.9804710610821844,
+              "N_exact_binomial": 331,
+              "N_gaussian": 336,
+              "N_total_with_baseline": 16219,
+              "mc_empirical_power": 0.946875
+            }
+          ]
+        },
+        {
+          "phi_kick": 0.005,
+          "slope_at_0": 0.9899032384283467,
+          "contrast_loss": 0.01009676157165329,
+          "C0": 0.0,
+          "E_curve": [
+            0.0,
+            0.04947454151603037,
+            0.09882542244411383,
+            0.14792929128337196,
+            0.1966634139345073,
+            0.24490598047113254,
+            0.2925364096011491,
+            0.33943565005717957,
+            0.3854864781627363,
+            0.43057379083036307,
+            0.47458489325940967
+          ],
+          "per_delta0": [
+            {
+              "delta0": 0.05,
+              "C0": 0.0,
+              "C1_noisy": 0.04947454151603037,
+              "C1_ideal": 0.04997916927067833,
+              "effect_delta": 0.04947454151603037,
+              "sigma1": 0.9987753850299769,
+              "N_exact_binomial": 5303,
+              "N_gaussian": 5309,
+              "N_total_with_baseline": 259847,
+              "mc_empirical_power": 0.951675
+            },
+            {
+              "delta0": 0.1,
+              "C0": 0.0,
+              "C1_noisy": 0.09882542244411383,
+              "C1_ideal": 0.09983341664682815,
+              "effect_delta": 0.09882542244411383,
+              "sigma1": 0.9951047863811843,
+              "N_exact_binomial": 1325,
+              "N_gaussian": 1331,
+              "N_total_with_baseline": 64925,
+              "mc_empirical_power": 0.948475
+            },
+            {
+              "delta0": 0.2,
+              "C0": 0.0,
+              "C1_noisy": 0.1966634139345073,
+              "C1_ideal": 0.19866933079506122,
+              "effect_delta": 0.1966634139345073,
+              "sigma1": 0.9804710610821844,
+              "N_exact_binomial": 331,
+              "N_gaussian": 336,
+              "N_total_with_baseline": 16219,
+              "mc_empirical_power": 0.949125
+            }
+          ]
+        },
+        {
+          "phi_kick": 0.01,
+          "slope_at_0": 0.9899032384283467,
+          "contrast_loss": 0.01009676157165329,
+          "C0": 0.0,
+          "E_curve": [
+            0.0,
+            0.04947454151603037,
+            0.09882542244411383,
+            0.14792929128337196,
+            0.1966634139345073,
+            0.24490598047113254,
+            0.2925364096011491,
+            0.33943565005717957,
+            0.3854864781627363,
+            0.43057379083036307,
+            0.47458489325940967
+          ],
+          "per_delta0": [
+            {
+              "delta0": 0.05,
+              "C0": 0.0,
+              "C1_noisy": 0.04947454151603037,
+              "C1_ideal": 0.04997916927067833,
+              "effect_delta": 0.04947454151603037,
+              "sigma1": 0.9987753850299769,
+              "N_exact_binomial": 5303,
+              "N_gaussian": 5309,
+              "N_total_with_baseline": 259847,
+              "mc_empirical_power": 0.952325
+            },
+            {
+              "delta0": 0.1,
+              "C0": 0.0,
+              "C1_noisy": 0.09882542244411383,
+              "C1_ideal": 0.09983341664682815,
+              "effect_delta": 0.09882542244411383,
+              "sigma1": 0.9951047863811843,
+              "N_exact_binomial": 1325,
+              "N_gaussian": 1331,
+              "N_total_with_baseline": 64925,
+              "mc_empirical_power": 0.949525
+            },
+            {
+              "delta0": 0.2,
+              "C0": 0.0,
+              "C1_noisy": 0.1966634139345073,
+              "C1_ideal": 0.19866933079506122,
+              "effect_delta": 0.1966634139345073,
+              "sigma1": 0.9804710610821844,
+              "N_exact_binomial": 331,
+              "N_gaussian": 336,
+              "N_total_with_baseline": 16219,
+              "mc_empirical_power": 0.950425
+            }
+          ]
+        },
+        {
+          "phi_kick": 0.02,
+          "slope_at_0": 0.9899032384283467,
+          "contrast_loss": 0.01009676157165329,
+          "C0": 0.0,
+          "E_curve": [
+            0.0,
+            0.04947454151603037,
+            0.09882542244411383,
+            0.14792929128337196,
+            0.1966634139345073,
+            0.24490598047113254,
+            0.2925364096011491,
+            0.33943565005717957,
+            0.3854864781627363,
+            0.43057379083036307,
+            0.47458489325940967
+          ],
+          "per_delta0": [
+            {
+              "delta0": 0.05,
+              "C0": 0.0,
+              "C1_noisy": 0.04947454151603037,
+              "C1_ideal": 0.04997916927067833,
+              "effect_delta": 0.04947454151603037,
+              "sigma1": 0.9987753850299769,
+              "N_exact_binomial": 5303,
+              "N_gaussian": 5309,
+              "N_total_with_baseline": 259847,
+              "mc_empirical_power": 0.95015
+            },
+            {
+              "delta0": 0.1,
+              "C0": 0.0,
+              "C1_noisy": 0.09882542244411383,
+              "C1_ideal": 0.09983341664682815,
+              "effect_delta": 0.09882542244411383,
+              "sigma1": 0.9951047863811843,
+              "N_exact_binomial": 1325,
+              "N_gaussian": 1331,
+              "N_total_with_baseline": 64925,
+              "mc_empirical_power": 0.949475
+            },
+            {
+              "delta0": 0.2,
+              "C0": 0.0,
+              "C1_noisy": 0.1966634139345073,
+              "C1_ideal": 0.19866933079506122,
+              "effect_delta": 0.1966634139345073,
+              "sigma1": 0.9804710610821844,
+              "N_exact_binomial": 331,
+              "N_gaussian": 336,
+              "N_total_with_baseline": 16219,
+              "mc_empirical_power": 0.948725
+            }
+          ]
+        },
+        {
+          "phi_kick": 0.05,
+          "slope_at_0": 0.9899032384283467,
+          "contrast_loss": 0.01009676157165329,
+          "C0": 0.0,
+          "E_curve": [
+            0.0,
+            0.04947454151603037,
+            0.09882542244411383,
+            0.14792929128337196,
+            0.1966634139345073,
+            0.24490598047113254,
+            0.2925364096011491,
+            0.33943565005717957,
+            0.3854864781627363,
+            0.43057379083036307,
+            0.47458489325940967
+          ],
+          "per_delta0": [
+            {
+              "delta0": 0.05,
+              "C0": 0.0,
+              "C1_noisy": 0.04947454151603037,
+              "C1_ideal": 0.04997916927067833,
+              "effect_delta": 0.04947454151603037,
+              "sigma1": 0.9987753850299769,
+              "N_exact_binomial": 5303,
+              "N_gaussian": 5309,
+              "N_total_with_baseline": 259847,
+              "mc_empirical_power": 0.9517
+            },
+            {
+              "delta0": 0.1,
+              "C0": 0.0,
+              "C1_noisy": 0.09882542244411383,
+              "C1_ideal": 0.09983341664682815,
+              "effect_delta": 0.09882542244411383,
+              "sigma1": 0.9951047863811843,
+              "N_exact_binomial": 1325,
+              "N_gaussian": 1331,
+              "N_total_with_baseline": 64925,
+              "mc_empirical_power": 0.949275
+            },
+            {
+              "delta0": 0.2,
+              "C0": 0.0,
+              "C1_noisy": 0.1966634139345073,
+              "C1_ideal": 0.19866933079506122,
+              "effect_delta": 0.1966634139345073,
+              "sigma1": 0.9804710610821844,
+              "N_exact_binomial": 331,
+              "N_gaussian": 336,
+              "N_total_with_baseline": 16219,
+              "mc_empirical_power": 0.9479
+            }
+          ]
+        },
+        {
+          "phi_kick": 0.1,
+          "slope_at_0": 0.9899032384283467,
+          "contrast_loss": 0.01009676157165329,
+          "C0": 0.0,
+          "E_curve": [
+            0.0,
+            0.04947454151603037,
+            0.09882542244411383,
+            0.14792929128337196,
+            0.1966634139345073,
+            0.24490598047113254,
+            0.2925364096011491,
+            0.33943565005717957,
+            0.3854864781627363,
+            0.43057379083036307,
+            0.47458489325940967
+          ],
+          "per_delta0": [
+            {
+              "delta0": 0.05,
+              "C0": 0.0,
+              "C1_noisy": 0.04947454151603037,
+              "C1_ideal": 0.04997916927067833,
+              "effect_delta": 0.04947454151603037,
+              "sigma1": 0.9987753850299769,
+              "N_exact_binomial": 5303,
+              "N_gaussian": 5309,
+              "N_total_with_baseline": 259847,
+              "mc_empirical_power": 0.9526
+            },
+            {
+              "delta0": 0.1,
+              "C0": 0.0,
+              "C1_noisy": 0.09882542244411383,
+              "C1_ideal": 0.09983341664682815,
+              "effect_delta": 0.09882542244411383,
+              "sigma1": 0.9951047863811843,
+              "N_exact_binomial": 1325,
+              "N_gaussian": 1331,
+              "N_total_with_baseline": 64925,
+              "mc_empirical_power": 0.9484
+            },
+            {
+              "delta0": 0.2,
+              "C0": 0.0,
+              "C1_noisy": 0.1966634139345073,
+              "C1_ideal": 0.19866933079506122,
+              "effect_delta": 0.1966634139345073,
+              "sigma1": 0.9804710610821844,
+              "N_exact_binomial": 331,
+              "N_gaussian": 336,
+              "N_total_with_baseline": 16219,
+              "mc_empirical_power": 0.9468
+            }
+          ]
+        }
+      ]
+    },
+    "ibm_heron_r2": {
+      "name": "IBM Heron r2 (transmon, heavy-hex)",
+      "citation": "ibm_marrakesh arXiv:2605.24252; AbuGhanem J Supercomput 81 687",
+      "mid_circuit_model": "ibm",
+      "notes": [
+        "2Q 2.334e-3, readout 1.23e-3, T2 96.89us (marrakesh, verified)",
+        "1Q 2.9e-4 (Heron ~3-4e-4; verified Eagle anchor 2.411e-4)",
+        "MCM window 1.5us UNVERIFIED lower bound",
+        "ZZ phase-kick phi_kick UNVERIFIED (Govia mechanism)",
+        "prep_error 0 (no verified IBM prep number; readout carries SPAM)"
+      ],
+      "cptp_validation": [
+        {
+          "channel": "depol_1q(err_1q)",
+          "choi_min_eig": 0.00014499999999994194,
+          "tp_defect": 0.0
+        },
+        {
+          "channel": "depol_2q(err_2q)",
+          "choi_min_eig": 0.0005834999999995223,
+          "tp_defect": 5.551115123125783e-16
+        },
+        {
+          "channel": "prep_depol",
+          "choi_min_eig": 0.0,
+          "tp_defect": 0.0
+        },
+        {
+          "channel": "ibm_idle_dephasing",
+          "choi_min_eig": 0.0,
+          "tp_defect": 0.0
+        },
+        {
+          "channel": "ibm_zz_kick",
+          "choi_min_eig": 0.0,
+          "tp_defect": 0.0
+        },
+        {
+          "channel": "full_comb_process",
+          "choi_min_eig": 1.7204560736862467e-06,
+          "tp_defect": 9.992007221626409e-16
+        }
+      ],
+      "sweep": [
+        {
+          "phi_kick": 0.0,
+          "slope_at_0": 0.9743827185951236,
+          "contrast_loss": 0.025617281404876402,
+          "C0": 0.0,
+          "E_curve": [
+            0.0,
+            0.0486988388278089,
+            0.09727595592041316,
+            0.14560993378355522,
+            0.19357996264442567,
+            0.2410661424131808,
+            0.2879497823707231,
+            0.3341136978336865,
+            0.3794425030551154,
+            0.4238228996287422,
+            0.46714395967599653
+          ],
+          "per_delta0": [
+            {
+              "delta0": 0.05,
+              "C0": 0.0,
+              "C1_noisy": 0.0486988388278089,
+              "C1_ideal": 0.04997916927067833,
+              "effect_delta": 0.0486988388278089,
+              "sigma1": 0.9988135076663827,
+              "N_exact_binomial": 5474,
+              "N_gaussian": 5480,
+              "N_total_with_baseline": 268226,
+              "mc_empirical_power": 0.948375
+            },
+            {
+              "delta0": 0.1,
+              "C0": 0.0,
+              "C1_noisy": 0.09727595592041316,
+              "C1_ideal": 0.09983341664682815,
+              "effect_delta": 0.09727595592041316,
+              "sigma1": 0.9952574483015788,
+              "N_exact_binomial": 1368,
+              "N_gaussian": 1374,
+              "N_total_with_baseline": 67032,
+              "mc_empirical_power": 0.94945
+            },
+            {
+              "delta0": 0.2,
+              "C0": 0.0,
+              "C1_noisy": 0.19357996264442567,
+              "C1_ideal": 0.19866933079506122,
+              "effect_delta": 0.19357996264442567,
+              "sigma1": 0.9810845009796979,
+              "N_exact_binomial": 341,
+              "N_gaussian": 347,
+              "N_total_with_baseline": 16709,
+              "mc_empirical_power": 0.95045
+            }
+          ]
+        },
+        {
+          "phi_kick": 0.005,
+          "slope_at_0": 0.9743705388268186,
+          "contrast_loss": 0.025629461173181434,
+          "C0": 0.0,
+          "E_curve": [
+            0.0,
+            0.04869823009359184,
+            0.09727473997349748,
+            0.14560811366317475,
+            0.1935775428999339,
+            0.24106312909267857,
+            0.2879461830059422,
+            0.33410952142116457,
+            0.379437760033709,
+            0.423817601853534,
+            0.467138120388666
+          ],
+          "per_delta0": [
+            {
+              "delta0": 0.05,
+              "C0": 0.0,
+              "C1_noisy": 0.04869823009359184,
+              "C1_ideal": 0.04997916927067833,
+              "effect_delta": 0.04869823009359184,
+              "sigma1": 0.9988135373460613,
+              "N_exact_binomial": 5474,
+              "N_gaussian": 5480,
+              "N_total_with_baseline": 268226,
+              "mc_empirical_power": 0.95115
+            },
+            {
+              "delta0": 0.1,
+              "C0": 0.0,
+              "C1_noisy": 0.09727473997349748,
+              "C1_ideal": 0.09983341664682815,
+              "effect_delta": 0.09727473997349748,
+              "sigma1": 0.995257567146861,
+              "N_exact_binomial": 1368,
+              "N_gaussian": 1374,
+              "N_total_with_baseline": 67032,
+              "mc_empirical_power": 0.947925
+            },
+            {
+              "delta0": 0.2,
+              "C0": 0.0,
+              "C1_noisy": 0.1935775428999339,
+              "C1_ideal": 0.19866933079506122,
+              "effect_delta": 0.1935775428999339,
+              "sigma1": 0.9810849784217595,
+              "N_exact_binomial": 341,
+              "N_gaussian": 347,
+              "N_total_with_baseline": 16709,
+              "mc_empirical_power": 0.9495
+            }
+          ]
+        },
+        {
+          "phi_kick": 0.01,
+          "slope_at_0": 0.9743339998410926,
+          "contrast_loss": 0.02566600015890741,
+          "C0": 0.0,
+          "E_curve": [
+            0.0,
+            0.04869640390615862,
+            0.09727109216314889,
+            0.14560265334753655,
+            0.1935702837269514,
+            0.24105408920650417,
+            0.28793538500158333,
+            0.3340969922880084,
+            0.3794235310880633,
+            0.4238017086603532,
+            0.46712060267265576
+          ],
+          "per_delta0": [
+            {
+              "delta0": 0.05,
+              "C0": 0.0,
+              "C1_noisy": 0.04869640390615862,
+              "C1_ideal": 0.04997916927067833,
+              "effect_delta": 0.04869640390615862,
+              "sigma1": 0.9988136263821236,
+              "N_exact_binomial": 5474,
+              "N_gaussian": 5480,
+              "N_total_with_baseline": 268226,
+              "mc_empirical_power": 0.948
+            },
+            {
+              "delta0": 0.1,
+              "C0": 0.0,
+              "C1_noisy": 0.09727109216314889,
+              "C1_ideal": 0.09983341664682815,
+              "effect_delta": 0.09727109216314889,
+              "sigma1": 0.9952579236707378,
+              "N_exact_binomial": 1368,
+              "N_gaussian": 1374,
+              "N_total_with_baseline": 67032,
+              "mc_empirical_power": 0.94925
+            },
+            {
+              "delta0": 0.2,
+              "C0": 0.0,
+              "C1_noisy": 0.1935702837269514,
+              "C1_ideal": 0.19866933079506122,
+              "effect_delta": 0.1935702837269514,
+              "sigma1": 0.9810864106988066,
+              "N_exact_binomial": 341,
+              "N_gaussian": 347,
+              "N_total_with_baseline": 16709,
+              "mc_empirical_power": 0.950375
+            }
+          ]
+        },
+        {
+          "phi_kick": 0.02,
+          "slope_at_0": 0.9741878485347576,
+          "contrast_loss": 0.025812151465242406,
+          "C0": 0.0,
+          "E_curve": [
+            0.0,
+            0.0486890993846979,
+            0.09725650137772682,
+            0.1455808127675184,
+            0.1935412479424127,
+            0.24101793079178416,
+            0.2878921943338887,
+            0.3340468773215147,
+            0.37936661708408737,
+            0.42373813787426484,
+            0.46705053399831303
+          ],
+          "per_delta0": [
+            {
+              "delta0": 0.05,
+              "C0": 0.0,
+              "C1_noisy": 0.0486890993846979,
+              "C1_ideal": 0.04997916927067833,
+              "effect_delta": 0.0486890993846979,
+              "sigma1": 0.9988139824817768,
+              "N_exact_binomial": 5476,
+              "N_gaussian": 5482,
+              "N_total_with_baseline": 268324,
+              "mc_empirical_power": 0.950125
+            },
+            {
+              "delta0": 0.1,
+              "C0": 0.0,
+              "C1_noisy": 0.09725650137772682,
+              "C1_ideal": 0.09983341664682815,
+              "effect_delta": 0.09725650137772682,
+              "sigma1": 0.9952593495867116,
+              "N_exact_binomial": 1368,
+              "N_gaussian": 1374,
+              "N_total_with_baseline": 67032,
+              "mc_empirical_power": 0.947975
+            },
+            {
+              "delta0": 0.2,
+              "C0": 0.0,
+              "C1_noisy": 0.1935412479424127,
+              "C1_ideal": 0.19866933079506122,
+              "effect_delta": 0.1935412479424127,
+              "sigma1": 0.9810921390699722,
+              "N_exact_binomial": 341,
+              "N_gaussian": 347,
+              "N_total_with_baseline": 16709,
+              "mc_empirical_power": 0.950425
+            }
+          ]
+        },
+        {
+          "phi_kick": 0.05,
+          "slope_at_0": 0.9731649939004327,
+          "contrast_loss": 0.02683500609956735,
+          "C0": 0.0,
+          "E_curve": [
+            0.0,
+            0.048637977960206746,
+            0.09715438630568218,
+            0.14542795928241956,
+            0.19333803809836791,
+            0.24076487250757458,
+            0.28758992012343354,
+            0.3336961427129195,
+            0.3789682987312145,
+            0.42329323136555597,
+            0.4665601513683374
+          ],
+          "per_delta0": [
+            {
+              "delta0": 0.05,
+              "C0": 0.0,
+              "C1_noisy": 0.048637977960206746,
+              "C1_ideal": 0.04997916927067833,
+              "effect_delta": 0.048637977960206746,
+              "sigma1": 0.9988164731821069,
+              "N_exact_binomial": 5488,
+              "N_gaussian": 5494,
+              "N_total_with_baseline": 268912,
+              "mc_empirical_power": 0.95135
+            },
+            {
+              "delta0": 0.1,
+              "C0": 0.0,
+              "C1_noisy": 0.09715438630568218,
+              "C1_ideal": 0.09983341664682815,
+              "effect_delta": 0.09715438630568218,
+              "sigma1": 0.995269322958146,
+              "N_exact_binomial": 1371,
+              "N_gaussian": 1377,
+              "N_total_with_baseline": 67179,
+              "mc_empirical_power": 0.95085
+            },
+            {
+              "delta0": 0.2,
+              "C0": 0.0,
+              "C1_noisy": 0.19333803809836791,
+              "C1_ideal": 0.19866933079506122,
+              "effect_delta": 0.19333803809836791,
+              "sigma1": 0.9811322046616725,
+              "N_exact_binomial": 342,
+              "N_gaussian": 348,
+              "N_total_with_baseline": 16758,
+              "mc_empirical_power": 0.945025
+            }
+          ]
+        },
+        {
+          "phi_kick": 0.1,
+          "slope_at_0": 0.969514863573273,
+          "contrast_loss": 0.03048513642672701,
+          "C0": 0.0,
+          "E_curve": [
+            0.0,
+            0.048455547477873145,
+            0.09678998132221306,
+            0.14488249062049519,
+            0.19261286914556827,
+            0.23986181580862087,
+            0.28651123284977065,
+            0.33244452102096167,
+            0.37754687102336004,
+            0.4217055504708094,
+            0.4648101856620868
+          ],
+          "per_delta0": [
+            {
+              "delta0": 0.05,
+              "C0": 0.0,
+              "C1_noisy": 0.048455547477873145,
+              "C1_ideal": 0.04997916927067833,
+              "effect_delta": 0.048455547477873145,
+              "sigma1": 0.9988253400463064,
+              "N_exact_binomial": 5529,
+              "N_gaussian": 5535,
+              "N_total_with_baseline": 270921,
+              "mc_empirical_power": 0.950175
+            },
+            {
+              "delta0": 0.1,
+              "C0": 0.0,
+              "C1_noisy": 0.09678998132221306,
+              "C1_ideal": 0.09983341664682815,
+              "effect_delta": 0.09678998132221306,
+              "sigma1": 0.9953048274351158,
+              "N_exact_binomial": 1382,
+              "N_gaussian": 1388,
+              "N_total_with_baseline": 67718,
+              "mc_empirical_power": 0.94735
+            },
+            {
+              "delta0": 0.2,
+              "C0": 0.0,
+              "C1_noisy": 0.19261286914556827,
+              "C1_ideal": 0.19866933079506122,
+              "effect_delta": 0.19261286914556827,
+              "sigma1": 0.9812748252347617,
+              "N_exact_binomial": 345,
+              "N_gaussian": 351,
+              "N_total_with_baseline": 16905,
+              "mc_empirical_power": 0.95115
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "headlines": [
+    "Under Quantinuum H2 (trapped ion, QCCD) parameters [Moses PRX 13 041052; DeCross PRX 15 021052], N = 64,925 total shots certify the planted dark direction delta_0 = 0.1 at 95% power / alpha = 0.05 (correlator 1,325 + baseline 48x).",
+    "Under IBM Heron r2 (transmon, heavy-hex) parameters [ibm_marrakesh arXiv:2605.24252; AbuGhanem J Supercomput 81 687] with ZZ phase-kick phi=0.0 rad, N = 67,032 total shots certify the planted dark direction delta_0 = 0.1 at 95% power / alpha = 0.05 (correlator 1,368 + baseline 48x).",
+    "Under IBM Heron r2 (transmon, heavy-hex) parameters [ibm_marrakesh arXiv:2605.24252; AbuGhanem J Supercomput 81 687] with ZZ phase-kick phi=0.1 rad, N = 67,718 total shots certify the planted dark direction delta_0 = 0.1 at 95% power / alpha = 0.05 (correlator 1,382 + baseline 48x)."
+  ],
+  "comparison": {
+    "ion_wins_all_across_sweep": true,
+    "narrative": [
+      "delta0=0.05: ion N_total=259,847 (phi-independent); IBM N_total ranges 268,226 (phi=0) .. 270,921 (phi=0.1); ion favored across the whole sweep: True.",
+      "delta0=0.1: ion N_total=64,925 (phi-independent); IBM N_total ranges 67,032 (phi=0) .. 67,718 (phi=0.1); ion favored across the whole sweep: True.",
+      "delta0=0.2: ion N_total=16,219 (phi-independent); IBM N_total ranges 16,709 (phi=0) .. 16,905 (phi=0.1); ion favored across the whole sweep: True.",
+      "The phi_kick sweep does NOT flip the ion-vs-IBM ordering: ion needs fewer certification shots at every swept phi_kick and every delta0.",
+      "phi_kick only degrades IBM (monotone slope drop / N_total rise); the ion model is phi_kick-independent by construction (no ZZ-kick term). The ion advantage widens as phi_kick grows."
+    ]
+  }
+}

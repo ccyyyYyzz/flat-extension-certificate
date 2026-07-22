@@ -1,0 +1,3304 @@
+{
+  "metadata": {
+    "armed": false,
+    "exec_source": "AerSimulator.from_backend(ibm_marrakesh)",
+    "date": "2026-07-21",
+    "target_backend": "ibm_marrakesh",
+    "calibration_backend": "ibm_marrakesh",
+    "master_seed": 20260723,
+    "n_inst": 8,
+    "n_dark": 5,
+    "n_null": 3,
+    "qiskit_version": "2.5.0",
+    "aer_version": "0.17.2",
+    "ibm_runtime_version": "0.48.0",
+    "sealed_key_sha256": "eca687ff1bbd313ec6c4b187af5c9d2d76bd97aad5b7f5ff05fbdc3d96ca52b3",
+    "unblind_verified": true,
+    "plan_sha256": "422e1ec76949be738016397a8420ee7e234ee77af4b327600777eff424b84c8d",
+    "estimator_config_sha256": "76296041f509bda06a9d0e7433ee6312f1ba769bd70e39bbfb1956eada7e8543",
+    "resource_ledger": {
+      "target_backend": "ibm_marrakesh",
+      "job_count": 8,
+      "total_pubs": 378,
+      "total_shots": 331776,
+      "by_arm": {
+        "certificate": {
+          "instances": 8,
+          "settings": 9,
+          "shots_per_setting": 2048,
+          "pubs": 72,
+          "shots": 147456
+        },
+        "marginal_qpt": {
+          "instances": 8,
+          "settings": 36,
+          "shots_per_setting": 512,
+          "pubs": 288,
+          "shots": 147456
+        },
+        "heldout_depth3": {
+          "instances": 2,
+          "settings": 9,
+          "shots_per_setting": 2048,
+          "pubs": 18,
+          "shots": 36864
+        }
+      },
+      "structured_lowmem": {
+        "extra_shots": 0,
+        "note": "analysis-only on certificate counts"
+      },
+      "full_ptt": {
+        "extra_shots": 0,
+        "note": "simulator-only; excluded"
+      },
+      "qpu_seconds_estimate": {
+        "low_s": 24.5888,
+        "high_s": 73.7664,
+        "budget_s": 420,
+        "under_budget": true,
+        "assumptions": {
+          "per_shot_overhead_s": [
+            5e-05,
+            0.00015
+          ],
+          "per_job_overhead_s": [
+            1.0,
+            3.0
+          ],
+          "model": "qpu_s = total_shots * per_shot + job_count * per_job",
+          "note": "excludes queue wait; SamplerV2 job-mode active QPU time."
+        }
+      }
+    },
+    "runtime_seconds": 105.5
+  },
+  "run_plan": {
+    "protocol": "c7_blind_benchmark_hardware",
+    "target_backend": "ibm_marrakesh",
+    "master_seed": 20260723,
+    "n_inst": 8,
+    "delta_range": [
+      0.2,
+      0.4
+    ],
+    "n_slots": 2,
+    "alpha_exp": 0.01,
+    "cert_shots": 2048,
+    "arms": [
+      {
+        "name": "certificate",
+        "builder": "depth2_correlators",
+        "n_settings": 9,
+        "shots": 2048,
+        "instance_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "readout": "pair"
+      },
+      {
+        "name": "marginal_qpt",
+        "builder": "atomic_testers",
+        "n_settings": 36,
+        "shots": 512,
+        "instance_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "readout": "single"
+      },
+      {
+        "name": "heldout_depth3",
+        "builder": "heldout_depth3",
+        "n_settings": 9,
+        "shots": 2048,
+        "instance_ids": [
+          0,
+          1
+        ],
+        "readout": "pair"
+      }
+    ],
+    "jobs": [
+      {
+        "instance_id": 0,
+        "n_pubs": 54,
+        "shuffle_seed": 1229389052,
+        "pub_order": [
+          45,
+          24,
+          4,
+          41,
+          49,
+          31,
+          2,
+          52,
+          8,
+          30,
+          44,
+          38,
+          19,
+          53,
+          1,
+          27,
+          9,
+          47,
+          33,
+          11,
+          21,
+          51,
+          22,
+          29,
+          35,
+          12,
+          32,
+          34,
+          36,
+          26,
+          17,
+          40,
+          23,
+          20,
+          7,
+          39,
+          10,
+          50,
+          43,
+          28,
+          13,
+          18,
+          46,
+          16,
+          5,
+          0,
+          37,
+          15,
+          25,
+          14,
+          3,
+          42,
+          6,
+          48
+        ]
+      },
+      {
+        "instance_id": 1,
+        "n_pubs": 54,
+        "shuffle_seed": 3183456601,
+        "pub_order": [
+          48,
+          50,
+          40,
+          16,
+          33,
+          3,
+          11,
+          27,
+          51,
+          36,
+          24,
+          35,
+          20,
+          29,
+          34,
+          0,
+          12,
+          1,
+          19,
+          38,
+          5,
+          44,
+          18,
+          46,
+          8,
+          10,
+          28,
+          41,
+          45,
+          9,
+          21,
+          17,
+          49,
+          39,
+          47,
+          32,
+          52,
+          26,
+          42,
+          2,
+          25,
+          30,
+          53,
+          23,
+          14,
+          43,
+          37,
+          31,
+          13,
+          6,
+          7,
+          4,
+          22,
+          15
+        ]
+      },
+      {
+        "instance_id": 2,
+        "n_pubs": 45,
+        "shuffle_seed": 2082751670,
+        "pub_order": [
+          9,
+          41,
+          33,
+          7,
+          35,
+          22,
+          24,
+          16,
+          42,
+          34,
+          17,
+          23,
+          11,
+          2,
+          40,
+          0,
+          25,
+          37,
+          43,
+          10,
+          28,
+          27,
+          29,
+          36,
+          39,
+          4,
+          30,
+          6,
+          20,
+          3,
+          1,
+          19,
+          15,
+          12,
+          13,
+          44,
+          18,
+          8,
+          5,
+          21,
+          14,
+          32,
+          38,
+          26,
+          31
+        ]
+      },
+      {
+        "instance_id": 3,
+        "n_pubs": 45,
+        "shuffle_seed": 1235991905,
+        "pub_order": [
+          32,
+          38,
+          10,
+          27,
+          19,
+          26,
+          2,
+          44,
+          24,
+          6,
+          7,
+          25,
+          23,
+          30,
+          15,
+          36,
+          13,
+          21,
+          17,
+          5,
+          14,
+          31,
+          0,
+          16,
+          42,
+          33,
+          3,
+          1,
+          41,
+          40,
+          35,
+          18,
+          28,
+          37,
+          4,
+          11,
+          8,
+          43,
+          22,
+          29,
+          34,
+          12,
+          9,
+          20,
+          39
+        ]
+      },
+      {
+        "instance_id": 4,
+        "n_pubs": 45,
+        "shuffle_seed": 2926241974,
+        "pub_order": [
+          10,
+          42,
+          25,
+          4,
+          35,
+          22,
+          31,
+          17,
+          34,
+          39,
+          15,
+          43,
+          41,
+          44,
+          33,
+          5,
+          9,
+          40,
+          20,
+          3,
+          11,
+          32,
+          18,
+          38,
+          19,
+          14,
+          1,
+          16,
+          27,
+          24,
+          0,
+          12,
+          21,
+          13,
+          26,
+          29,
+          2,
+          7,
+          8,
+          37,
+          23,
+          6,
+          28,
+          30,
+          36
+        ]
+      },
+      {
+        "instance_id": 5,
+        "n_pubs": 45,
+        "shuffle_seed": 1200394067,
+        "pub_order": [
+          32,
+          26,
+          3,
+          8,
+          25,
+          10,
+          44,
+          35,
+          13,
+          40,
+          33,
+          18,
+          5,
+          38,
+          31,
+          2,
+          22,
+          14,
+          9,
+          37,
+          16,
+          23,
+          11,
+          42,
+          7,
+          29,
+          41,
+          0,
+          4,
+          36,
+          30,
+          34,
+          17,
+          21,
+          24,
+          43,
+          20,
+          39,
+          19,
+          6,
+          1,
+          12,
+          28,
+          27,
+          15
+        ]
+      },
+      {
+        "instance_id": 6,
+        "n_pubs": 45,
+        "shuffle_seed": 4139405357,
+        "pub_order": [
+          15,
+          37,
+          39,
+          17,
+          14,
+          16,
+          13,
+          0,
+          5,
+          25,
+          42,
+          31,
+          11,
+          32,
+          38,
+          28,
+          22,
+          3,
+          26,
+          36,
+          41,
+          10,
+          18,
+          8,
+          35,
+          4,
+          1,
+          27,
+          44,
+          19,
+          9,
+          6,
+          24,
+          40,
+          30,
+          33,
+          2,
+          7,
+          43,
+          12,
+          34,
+          20,
+          23,
+          29,
+          21
+        ]
+      },
+      {
+        "instance_id": 7,
+        "n_pubs": 45,
+        "shuffle_seed": 422218890,
+        "pub_order": [
+          12,
+          42,
+          20,
+          34,
+          30,
+          11,
+          39,
+          37,
+          17,
+          31,
+          40,
+          19,
+          8,
+          4,
+          21,
+          25,
+          38,
+          26,
+          2,
+          29,
+          18,
+          36,
+          35,
+          24,
+          16,
+          44,
+          5,
+          14,
+          23,
+          1,
+          6,
+          15,
+          22,
+          3,
+          9,
+          33,
+          41,
+          27,
+          32,
+          28,
+          0,
+          13,
+          10,
+          7,
+          43
+        ]
+      }
+    ],
+    "totals": {
+      "total_shots": 331776,
+      "total_pubs": 378,
+      "job_count": 8,
+      "by_arm": {
+        "certificate": {
+          "instances": 8,
+          "settings": 9,
+          "shots_per_setting": 2048,
+          "pubs": 72,
+          "shots": 147456
+        },
+        "marginal_qpt": {
+          "instances": 8,
+          "settings": 36,
+          "shots_per_setting": 512,
+          "pubs": 288,
+          "shots": 147456
+        },
+        "heldout_depth3": {
+          "instances": 2,
+          "settings": 9,
+          "shots_per_setting": 2048,
+          "pubs": 18,
+          "shots": 36864
+        }
+      }
+    },
+    "qpu_seconds_estimate": {
+      "low_s": 24.5888,
+      "high_s": 73.7664,
+      "budget_s": 420,
+      "under_budget": true,
+      "assumptions": {
+        "per_shot_overhead_s": [
+          5e-05,
+          0.00015
+        ],
+        "per_job_overhead_s": [
+          1.0,
+          3.0
+        ],
+        "model": "qpu_s = total_shots * per_shot + job_count * per_job",
+        "note": "excludes queue wait; SamplerV2 job-mode active QPU time."
+      }
+    },
+    "marginal_ci": {
+      "marginal_shots": 512,
+      "se_null": 0.04419417382415922,
+      "ci_halfwidth_95": 0.08661898902185487,
+      "ci_halfwidth_99": 0.1138366479824031
+    },
+    "structured_comparator": "analysis-only on certificate counts",
+    "full_ptt": "simulator-only; excluded from the hardware plan",
+    "estimator_config_sha256": "76296041f509bda06a9d0e7433ee6312f1ba769bd70e39bbfb1956eada7e8543",
+    "sealed_key_sha256": "eca687ff1bbd313ec6c4b187af5c9d2d76bd97aad5b7f5ff05fbdc3d96ca52b3"
+  },
+  "public_manifest": {
+    "protocol": "c7_blind_benchmark",
+    "master_seed": 20260723,
+    "n_inst": 8,
+    "n_slots": 2,
+    "delta_range": [
+      0.2,
+      0.4
+    ],
+    "dark_prob": 0.5,
+    "sealed_key_sha256": "eca687ff1bbd313ec6c4b187af5c9d2d76bd97aad5b7f5ff05fbdc3d96ca52b3",
+    "instances": [
+      {
+        "instance_id": 0,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 1,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 2,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 3,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 4,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 5,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 6,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      },
+      {
+        "instance_id": 7,
+        "n_slots": 2,
+        "families": [
+          "atomic",
+          "depth2",
+          "heldout_depth3"
+        ]
+      }
+    ],
+    "target_backend": "ibm_marrakesh",
+    "plan_sha256": "422e1ec76949be738016397a8420ee7e234ee77af4b327600777eff424b84c8d",
+    "armed": false
+  },
+  "answer_key": [
+    {
+      "instance_id": 0,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 1,
+      "n_slots": 2,
+      "dark": true,
+      "axis": 4.048306989092931,
+      "delta": 0.30851503897725197,
+      "slot": "inter"
+    },
+    {
+      "instance_id": 2,
+      "n_slots": 2,
+      "dark": true,
+      "axis": 0.9946728020664951,
+      "delta": 0.3232184566724856,
+      "slot": "inter"
+    },
+    {
+      "instance_id": 3,
+      "n_slots": 2,
+      "dark": true,
+      "axis": 2.6950215646752396,
+      "delta": 0.3328034681366832,
+      "slot": "inter"
+    },
+    {
+      "instance_id": 4,
+      "n_slots": 2,
+      "dark": true,
+      "axis": 3.665605479003973,
+      "delta": 0.33070274734689015,
+      "slot": "inter"
+    },
+    {
+      "instance_id": 5,
+      "n_slots": 2,
+      "dark": true,
+      "axis": 1.5717947292914396,
+      "delta": 0.24860293793326682,
+      "slot": "inter"
+    },
+    {
+      "instance_id": 6,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    },
+    {
+      "instance_id": 7,
+      "n_slots": 2,
+      "dark": false,
+      "axis": 0.0,
+      "delta": 0.0,
+      "slot": null
+    }
+  ],
+  "scores": {
+    "certificate": {
+      "n_dark": 5,
+      "n_null": 3,
+      "true_positives": 5,
+      "false_positives": 0,
+      "power": 1.0,
+      "fp_rate": 0.0
+    },
+    "structured_lowmem": {
+      "n_dark": 5,
+      "n_null": 3,
+      "true_positives": 5,
+      "false_positives": 0,
+      "power": 1.0,
+      "fp_rate": 0.0
+    },
+    "marginal_qpt": {
+      "n_dark": 5,
+      "n_null": 3,
+      "true_positives": 0,
+      "false_positives": 0,
+      "power": 0.0,
+      "fp_rate": 0.0
+    },
+    "heldout_depth3": {
+      "n_dark": 1,
+      "n_null": 1,
+      "true_positives": 1,
+      "false_positives": 0,
+      "power": 1.0,
+      "fp_rate": 0.0
+    }
+  },
+  "verdicts": {
+    "certificate": [
+      {
+        "detected": false,
+        "max_abs_z": 0.9724962916629823,
+        "argmax_pair": "YX",
+        "z_gate": 3.559932645771468,
+        "method": "certificate"
+      },
+      {
+        "detected": true,
+        "max_abs_z": 10.43118848037081,
+        "argmax_pair": "ZX",
+        "z_gate": 3.559932645771468,
+        "method": "certificate"
+      },
+      {
+        "detected": true,
+        "max_abs_z": 13.513909945980561,
+        "argmax_pair": "ZX",
+        "z_gate": 3.559932645771468,
+        "method": "certificate"
+      },
+      {
+        "detected": true,
+        "max_abs_z": 13.614472850078418,
+        "argmax_pair": "YX",
+        "z_gate": 3.559932645771468,
+        "method": "certificate"
+      },
+      {
+        "detected": true,
+        "max_abs_z": 14.425802012488084,
+        "argmax_pair": "YX",
+        "z_gate": 3.559932645771468,
+        "method": "certificate"
+      },
+      {
+        "detected": true,
+        "max_abs_z": 13.013811561116814,
+        "argmax_pair": "ZX",
+        "z_gate": 3.559932645771468,
+        "method": "certificate"
+      },
+      {
+        "detected": false,
+        "max_abs_z": 1.3263945637130168,
+        "argmax_pair": "ZX",
+        "z_gate": 3.559932645771468,
+        "method": "certificate"
+      },
+      {
+        "detected": false,
+        "max_abs_z": 1.2378997304573918,
+        "argmax_pair": "ZX",
+        "z_gate": 3.559932645771468,
+        "method": "certificate"
+      }
+    ],
+    "structured_lowmem": [
+      {
+        "method": "structured_lowmem",
+        "detected": false,
+        "max_abs_z": 0.9724962916629823,
+        "argmax": "YX_component",
+        "gate": 3.4205266973186355,
+        "delta_hat": 0.021836601342771385
+      },
+      {
+        "method": "structured_lowmem",
+        "detected": true,
+        "max_abs_z": 10.43118848037081,
+        "argmax": "ZX_component",
+        "gate": 3.4205266973186355,
+        "delta_hat": 0.30022904871023576
+      },
+      {
+        "method": "structured_lowmem",
+        "detected": true,
+        "max_abs_z": 13.513909945980561,
+        "argmax": "ZX_component",
+        "gate": 3.4205266973186355,
+        "delta_hat": 0.3250838538345542
+      },
+      {
+        "method": "structured_lowmem",
+        "detected": true,
+        "max_abs_z": 13.614472850078418,
+        "argmax": "YX_component",
+        "gate": 3.4205266973186355,
+        "delta_hat": 0.31722652401951495
+      },
+      {
+        "method": "structured_lowmem",
+        "detected": true,
+        "max_abs_z": 14.425802012488084,
+        "argmax": "YX_component",
+        "gate": 3.4205266973186355,
+        "delta_hat": 0.3342783565433459
+      },
+      {
+        "method": "structured_lowmem",
+        "detected": true,
+        "max_abs_z": 13.013811561116814,
+        "argmax": "ZX_component",
+        "gate": 3.4205266973186355,
+        "delta_hat": 0.27670515443821386
+      },
+      {
+        "method": "structured_lowmem",
+        "detected": false,
+        "max_abs_z": 1.3263945637130168,
+        "argmax": "ZX_component",
+        "gate": 3.4205266973186355,
+        "delta_hat": 0.03192926313334339
+      },
+      {
+        "method": "structured_lowmem",
+        "detected": false,
+        "max_abs_z": 1.2378997304573918,
+        "argmax": "ZX_component",
+        "gate": 3.4205266973186355,
+        "delta_hat": 0.03014716609459596
+      }
+    ],
+    "marginal_qpt": [
+      {
+        "method": "marginal_qpt",
+        "detected": false,
+        "max_abs_z": 1.9517641411350586,
+        "argmax": "s1_|-i>_Z",
+        "gate": 4.112955916844742,
+        "offnull_family_size": 32,
+        "max_abs_offnull_expectation": 0.0859375,
+        "note": "atomic marginals are dark-invariant (Theorem 1)"
+      },
+      {
+        "method": "marginal_qpt",
+        "detected": false,
+        "max_abs_z": 2.3100418947174925,
+        "argmax": "s2_|+i>_Y",
+        "gate": 4.112955916844742,
+        "offnull_family_size": 32,
+        "max_abs_offnull_expectation": 0.1015625,
+        "note": "atomic marginals are dark-invariant (Theorem 1)"
+      },
+      {
+        "method": "marginal_qpt",
+        "detected": false,
+        "max_abs_z": 1.8624321481368666,
+        "argmax": "s1_|+i>_X",
+        "gate": 4.112955916844742,
+        "offnull_family_size": 32,
+        "max_abs_offnull_expectation": 0.08203125,
+        "note": "atomic marginals are dark-invariant (Theorem 1)"
+      },
+      {
+        "method": "marginal_qpt",
+        "detected": false,
+        "max_abs_z": 1.4169838168641524,
+        "argmax": "s2_|->_Z",
+        "gate": 4.112955916844742,
+        "offnull_family_size": 32,
+        "max_abs_offnull_expectation": 0.0625,
+        "note": "atomic marginals are dark-invariant (Theorem 1)"
+      },
+      {
+        "method": "marginal_qpt",
+        "detected": false,
+        "max_abs_z": 1.5059259874006294,
+        "argmax": "s1_|0>_Y",
+        "gate": 4.112955916844742,
+        "offnull_family_size": 32,
+        "max_abs_offnull_expectation": 0.06640625,
+        "note": "atomic marginals are dark-invariant (Theorem 1)"
+      },
+      {
+        "method": "marginal_qpt",
+        "detected": false,
+        "max_abs_z": 2.220321371757686,
+        "argmax": "s1_|+i>_Z",
+        "gate": 4.112955916844742,
+        "offnull_family_size": 32,
+        "max_abs_offnull_expectation": 0.09765625,
+        "note": "atomic marginals are dark-invariant (Theorem 1)"
+      },
+      {
+        "method": "marginal_qpt",
+        "detected": false,
+        "max_abs_z": 2.220321371757686,
+        "argmax": "s1_|+i>_Z",
+        "gate": 4.112955916844742,
+        "offnull_family_size": 32,
+        "max_abs_offnull_expectation": 0.09765625,
+        "note": "atomic marginals are dark-invariant (Theorem 1)"
+      },
+      {
+        "method": "marginal_qpt",
+        "detected": false,
+        "max_abs_z": 2.3998703808718256,
+        "argmax": "s1_|0>_X",
+        "gate": 4.112955916844742,
+        "offnull_family_size": 32,
+        "max_abs_offnull_expectation": 0.10546875,
+        "note": "atomic marginals are dark-invariant (Theorem 1)"
+      }
+    ],
+    "heldout_depth3": [
+      {
+        "method": "heldout_depth3",
+        "detected": false,
+        "max_abs_z": 1.2378997304573918,
+        "argmax": "YX",
+        "gate": 3.7809198083328064
+      },
+      {
+        "method": "heldout_depth3",
+        "detected": true,
+        "max_abs_z": 10.335729264859811,
+        "argmax": "ZX",
+        "gate": 3.7809198083328064
+      }
+    ]
+  },
+  "job_records": [
+    {
+      "instance_id": 0,
+      "job_id": "4df03378-6c15-457a-8c61-5e11cd8a25a5",
+      "armed": false,
+      "n_pubs": 54,
+      "shuffle_seed": 1229389052,
+      "pub_order": [
+        45,
+        24,
+        4,
+        41,
+        49,
+        31,
+        2,
+        52,
+        8,
+        30,
+        44,
+        38,
+        19,
+        53,
+        1,
+        27,
+        9,
+        47,
+        33,
+        11,
+        21,
+        51,
+        22,
+        29,
+        35,
+        12,
+        32,
+        34,
+        36,
+        26,
+        17,
+        40,
+        23,
+        20,
+        7,
+        39,
+        10,
+        50,
+        43,
+        28,
+        13,
+        18,
+        46,
+        16,
+        5,
+        0,
+        37,
+        15,
+        25,
+        14,
+        3,
+        42,
+        6,
+        48
+      ],
+      "submit_ts_utc": "2026-07-21T14:05:35.694985+00:00",
+      "result_ts_utc": "2026-07-21T14:05:46.111545+00:00",
+      "usage_qpu_s": 0
+    },
+    {
+      "instance_id": 1,
+      "job_id": "ce2fbb31-22e7-461d-8738-9c016f51be7b",
+      "armed": false,
+      "n_pubs": 54,
+      "shuffle_seed": 3183456601,
+      "pub_order": [
+        48,
+        50,
+        40,
+        16,
+        33,
+        3,
+        11,
+        27,
+        51,
+        36,
+        24,
+        35,
+        20,
+        29,
+        34,
+        0,
+        12,
+        1,
+        19,
+        38,
+        5,
+        44,
+        18,
+        46,
+        8,
+        10,
+        28,
+        41,
+        45,
+        9,
+        21,
+        17,
+        49,
+        39,
+        47,
+        32,
+        52,
+        26,
+        42,
+        2,
+        25,
+        30,
+        53,
+        23,
+        14,
+        43,
+        37,
+        31,
+        13,
+        6,
+        7,
+        4,
+        22,
+        15
+      ],
+      "submit_ts_utc": "2026-07-21T14:05:46.360929+00:00",
+      "result_ts_utc": "2026-07-21T14:05:56.771649+00:00",
+      "usage_qpu_s": 0
+    },
+    {
+      "instance_id": 2,
+      "job_id": "0456595d-cd65-4707-bcff-dbb32a1a7212",
+      "armed": false,
+      "n_pubs": 45,
+      "shuffle_seed": 2082751670,
+      "pub_order": [
+        9,
+        41,
+        33,
+        7,
+        35,
+        22,
+        24,
+        16,
+        42,
+        34,
+        17,
+        23,
+        11,
+        2,
+        40,
+        0,
+        25,
+        37,
+        43,
+        10,
+        28,
+        27,
+        29,
+        36,
+        39,
+        4,
+        30,
+        6,
+        20,
+        3,
+        1,
+        19,
+        15,
+        12,
+        13,
+        44,
+        18,
+        8,
+        5,
+        21,
+        14,
+        32,
+        38,
+        26,
+        31
+      ],
+      "submit_ts_utc": "2026-07-21T14:05:57.002092+00:00",
+      "result_ts_utc": "2026-07-21T14:06:07.757428+00:00",
+      "usage_qpu_s": 0
+    },
+    {
+      "instance_id": 3,
+      "job_id": "36837ed9-8338-4aff-a3b7-eb76114a6bf0",
+      "armed": false,
+      "n_pubs": 45,
+      "shuffle_seed": 1235991905,
+      "pub_order": [
+        32,
+        38,
+        10,
+        27,
+        19,
+        26,
+        2,
+        44,
+        24,
+        6,
+        7,
+        25,
+        23,
+        30,
+        15,
+        36,
+        13,
+        21,
+        17,
+        5,
+        14,
+        31,
+        0,
+        16,
+        42,
+        33,
+        3,
+        1,
+        41,
+        40,
+        35,
+        18,
+        28,
+        37,
+        4,
+        11,
+        8,
+        43,
+        22,
+        29,
+        34,
+        12,
+        9,
+        20,
+        39
+      ],
+      "submit_ts_utc": "2026-07-21T14:06:07.943647+00:00",
+      "result_ts_utc": "2026-07-21T14:06:19.018746+00:00",
+      "usage_qpu_s": 0
+    },
+    {
+      "instance_id": 4,
+      "job_id": "446c28ce-77e6-40b3-8aaa-f3de0cb542d8",
+      "armed": false,
+      "n_pubs": 45,
+      "shuffle_seed": 2926241974,
+      "pub_order": [
+        10,
+        42,
+        25,
+        4,
+        35,
+        22,
+        31,
+        17,
+        34,
+        39,
+        15,
+        43,
+        41,
+        44,
+        33,
+        5,
+        9,
+        40,
+        20,
+        3,
+        11,
+        32,
+        18,
+        38,
+        19,
+        14,
+        1,
+        16,
+        27,
+        24,
+        0,
+        12,
+        21,
+        13,
+        26,
+        29,
+        2,
+        7,
+        8,
+        37,
+        23,
+        6,
+        28,
+        30,
+        36
+      ],
+      "submit_ts_utc": "2026-07-21T14:06:19.220561+00:00",
+      "result_ts_utc": "2026-07-21T14:06:30.008702+00:00",
+      "usage_qpu_s": 0
+    },
+    {
+      "instance_id": 5,
+      "job_id": "1b983f6c-1ad8-4c2a-8360-a6d0a260aef6",
+      "armed": false,
+      "n_pubs": 45,
+      "shuffle_seed": 1200394067,
+      "pub_order": [
+        32,
+        26,
+        3,
+        8,
+        25,
+        10,
+        44,
+        35,
+        13,
+        40,
+        33,
+        18,
+        5,
+        38,
+        31,
+        2,
+        22,
+        14,
+        9,
+        37,
+        16,
+        23,
+        11,
+        42,
+        7,
+        29,
+        41,
+        0,
+        4,
+        36,
+        30,
+        34,
+        17,
+        21,
+        24,
+        43,
+        20,
+        39,
+        19,
+        6,
+        1,
+        12,
+        28,
+        27,
+        15
+      ],
+      "submit_ts_utc": "2026-07-21T14:06:30.199949+00:00",
+      "result_ts_utc": "2026-07-21T14:06:41.183506+00:00",
+      "usage_qpu_s": 0
+    },
+    {
+      "instance_id": 6,
+      "job_id": "4e8190e7-6040-4f9e-a512-a21c600c2850",
+      "armed": false,
+      "n_pubs": 45,
+      "shuffle_seed": 4139405357,
+      "pub_order": [
+        15,
+        37,
+        39,
+        17,
+        14,
+        16,
+        13,
+        0,
+        5,
+        25,
+        42,
+        31,
+        11,
+        32,
+        38,
+        28,
+        22,
+        3,
+        26,
+        36,
+        41,
+        10,
+        18,
+        8,
+        35,
+        4,
+        1,
+        27,
+        44,
+        19,
+        9,
+        6,
+        24,
+        40,
+        30,
+        33,
+        2,
+        7,
+        43,
+        12,
+        34,
+        20,
+        23,
+        29,
+        21
+      ],
+      "submit_ts_utc": "2026-07-21T14:06:41.375180+00:00",
+      "result_ts_utc": "2026-07-21T14:06:53.034747+00:00",
+      "usage_qpu_s": 0
+    },
+    {
+      "instance_id": 7,
+      "job_id": "dde273ef-408d-41c1-9346-954cc86bb85a",
+      "armed": false,
+      "n_pubs": 45,
+      "shuffle_seed": 422218890,
+      "pub_order": [
+        12,
+        42,
+        20,
+        34,
+        30,
+        11,
+        39,
+        37,
+        17,
+        31,
+        40,
+        19,
+        8,
+        4,
+        21,
+        25,
+        38,
+        26,
+        2,
+        29,
+        18,
+        36,
+        35,
+        24,
+        16,
+        44,
+        5,
+        14,
+        23,
+        1,
+        6,
+        15,
+        22,
+        3,
+        9,
+        33,
+        41,
+        27,
+        32,
+        28,
+        0,
+        13,
+        10,
+        7,
+        43
+      ],
+      "submit_ts_utc": "2026-07-21T14:06:53.221970+00:00",
+      "result_ts_utc": "2026-07-21T14:07:03.775113+00:00",
+      "usage_qpu_s": 0
+    }
+  ],
+  "calibration_snapshot": {
+    "backend_name": "ibm_marrakesh",
+    "num_qubits": 156,
+    "dt": 4e-09,
+    "operation_names": [
+      "cz",
+      "delay",
+      "id",
+      "if_else",
+      "measure",
+      "reset",
+      "rz",
+      "sx",
+      "x"
+    ],
+    "qubit_properties": [
+      {
+        "qubit": 0,
+        "t1": 0.0001863530822707006,
+        "t2": 4.6836784797465265e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 1,
+        "t1": 0.00019771250684864092,
+        "t2": 0.00015676871867000345,
+        "frequency": null
+      },
+      {
+        "qubit": 2,
+        "t1": 0.0002795508896578044,
+        "t2": 0.000404655872047203,
+        "frequency": null
+      },
+      {
+        "qubit": 3,
+        "t1": 0.00010678695750391187,
+        "t2": 0.00010888297254880491,
+        "frequency": null
+      },
+      {
+        "qubit": 4,
+        "t1": 0.00011341466773559152,
+        "t2": 0.0001053598247410605,
+        "frequency": null
+      },
+      {
+        "qubit": 5,
+        "t1": 0.0002823895967493292,
+        "t2": 0.00018941557627690628,
+        "frequency": null
+      },
+      {
+        "qubit": 6,
+        "t1": 0.0003160481084567559,
+        "t2": 0.0002934400268175267,
+        "frequency": null
+      },
+      {
+        "qubit": 7,
+        "t1": 0.0001568927839101548,
+        "t2": 0.00011934889029610497,
+        "frequency": null
+      },
+      {
+        "qubit": 8,
+        "t1": 0.00019676599179247134,
+        "t2": 8.03959666261892e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 9,
+        "t1": 0.00011893285630216559,
+        "t2": 0.00013971225700899732,
+        "frequency": null
+      },
+      {
+        "qubit": 10,
+        "t1": 0.00023644479845607048,
+        "t2": 9.960859928495285e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 11,
+        "t1": 0.0002563677931624968,
+        "t2": 0.00017987150256783664,
+        "frequency": null
+      },
+      {
+        "qubit": 12,
+        "t1": 0.00020757394305446865,
+        "t2": 3.063455564928743e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 13,
+        "t1": 0.00020918677607557412,
+        "t2": 0.00017808248250894752,
+        "frequency": null
+      },
+      {
+        "qubit": 14,
+        "t1": 0.0001650379628822479,
+        "t2": 9.583617519972636e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 15,
+        "t1": 0.00026102944868665627,
+        "t2": 4.1081168732686286e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 16,
+        "t1": 8.625463180506762e-05,
+        "t2": 2.4317572097238226e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 17,
+        "t1": 0.0002554939928586585,
+        "t2": 1.015373528847911e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 18,
+        "t1": 6.731815073784616e-05,
+        "t2": 6.907353139907431e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 19,
+        "t1": 0.0001022952208580519,
+        "t2": 2.687861742471874e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 20,
+        "t1": 0.00017173637784139158,
+        "t2": 0.00019807108121543666,
+        "frequency": null
+      },
+      {
+        "qubit": 21,
+        "t1": 0.00021141763879979373,
+        "t2": 0.0001766512973214236,
+        "frequency": null
+      },
+      {
+        "qubit": 22,
+        "t1": 0.00014285702650590455,
+        "t2": 3.039621233037978e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 23,
+        "t1": 7.391387338720804e-05,
+        "t2": 5.673408552318965e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 24,
+        "t1": 9.522624156839082e-05,
+        "t2": 5.458257230941259e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 25,
+        "t1": 0.00014001708181923667,
+        "t2": 4.4455458766541324e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 26,
+        "t1": 6.989303195854377e-06,
+        "t2": 6.816919799374118e-06,
+        "frequency": null
+      },
+      {
+        "qubit": 27,
+        "t1": 0.0001854624900044681,
+        "t2": 0.00014040909424375557,
+        "frequency": null
+      },
+      {
+        "qubit": 28,
+        "t1": 0.0002298364869271822,
+        "t2": 6.364268579369481e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 29,
+        "t1": 4.12440000447884e-05,
+        "t2": 5.967975794965969e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 30,
+        "t1": 0.00019937320614659172,
+        "t2": 5.2661093132365734e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 31,
+        "t1": 0.0001568738941759402,
+        "t2": 6.814817084782059e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 32,
+        "t1": 0.00017450618461809306,
+        "t2": 4.2401858851234485e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 33,
+        "t1": 0.0001676952953545535,
+        "t2": 0.00014240766382700586,
+        "frequency": null
+      },
+      {
+        "qubit": 34,
+        "t1": 0.0001512834720690774,
+        "t2": 9.8502487253624e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 35,
+        "t1": 0.0003127829512202842,
+        "t2": 0.0003078069085919374,
+        "frequency": null
+      },
+      {
+        "qubit": 36,
+        "t1": 0.00010848936097496247,
+        "t2": 3.303626704939942e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 37,
+        "t1": 0.00014620527661295596,
+        "t2": 1.665566667988977e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 38,
+        "t1": 0.00011063575603538977,
+        "t2": 8.566005322023711e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 39,
+        "t1": 0.0001473482219078835,
+        "t2": 0.00010730340411333627,
+        "frequency": null
+      },
+      {
+        "qubit": 40,
+        "t1": 0.0001644784353769306,
+        "t2": 8.112053078843601e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 41,
+        "t1": 0.00017389854156603412,
+        "t2": 4.125817938288728e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 42,
+        "t1": 0.00027399222692203436,
+        "t2": 8.808352637506382e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 43,
+        "t1": 0.00017442084274697043,
+        "t2": 6.614777961668079e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 44,
+        "t1": 0.0001716119131741709,
+        "t2": 0.00017085553266594402,
+        "frequency": null
+      },
+      {
+        "qubit": 45,
+        "t1": 7.125966816394209e-05,
+        "t2": 8.423944134591411e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 46,
+        "t1": 7.162898743307358e-05,
+        "t2": 3.669392786051037e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 47,
+        "t1": 0.00015972275766982478,
+        "t2": 0.00013701719404585585,
+        "frequency": null
+      },
+      {
+        "qubit": 48,
+        "t1": 0.00022245198114201884,
+        "t2": 0.00016518818498590607,
+        "frequency": null
+      },
+      {
+        "qubit": 49,
+        "t1": 0.0002652313707174957,
+        "t2": 0.00019082764116772663,
+        "frequency": null
+      },
+      {
+        "qubit": 50,
+        "t1": 0.00011420093991396256,
+        "t2": 8.322855473860135e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 51,
+        "t1": 0.00013802833757640317,
+        "t2": 0.00018002008878752445,
+        "frequency": null
+      },
+      {
+        "qubit": 52,
+        "t1": 5.997861491835775e-05,
+        "t2": 2.037900014141727e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 53,
+        "t1": 0.0002520524349635823,
+        "t2": 0.00020090578267014392,
+        "frequency": null
+      },
+      {
+        "qubit": 54,
+        "t1": 0.00018218059080626084,
+        "t2": 0.0001662322759748144,
+        "frequency": null
+      },
+      {
+        "qubit": 55,
+        "t1": 0.00021337260982138857,
+        "t2": 7.349043212509202e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 56,
+        "t1": 0.00014060549544185865,
+        "t2": 5.957501244656585e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 57,
+        "t1": 0.000204739154591869,
+        "t2": 7.823606741298951e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 58,
+        "t1": 0.00021513902295241014,
+        "t2": 0.0001563317184697573,
+        "frequency": null
+      },
+      {
+        "qubit": 59,
+        "t1": 7.02008405479936e-05,
+        "t2": 8.780678936714585e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 60,
+        "t1": 0.0001645294101800227,
+        "t2": 8.57185897037205e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 61,
+        "t1": 0.0002218585837797615,
+        "t2": 0.00020499262936110637,
+        "frequency": null
+      },
+      {
+        "qubit": 62,
+        "t1": 0.00010524891646590548,
+        "t2": 5.784019187537195e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 63,
+        "t1": 0.00013019836183686108,
+        "t2": 0.00012078836501497993,
+        "frequency": null
+      },
+      {
+        "qubit": 64,
+        "t1": 0.0002033666242654302,
+        "t2": 2.5933641498432097e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 65,
+        "t1": 0.0001950136885569588,
+        "t2": 5.851706780029938e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 66,
+        "t1": 9.913971750611462e-05,
+        "t2": 8.58263061967695e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 67,
+        "t1": 0.0003390205847452318,
+        "t2": 8.67246649750762e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 68,
+        "t1": 0.00013207141521904916,
+        "t2": 2.1059617171729873e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 69,
+        "t1": 0.00012329185908853047,
+        "t2": 6.866650303448037e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 70,
+        "t1": 0.00013033454704785958,
+        "t2": 2.4497830245896385e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 71,
+        "t1": 7.890094803511223e-05,
+        "t2": 7.36660517365326e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 72,
+        "t1": 0.0001216911484080227,
+        "t2": 2.5234408874245262e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 73,
+        "t1": 7.540596661600219e-05,
+        "t2": 7.026384303989656e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 74,
+        "t1": 0.00011658034607125431,
+        "t2": 1.7523696984176176e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 75,
+        "t1": 0.00019653013048398954,
+        "t2": 5.3314582332360736e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 76,
+        "t1": 0.0001252566864660514,
+        "t2": 7.397001564935671e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 77,
+        "t1": 0.00011943775587090469,
+        "t2": 3.916414335360223e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 78,
+        "t1": 0.00014048204986177466,
+        "t2": 0.00010638298999800478,
+        "frequency": null
+      },
+      {
+        "qubit": 79,
+        "t1": 0.00011338133904909066,
+        "t2": 3.605837405930327e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 80,
+        "t1": 0.00017928145016445022,
+        "t2": 4.178609884963377e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 81,
+        "t1": 7.446566273747974e-05,
+        "t2": 4.754760970872193e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 82,
+        "t1": 6.962026713740692e-06,
+        "t2": 6.440762177221646e-06,
+        "frequency": null
+      },
+      {
+        "qubit": 83,
+        "t1": 0.00011779541347625049,
+        "t2": 0.00014697351349700154,
+        "frequency": null
+      },
+      {
+        "qubit": 84,
+        "t1": 0.0001810507797046545,
+        "t2": 0.00016896637530801654,
+        "frequency": null
+      },
+      {
+        "qubit": 85,
+        "t1": 0.00013539294277581558,
+        "t2": 0.00010390134520527305,
+        "frequency": null
+      },
+      {
+        "qubit": 86,
+        "t1": 0.00011791727296348725,
+        "t2": 3.076223138285853e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 87,
+        "t1": 0.00017345568741474198,
+        "t2": 0.00016271065817115055,
+        "frequency": null
+      },
+      {
+        "qubit": 88,
+        "t1": 0.0001763276422989504,
+        "t2": 0.00017939805227213933,
+        "frequency": null
+      },
+      {
+        "qubit": 89,
+        "t1": 0.0001916100447933101,
+        "t2": 0.00017045870813544968,
+        "frequency": null
+      },
+      {
+        "qubit": 90,
+        "t1": 4.972769031856426e-05,
+        "t2": 4.6280159491176706e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 91,
+        "t1": 0.00011828751415621443,
+        "t2": 0.00017788704713647615,
+        "frequency": null
+      },
+      {
+        "qubit": 92,
+        "t1": 0.0002962984516407926,
+        "t2": 0.0002829474352250006,
+        "frequency": null
+      },
+      {
+        "qubit": 93,
+        "t1": 0.00020932382344244772,
+        "t2": 0.00013727158582629972,
+        "frequency": null
+      },
+      {
+        "qubit": 94,
+        "t1": 0.00011625033533170939,
+        "t2": 1.1025064724145011e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 95,
+        "t1": 0.0003044501324462459,
+        "t2": 0.00036196113275288366,
+        "frequency": null
+      },
+      {
+        "qubit": 96,
+        "t1": 0.00015060415282261595,
+        "t2": 3.298201236422348e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 97,
+        "t1": 0.00016431289101258222,
+        "t2": 3.748258731942218e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 98,
+        "t1": 0.00016732575561268192,
+        "t2": 7.350686721484687e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 99,
+        "t1": 0.0001339130100893248,
+        "t2": 3.273266572920319e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 100,
+        "t1": 9.684125426662073e-05,
+        "t2": 0.00010427748388249242,
+        "frequency": null
+      },
+      {
+        "qubit": 101,
+        "t1": 0.0001337356274879838,
+        "t2": 5.96515433499899e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 102,
+        "t1": 7.611616446759815e-05,
+        "t2": 2.1860796206289868e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 103,
+        "t1": 9.275657245848119e-05,
+        "t2": 3.1320106152153316e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 104,
+        "t1": 0.00011476186637133192,
+        "t2": 2.007384176427901e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 105,
+        "t1": 0.00013310801195437122,
+        "t2": 8.139659350673183e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 106,
+        "t1": 0.0002671141484001223,
+        "t2": 0.00017958711694465517,
+        "frequency": null
+      },
+      {
+        "qubit": 107,
+        "t1": 0.0004438305661207871,
+        "t2": 0.00024796423122907683,
+        "frequency": null
+      },
+      {
+        "qubit": 108,
+        "t1": 4.5838580610631856e-05,
+        "t2": 4.233798229352259e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 109,
+        "t1": 8.585359319848085e-05,
+        "t2": 5.167379675587398e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 110,
+        "t1": 0.00029975035068817825,
+        "t2": 0.0002820418537681565,
+        "frequency": null
+      },
+      {
+        "qubit": 111,
+        "t1": 0.0001666509763724747,
+        "t2": 9.866650822786524e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 112,
+        "t1": 0.0002490659837123423,
+        "t2": 0.00017132215179783736,
+        "frequency": null
+      },
+      {
+        "qubit": 113,
+        "t1": 0.00016271092368031745,
+        "t2": 8.948945599617846e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 114,
+        "t1": 0.00026596113999779406,
+        "t2": 0.0002513691396052829,
+        "frequency": null
+      },
+      {
+        "qubit": 115,
+        "t1": 0.0001813598101717306,
+        "t2": 7.464064763583506e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 116,
+        "t1": 6.839385340939782e-05,
+        "t2": 7.460572522386532e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 117,
+        "t1": 0.0001683342126480593,
+        "t2": 2.2081004848000484e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 118,
+        "t1": 0.00012685701811307432,
+        "t2": 2.2778944574820028e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 119,
+        "t1": 0.0001921459590727375,
+        "t2": 3.145403873412202e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 120,
+        "t1": 0.00019029085770213666,
+        "t2": 7.55288115930131e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 121,
+        "t1": 0.00014590129799964196,
+        "t2": 0.00019283001079227125,
+        "frequency": null
+      },
+      {
+        "qubit": 122,
+        "t1": 1.9320339845845867e-05,
+        "t2": 1.5678805691285672e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 123,
+        "t1": 0.00020651632612748942,
+        "t2": 9.861310197342177e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 124,
+        "t1": 0.00013034279383717832,
+        "t2": 5.555853008470353e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 125,
+        "t1": 0.0001738898348622781,
+        "t2": 5.828024271856841e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 126,
+        "t1": 5.95760754922843e-05,
+        "t2": 2.8298539356799378e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 127,
+        "t1": 5.503521089059757e-05,
+        "t2": 2.204751224892024e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 128,
+        "t1": 0.00019223704387157174,
+        "t2": 4.767285622571156e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 129,
+        "t1": 0.0002748795693310741,
+        "t2": 0.00011081288408412665,
+        "frequency": null
+      },
+      {
+        "qubit": 130,
+        "t1": 0.0003229729925580698,
+        "t2": 1.6288825214895343e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 131,
+        "t1": 8.98572976471822e-05,
+        "t2": 6.161275327568456e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 132,
+        "t1": 0.00024953025848120967,
+        "t2": 8.766214266760924e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 133,
+        "t1": 0.0001997479532247442,
+        "t2": 0.00016795972239067283,
+        "frequency": null
+      },
+      {
+        "qubit": 134,
+        "t1": 0.00032602547845631024,
+        "t2": 0.00011941993230970981,
+        "frequency": null
+      },
+      {
+        "qubit": 135,
+        "t1": 0.0003621008484627996,
+        "t2": 8.259622885424813e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 136,
+        "t1": 0.00023953914738420983,
+        "t2": 2.7538097891651815e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 137,
+        "t1": 0.00017688729710702862,
+        "t2": 0.0001078774166734176,
+        "frequency": null
+      },
+      {
+        "qubit": 138,
+        "t1": 9.107499207931439e-05,
+        "t2": 8.229018954831049e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 139,
+        "t1": 0.00014215155332027453,
+        "t2": 0.00017862904513615656,
+        "frequency": null
+      },
+      {
+        "qubit": 140,
+        "t1": 0.00019003848223562514,
+        "t2": 5.2325857064319185e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 141,
+        "t1": 0.00013641744441395757,
+        "t2": 0.00014621933188294978,
+        "frequency": null
+      },
+      {
+        "qubit": 142,
+        "t1": 9.879717677377873e-05,
+        "t2": 0.00010315347972664928,
+        "frequency": null
+      },
+      {
+        "qubit": 143,
+        "t1": 8.163913781516005e-05,
+        "t2": 3.190708146629325e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 144,
+        "t1": 0.0001046440312091155,
+        "t2": 2.2736674421328405e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 145,
+        "t1": 0.00014524803047522502,
+        "t2": 0.00015918480500449266,
+        "frequency": null
+      },
+      {
+        "qubit": 146,
+        "t1": 0.00016070802591289736,
+        "t2": 7.234590873861833e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 147,
+        "t1": 0.0002962974580381884,
+        "t2": 0.00010381197992999973,
+        "frequency": null
+      },
+      {
+        "qubit": 148,
+        "t1": 2.5860516197883537e-05,
+        "t2": 2.4764186623336436e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 149,
+        "t1": 0.00021192890435658087,
+        "t2": 8.543878088043828e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 150,
+        "t1": 0.0001677121415139334,
+        "t2": 7.492882955573073e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 151,
+        "t1": 0.000173957571100741,
+        "t2": 5.3997483640088276e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 152,
+        "t1": 0.0003266629582907406,
+        "t2": 0.000229980207977,
+        "frequency": null
+      },
+      {
+        "qubit": 153,
+        "t1": 0.00026718966595315106,
+        "t2": 0.00017369697025075201,
+        "frequency": null
+      },
+      {
+        "qubit": 154,
+        "t1": 0.0003036028709791475,
+        "t2": 2.175268818538314e-05,
+        "frequency": null
+      },
+      {
+        "qubit": 155,
+        "t1": 0.00034285870303760624,
+        "t2": 0.0001410595553345907,
+        "frequency": null
+      }
+    ],
+    "operation_error_stats": {
+      "cz": {
+        "n_calibrated": 352,
+        "median_error": 0.0029296146961888953,
+        "min_error": 0.001110027874729802,
+        "max_error": 1.0,
+        "median_duration_s": 6.8e-08
+      },
+      "id": {
+        "n_calibrated": 156,
+        "median_error": 0.00034151825727120826,
+        "min_error": 0.00010095935355024024,
+        "max_error": 1.0,
+        "median_duration_s": 3.6e-08
+      },
+      "measure": {
+        "n_calibrated": 156,
+        "median_error": 0.0096435546875,
+        "min_error": 0.001953125,
+        "max_error": 0.4959716796875,
+        "median_duration_s": 2.18e-06
+      },
+      "reset": {
+        "n_calibrated": 0,
+        "median_error": null,
+        "min_error": null,
+        "max_error": null,
+        "median_duration_s": 2.216e-06
+      },
+      "rz": {
+        "n_calibrated": 156,
+        "median_error": 0.0,
+        "min_error": 0.0,
+        "max_error": 0.0,
+        "median_duration_s": 0.0
+      },
+      "sx": {
+        "n_calibrated": 156,
+        "median_error": 0.00034151825727120826,
+        "min_error": 0.00010095935355024024,
+        "max_error": 1.0,
+        "median_duration_s": 3.6e-08
+      },
+      "x": {
+        "n_calibrated": 156,
+        "median_error": 0.00034151825727120826,
+        "min_error": 0.00010095935355024024,
+        "max_error": 1.0,
+        "median_duration_s": 3.6e-08
+      }
+    },
+    "readout_error": [
+      {
+        "qubit": 0,
+        "error": 0.0032958984375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 1,
+        "error": 0.0072021484375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 2,
+        "error": 0.003662109375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 3,
+        "error": 0.0048828125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 4,
+        "error": 0.0067138671875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 5,
+        "error": 0.001953125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 6,
+        "error": 0.0025634765625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 7,
+        "error": 0.0067138671875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 8,
+        "error": 0.0047607421875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 9,
+        "error": 0.008056640625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 10,
+        "error": 0.00390625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 11,
+        "error": 0.0145263671875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 12,
+        "error": 0.005615234375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 13,
+        "error": 0.0045166015625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 14,
+        "error": 0.0133056640625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 15,
+        "error": 0.0155029296875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 16,
+        "error": 0.00634765625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 17,
+        "error": 0.006103515625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 18,
+        "error": 0.01025390625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 19,
+        "error": 0.0086669921875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 20,
+        "error": 0.00537109375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 21,
+        "error": 0.0048828125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 22,
+        "error": 0.0069580078125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 23,
+        "error": 0.029541015625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 24,
+        "error": 0.01123046875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 25,
+        "error": 0.00830078125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 26,
+        "error": 0.0628662109375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 27,
+        "error": 0.01220703125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 28,
+        "error": 0.031494140625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 29,
+        "error": 0.0159912109375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 30,
+        "error": 0.005859375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 31,
+        "error": 0.0672607421875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 32,
+        "error": 0.01953125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 33,
+        "error": 0.0054931640625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 34,
+        "error": 0.0068359375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 35,
+        "error": 0.0091552734375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 36,
+        "error": 0.0137939453125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 37,
+        "error": 0.0760498046875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 38,
+        "error": 0.0098876953125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 39,
+        "error": 0.018310546875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 40,
+        "error": 0.0115966796875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 41,
+        "error": 0.0133056640625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 42,
+        "error": 0.0076904296875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 43,
+        "error": 0.012451171875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 44,
+        "error": 0.0068359375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 45,
+        "error": 0.011474609375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 46,
+        "error": 0.0732421875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 47,
+        "error": 0.0042724609375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 48,
+        "error": 0.044921875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 49,
+        "error": 0.010009765625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 50,
+        "error": 0.016357421875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 51,
+        "error": 0.0478515625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 52,
+        "error": 0.015380859375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 53,
+        "error": 0.0091552734375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 54,
+        "error": 0.004150390625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 55,
+        "error": 0.0078125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 56,
+        "error": 0.0089111328125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 57,
+        "error": 0.101318359375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 58,
+        "error": 0.0291748046875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 59,
+        "error": 0.0157470703125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 60,
+        "error": 0.009521484375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 61,
+        "error": 0.145751953125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 62,
+        "error": 0.04833984375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 63,
+        "error": 0.0322265625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 64,
+        "error": 0.0045166015625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 65,
+        "error": 0.0263671875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 66,
+        "error": 0.0325927734375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 67,
+        "error": 0.043701171875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 68,
+        "error": 0.0130615234375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 69,
+        "error": 0.0322265625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 70,
+        "error": 0.008544921875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 71,
+        "error": 0.00537109375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 72,
+        "error": 0.0150146484375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 73,
+        "error": 0.0091552734375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 74,
+        "error": 0.0137939453125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 75,
+        "error": 0.015869140625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 76,
+        "error": 0.0169677734375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 77,
+        "error": 0.0125732421875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 78,
+        "error": 0.0096435546875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 79,
+        "error": 0.0782470703125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 80,
+        "error": 0.006591796875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 81,
+        "error": 0.049560546875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 82,
+        "error": 0.4959716796875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 83,
+        "error": 0.0975341796875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 84,
+        "error": 0.01904296875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 85,
+        "error": 0.0152587890625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 86,
+        "error": 0.00390625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 87,
+        "error": 0.0054931640625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 88,
+        "error": 0.0242919921875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 89,
+        "error": 0.017333984375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 90,
+        "error": 0.026123046875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 91,
+        "error": 0.0174560546875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 92,
+        "error": 0.00439453125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 93,
+        "error": 0.004638671875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 94,
+        "error": 0.0050048828125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 95,
+        "error": 0.0057373046875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 96,
+        "error": 0.0223388671875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 97,
+        "error": 0.011474609375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 98,
+        "error": 0.0035400390625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 99,
+        "error": 0.0086669921875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 100,
+        "error": 0.0093994140625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 101,
+        "error": 0.0086669921875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 102,
+        "error": 0.0621337890625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 103,
+        "error": 0.0191650390625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 104,
+        "error": 0.0115966796875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 105,
+        "error": 0.005859375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 106,
+        "error": 0.015869140625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 107,
+        "error": 0.0179443359375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 108,
+        "error": 0.0198974609375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 109,
+        "error": 0.0045166015625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 110,
+        "error": 0.0115966796875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 111,
+        "error": 0.0152587890625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 112,
+        "error": 0.0029296875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 113,
+        "error": 0.3348388671875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 114,
+        "error": 0.0069580078125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 115,
+        "error": 0.0079345703125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 116,
+        "error": 0.0152587890625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 117,
+        "error": 0.0050048828125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 118,
+        "error": 0.005615234375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 119,
+        "error": 0.1043701171875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 120,
+        "error": 0.004150390625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 121,
+        "error": 0.054443359375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 122,
+        "error": 0.007568359375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 123,
+        "error": 0.0101318359375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 124,
+        "error": 0.01171875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 125,
+        "error": 0.0108642578125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 126,
+        "error": 0.0081787109375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 127,
+        "error": 0.0218505859375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 128,
+        "error": 0.0048828125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 129,
+        "error": 0.007080078125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 130,
+        "error": 0.495361328125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 131,
+        "error": 0.0059814453125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 132,
+        "error": 0.0064697265625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 133,
+        "error": 0.0091552734375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 134,
+        "error": 0.0035400390625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 135,
+        "error": 0.0220947265625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 136,
+        "error": 0.005126953125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 137,
+        "error": 0.07763671875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 138,
+        "error": 0.0078125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 139,
+        "error": 0.007568359375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 140,
+        "error": 0.009033203125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 141,
+        "error": 0.0048828125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 142,
+        "error": 0.0107421875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 143,
+        "error": 0.01513671875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 144,
+        "error": 0.0067138671875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 145,
+        "error": 0.009033203125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 146,
+        "error": 0.005859375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 147,
+        "error": 0.0025634765625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 148,
+        "error": 0.0030517578125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 149,
+        "error": 0.0096435546875,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 150,
+        "error": 0.015380859375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 151,
+        "error": 0.0059814453125,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 152,
+        "error": 0.0120849609375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 153,
+        "error": 0.0084228515625,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 154,
+        "error": 0.0062255859375,
+        "duration": 2.18e-06
+      },
+      {
+        "qubit": 155,
+        "error": 0.004150390625,
+        "duration": 2.18e-06
+      }
+    ]
+  }
+}

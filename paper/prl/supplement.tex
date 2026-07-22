@@ -1,0 +1,1433 @@
+\documentclass[aps,prl,onecolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{amsmath,amssymb,bm,graphicx,booktabs,array}
+\usepackage{xr-hyper}
+\usepackage[hidelinks]{hyperref}
+\usepackage{orcidlink}
+\externaldocument{main}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\full}{\mathrm{full}}
+\newcommand{\obs}{\mathrm{obs}}
+\newcommand{\cert}{\mathrm{cert}}
+\newcommand{\PT}{\mathrm{PT}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\hashfour}[4]{\texttt{#1}\allowbreak\texttt{#2}\allowbreak\texttt{#3}\allowbreak\texttt{#4}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thetable}{S\Roman{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\renewcommand{\theproposition}{S\arabic{proposition}}
+\renewcommand{\thetheorem}{S\arabic{theorem}}
+\renewcommand{\thecorollary}{S\arabic{corollary}}
+\begin{document}
+\title{Supplemental Material for ``Single-Slot Tomography Cannot Self-Certify Multitime Response Dimension''}
+\author{Yongzi Chen\,\orcidlink{0009-0008-6202-002X}}
+\email{23103646d@connect.polyu.hk}
+\affiliation{Department of Physics and Materials, The Hong Kong Polytechnic University, Hung Hom, Hong Kong, China}
+\maketitle
+
+\section{Exact single-slot non-self-certification}
+\label{sec:single-slot}
+
+\subsection{Collision model and complete marginal testers}
+
+We expand Eq.~(\ref{eq:comb}) of the Letter.  Registers are ordered as
+$[S_1,E,S_2]$, each with Hilbert space $\C^2$.  The memory starts in
+$|+\rangle_E$, and
+\begin{equation}
+ U_G=CZ_{S_2E}\,(I_{S_1}\otimes G_E\otimes I_{S_2})\,CZ_{S_1E},
+ \qquad G\in SU(2).
+ \label{eq:UG}
+\end{equation}
+The accessible output is
+\begin{equation}
+ \Phi_G(\rho_{12})=\Tr_E\!\left[U_G
+ (\rho_{12}\otimes |+\rangle\!\langle+|_E)U_G^*\right].
+ \label{eq:PhiG}
+\end{equation}
+All declared instruments act on the system ports; direct access to $E$ is outside the intervention algebra.
+
+At slot $j\in\{1,2\}$ the single-slot family prepares the six Pauli eigenstates
+\begin{equation}
+ |0\rangle,\ |1\rangle,\ |+\rangle,\ |-\rangle,\ |+i\rangle,\ |-i\rangle
+ \label{eq:sixpreps}
+\end{equation}
+and records the four expectation coordinates $I,X,Y,Z$.  The other slot is closed by a causal break that prepares $I/2$ and discards its output.  The six preparations and four readout coordinates span $B(\C^2)_{\rm sa}$, so the family is informationally complete for each one-time marginal channel.  It is not process-tensor informationally complete: a bare qubit operation slot spans a real 16-dimensional space of Hermiticity-preserving input--output maps.  The code calls these experiments ``atomic testers''; the paper uses ``single slot'' to avoid confusion with atomic physics.
+
+\subsection{Exact invariance of both marginal channels}
+
+\begin{proposition}[Single-slot exact agreement]
+\label{prop:single-slot-invariance}
+For every $G\in SU(2)$, every statistic in the marginal-channel causal-break family is independent of $G$.
+\end{proposition}
+
+\emph{Proof.---}
+For slot 1, let $\rho_1$ be arbitrary and close slot 2 with $I/2$.  After the first $CZ$, every $G$-dependent operation acts only on $ES_2$.  If $\Lambda_G$ is the complete downstream trace-preserving channel on $ES_2$, then for every operator $R$ on $S_1ES_2$,
+\begin{equation}
+ \Tr_{ES_2}\!\left[(\id_{S_1}\otimes\Lambda_G)(R)\right]
+ =\Tr_{ES_2}R.
+ \label{eq:no-signalling}
+\end{equation}
+Hence the $S_1$ marginal is independent of $G$.
+
+For slot 2, close slot 1 with $I/2$.  Writing the first controlled phase in the memory computational basis gives
+\begin{align}
+ &\Tr_{S_1}\!\left[CZ_{S_1E}
+ \left(I_{S_1}/2\otimes|+\rangle\!\langle+|_E\right)
+ CZ_{S_1E}\right]\nonumber\\
+ &\qquad=\frac12\left(|+\rangle\!\langle+|+|-\rangle\!\langle-|\right)=I_E/2.
+ \label{eq:memory-pinning}
+\end{align}
+Although $S_1$ and $E$ are correlated before $S_1$ is discarded, later operations act only on $ES_2$, so the $S_2$ output depends only on the reduced memory state.  Since $G(I/2)G^*=I/2$, every slot-2 statistic is independent of $G$. \hfill$\square$
+
+The equality holds on the entire link group and therefore to every derivative order.  The numerical prototype evaluates all 48 coordinates on a 21-point one-parameter grid and an $11\times11$ $(\theta_x,\theta_y)$ grid; the largest deviations from identity-link data are $1.11\times10^{-16}$ and $3.33\times10^{-16}$.
+
+\subsection{Depth-two separators and the registered gauge}
+
+For $G=R_x(\delta)$ and $S_1=S_2=|+\rangle$, the Heisenberg derivation of Eq.~(\ref{eq:separator}) is
+\begin{align}
+ CZ_{S_2E}^*(Y_1X_2)CZ_{S_2E}&=Y_1X_2Z_E,\nonumber\\
+ R_x(\delta)^*Z_ER_x(\delta)&=Z_E\cos\delta+Y_E\sin\delta,\nonumber\\
+ CZ_{S_1E}^*(Y_1Y_E)CZ_{S_1E}&=X_1X_E.
+ \label{eq:separator-heis}
+\end{align}
+The cosine contribution has zero expectation on $|+\rangle^{\otimes3}$; the sine contribution becomes $X_1X_2X_E$ and has expectation one.  The numerical symmetric derivative is $+1.000000$.  The second quotient direction is also visible: for $G=R_y(\delta)$,
+\begin{equation}
+ \langle Z_{S_1}X_{S_2}\rangle=-\sin\delta,
+ \qquad \left.\partial_\delta\right|_0=-1.
+ \label{eq:separator-y}
+\end{equation}
+
+The $R_z$ direction is different.  For any $G$ and $\alpha$,
+\begin{align}
+ U_{R_z(\alpha)G}
+ &=CZ_{S_2E}R_z(\alpha)G CZ_{S_1E}\nonumber\\
+ &=R_z^E(\alpha)\,CZ_{S_2E}G CZ_{S_1E},
+ \label{eq:left-gauge}
+\end{align}
+because $R_z^E$ commutes with both controlled phases.  The final memory unitary disappears under $\Tr_E$, so left multiplication by $R_z$ is an exact gauge of the registered process.  At $G=I$ its vertical tangent is $Z_E$ and the quotient tangent is spanned by $X_E,Y_E$.  Away from the identity the gauge tangent is the tangent to the left $U(1)$ orbit, not the global vector $\partial_{\theta_z}$ of an exponential chart.  Direct memory access or a later coupling that does not commute with $Z_E$ could reveal it; ``gauge'' is therefore relative to the declared system-port quotient.
+
+\subsection{Minimal one-qubit purification}
+
+Write $G=(g_{ij})_{i,j=0}^1$.  Since
+\begin{equation}
+ CZ_{S_jE}=|0\rangle\!\langle0|_E\otimes I
+ +|1\rangle\!\langle1|_E\otimes Z_j,
+ \label{eq:CZ-memory}
+\end{equation}
+the two Kraus operators obtained by projecting the final memory onto $|0\rangle,|1\rangle$ are
+\begin{equation}
+ K_0=\frac{g_{00}I+g_{01}Z_1}{\sqrt2},
+ \qquad
+ K_1=\frac{Z_2(g_{10}I+g_{11}Z_1)}{\sqrt2}.
+ \label{eq:two-kraus}
+\end{equation}
+The Pauli support of $K_0$ lies in $\operatorname{span}\{I,Z_1\}$ and that of $K_1$ in $\operatorname{span}\{Z_2,Z_1Z_2\}$.  These subspaces are disjoint.  Each row of a unitary is nonzero, so $K_0,K_1$ are nonzero and linearly independent.  The Choi rank is exactly two for every $G\in SU(2)$, and one environment qubit is minimal for the induced $S_1S_2$ channel.  Random-link validation gives Choi rank two and maximum channel deviation $2.3\times10^{-16}$.
+
+\subsection{Tester annihilators and neighboring questions}
+
+Let $\mathsf A$ be the real span of the single-slot causal-break testers, $\mathsf T_{\rm reg}$ the declared registered multitime tester span, and $\mathsf T_{\PT}$ the full process-tensor tester space.  For a tangent $v$, let $\dot\Upsilon_v$ be the corresponding process functional and define
+\begin{equation}
+ K(\mathsf T)=\{v:\dot\Upsilon_v[T]=0\ \text{for all }T\in\mathsf T\}.
+ \label{eq:tester-kernel}
+\end{equation}
+Then
+\begin{equation}
+ \mathsf A\subsetneq\mathsf T_{\rm reg}\subseteq\mathsf T_{\PT},
+ \qquad
+ K(\mathsf T_{\PT})\subseteq K(\mathsf T_{\rm reg})\subsetneq K(\mathsf A).
+ \label{eq:tester-inclusions}
+\end{equation}
+
+\begin{proposition}[Tester annihilator]
+\label{prop:annihilator}
+At the identity link,
+\begin{equation}
+ \dot\Upsilon_X,\dot\Upsilon_Y\in\mathsf A^\perp,
+ \qquad
+ \dot\Upsilon_X,\dot\Upsilon_Y\notin\mathsf T_{\rm reg}^\perp,
+ \label{eq:annihilator}
+\end{equation}
+whereas $\dot\Upsilon_Z$ is zero in the registered exact quotient.
+\end{proposition}
+
+\emph{Proof.---}
+Proposition~\ref{prop:single-slot-invariance} makes every single-slot pairing constant on the full $SU(2)$ family, while Eqs.~\eqref{eq:separator-heis} and \eqref{eq:separator-y} exhibit registered testers with nonzero $X$ and $Y$ pairings.  Equation~\eqref{eq:left-gauge} makes the $Z$ tangent vertical. \hfill$\square$
+
+\begin{table}[t]
+\caption{Adjacent programs and the narrower object addressed here.}
+\label{tab:comparison}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\parbox[t]{0.20\linewidth}{Program} &
+\parbox[t]{0.30\linewidth}{Established object} &
+\parbox[t]{0.40\linewidth}{Present distinction}\\
+\midrule
+\parbox[t]{0.20\linewidth}{Process tensors~\cite{Pollock2018ProcessTensor,White2020ProcessControl,White2022ProcessTomography,Giarmatzi2025Multitime}} &
+\parbox[t]{0.30\linewidth}{A multitime process is a multilinear functional; incomplete interventions determine a restricted process.} &
+\parbox[t]{0.40\linewidth}{The counterexample is conceded as annihilator geometry; the positive result certifies completeness of a derivative kernel under an order bound.}\\[3pt]
+\parbox[t]{0.20\linewidth}{Instrument-dependent Markov order~\cite{Taranto2019MarkovOrder}} &
+\parbox[t]{0.30\linewidth}{Conditional independence and memory length depend on the conditioning instrument.} &
+\parbox[t]{0.40\linewidth}{No Markov-order claim is made; the object is a response kernel relative to an intervention algebra.}\\[3pt]
+\parbox[t]{0.20\linewidth}{Spectral realization and learning~\cite{Hsu2012HMM,Boots2011PSR,BalleMohri2012WFA,Balle2014WFA,BalleMohri2018WFA}} &
+\parbox[t]{0.30\linewidth}{Finite Hankel rank and singular-vector factorizations recover HMM, PSR, and weighted-automaton models.} &
+\parbox[t]{0.40\linewidth}{We lift values and derivatives together, retain their invariant filtration, and attach explicit certificate outcomes and a process-tensor order condition.}\\[3pt]
+\parbox[t]{0.20\linewidth}{Quantum process identification~\cite{BenninkLougovski2019QPI}} &
+\parbox[t]{0.30\linewidth}{Block-Hankel data from a fixed repeatedly applied channel; an effective-dimension upper bound makes the finite record complete via Ho--Kalman reconstruction.} &
+\parbox[t]{0.40\linewidth}{The words here are multi-letter intermediate interventions and the series carries values and first derivatives; exact blindness, certificate states, and the declared-algebra kernel have no analogue for a single repeated channel.}\\[3pt]
+\parbox[t]{0.20\linewidth}{Quantum realization and identification~\cite{MonrasWinter2016,GutaYamamoto2016}} &
+\parbox[t]{0.30\linewidth}{Completely positive realizability and identifiable quantum input--output models.} &
+\parbox[t]{0.40\linewidth}{The reconstructed response model is linear up to similarity; CP coordinates are not inferred automatically.}\\[3pt]
+\parbox[t]{0.20\linewidth}{Single-probe Hamiltonian identification~\cite{SoneCappellaro2017}} &
+\parbox[t]{0.30\linewidth}{Identifiability from a fixed accessible probe under structural assumptions.} &
+\parbox[t]{0.40\linewidth}{The hidden direction is an inter-slot memory tangent revealed by a retained multitime tester.}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Classical finite-rank realization goes back at least to stochastic automata and generalized Hankel matrices~\cite{CarlylePaz1971,ArbibManes1980}.  Modern spectral methods use related rank factorizations for hidden Markov models~\cite{Hsu2012HMM}, predictive-state representations~\cite{Boots2011PSR}, and weighted automata, including missing-entry and perturbation analyses~\cite{BalleMohri2012WFA,Balle2014WFA,BalleMohri2018WFA}.  On the quantum side, Bennink and Lougovski's quantum process identification reconstructs a fixed repeatedly applied channel from block-Hankel data and proves that an effective-dimension upper bound makes the finite record complete~\cite{BenninkLougovski2019QPI}; the present construction extends the same finite-record principle to word-indexed families of intermediate interventions carrying first derivatives.  Monr\`as and Winter formulate the completely positive realization problem~\cite{MonrasWinter2016}, while Gu\c{t}\u{a} and Yamamoto study identifiable passive quantum input--output systems~\cite{GutaYamamoto2016}.
+
+Our terminology must not be confused with the Curto--Fialkow theorem: there, a \emph{flat extension} is a rank-preserving positive moment-matrix extension tied to a finitely supported representing measure~\cite{CurtoFialkow1998}.  Here it means two-sided closure of a response-Hankel row/column space under registered word shifts.  The technical increments are: (i) the block-triangular first-derivative lift and its invariant zero-order-unobservable filtration with cocycle; (ii) certificate states that distinguish resolved model failure from unresolved rank, order, or perturbation evidence; and (iii) conditioning the construction on a declared process-tensor response order, with a sealed device protocol that explicitly tests its obstruction branch.
+
+\section{Delayed activation and the necessity of an order bound}
+\label{sec:delayed}
+
+Fix a tested prefix/suffix horizon $h$ and choose $N>2h+2$.  Consider a classical state space with basis $v,e_0,e_1,\ldots,e_N,s$, where $v$ is visible and stationary and $s$ is a sink.  For $|\theta|\le1/2$, define the column-stochastic map
+\begin{align}
+ T_\theta v&=v,&
+ T_\theta e_j&=e_{j+1}\quad(0\le j<N-1),\nonumber\\
+ T_\theta e_{N-1}&=(1/2-\theta)s+(1/2+\theta)e_N,&
+ T_\theta e_N&=e_N,
+ \quad T_\theta s=s.
+ \label{eq:delayed-map}
+\end{align}
+Use seed $(1-\kappa)v+\kappa e_0$, $0<\kappa<1$, and a final effect $f$ with $f(v)=f(e_N)=1$ and $f(e_j)=f(s)=0$ otherwise.  Then
+\begin{equation}
+ fT_\theta^k[(1-\kappa)v+\kappa e_0]=1-\kappa\quad(k<N),
+ \label{eq:delayed-flat}
+\end{equation}
+and
+\begin{equation}
+ \left.\partial_\theta\right|_0
+ fT_\theta^N[(1-\kappa)v+\kappa e_0]=\kappa.
+ \label{eq:delayed-growth}
+\end{equation}
+All entries $y(sp)$ and one-letter shifts $y(sap)$ with $|s|,|p|\le h$ have total word length below $N$; they equal the visible rank-one series and have zero derivative.  The sole nonzero singular value of the finite constant block is $(1-\kappa)\sqrt{|\cS||\cP|}$, so the false plateau can have an arbitrarily clean gap.  At depth $N$ a new derivative mode appears.  The construction is diagonal CPTP and proves that no fixed number of flat extensions certifies all-depth closure without an order bound or an independently complete basis.
+
+The four-state numerical fixture has scalar derivatives $S_1=S_2=\{0\}$ and $S_3\ne\{0\}$, while its augmented reachable dimensions are
+\begin{equation}
+ 1,2,3,4,5,5,\ldots .
+ \label{eq:jet-dims-validation}
+\end{equation}
+The first non-growth step of the full augmented span is permanent, as finite-dimensional invariance requires.
+
+\section{First-derivative response series and saturated cores}
+\label{sec:definitions}
+
+Throughout, $\F=\R$ or $\C$, $\Sigma$ is a finite alphabet, $\epsilon$ is the empty word, and
+\begin{equation}
+ A_{uv}=A_uA_v,
+ \label{eq:word-convention}
+\end{equation}
+so the word $v$ acts first and $u$ afterward.  A finite controller state and a slot phase are included in the alphabet label.  Let $I$ be a finite seed label set and $\Lambda$ a finite scalar readout label set; zeroth-order and every tangent-coordinate readout belong to $\Lambda$.
+
+\paragraph{Definition 1.1 (response series and linear realization).}
+A multi-input/multi-output response series is
+\begin{equation}
+ y_{\lambda i}:\Sigma^*\longrightarrow\F,
+ \qquad (\lambda,i)\in\Lambda\times I.
+ \label{eq:response-series}
+\end{equation}
+A linear realization of order $n$ is
+\begin{equation}
+ \mathfrak R=(X,\{A_a\}_{a\in\Sigma},\{s_i\}_{i\in I},
+ \{f_\lambda\}_{\lambda\in\Lambda}),
+ \qquad \dim X=n,
+ \label{eq:linear-realization}
+\end{equation}
+with
+\begin{equation}
+ y_{\lambda i}(w)=f_\lambda A_ws_i.
+ \label{eq:realization-output}
+\end{equation}
+Its reachable and unobservable spaces are
+\begin{align}
+ \cR&=\operatorname{span}\{A_ws_i:w\in\Sigma^*,\ i\in I\},\label{eq:reachable}\\
+ \cN&=\{x\in X:f_\lambda A_wx=0\ \text{for all }w,\lambda\}.
+ \label{eq:unobservable}
+\end{align}
+The reachable/observable part is
+\begin{equation}
+ X_{\min}=\cR/(\cR\cap\cN),
+ \label{eq:minimal-quotient}
+\end{equation}
+and the minimal order is $n(y)=\dim X_{\min}$.
+
+\paragraph{Definition 1.2 (physical first-derivative realization).}
+Let $M$ be a smooth parameter manifold, $x_0\in M$, and $E=T^*_{x_0}M$, $\dim E=p$.  Let $V$ be a finite-dimensional open carrier, including the finite classical controller.  Suppose
+\begin{equation}
+ A_a(x):V\to V,
+ \qquad s_i(x)\in V,
+ \qquad e_b(x)\in V^*
+ \label{eq:physical-data}
+\end{equation}
+are $C^1$ near $x_0$.  Outcomes propagate as unnormalized linear CP branches; normalized postselected states are formed only after the linear calculation and require a nonzero denominator.
+
+Set $J(V)=V\oplus(E\otimes V)$.  For a basis $\{e^\mu\}$ of $E$, define
+\begin{equation}
+ D_av=\sum_{\mu=1}^p e^\mu\otimes
+ \left.\partial_\mu A_a(x)\right|_{x_0}v.
+ \label{eq:Da}
+\end{equation}
+The lifted letter, seed, and readouts are
+\begin{align}
+ \bm A_a&=
+ \begin{pmatrix}
+ A_a^0&0\\D_a&I_E\otimes A_a^0
+ \end{pmatrix},
+ &A_a^0&=A_a(x_0),
+ \label{eq:lifted-letter}\\
+ \bm s_i&=(s_i^0,ds_i),
+ \label{eq:lifted-seed}\\
+ \bm f_{b,0}(v,\zeta)&=e_b^0(v),
+ &\bm f_{b,\mu}(v,\zeta)&=(\partial_\mu e_b)(v)+e_b^0(\zeta_\mu).
+ \label{eq:lifted-readout}
+\end{align}
+They satisfy
+\begin{align}
+ \bm f_{b,0}\bm A_w\bm s_i&=p_{bi}(w;x_0),\nonumber\\
+ \bm f_{b,\mu}\bm A_w\bm s_i&=\partial_\mu p_{bi}(w;x_0).
+ \label{eq:jet-output}
+\end{align}
+Equation~\eqref{eq:lifted-letter} is Eq.~(\ref{eq:jetlift}) of the Letter.
+
+\paragraph{Definition 1.3 (declared class $\cC(n_J)$).}
+$\cC(n_J)$ is the class of response families from Definition 1.2 whose augmented value-and-derivative series has minimal order
+\begin{equation}
+ n(y)\le n_J.
+ \label{eq:class-order}
+\end{equation}
+The alphabet, system ports, controller convention, seed menu, and readout menu are part of the declaration.  Direct access to an undeclared environment lies outside the class.  The bound is on the minimal response realization, not merely on a chosen nonminimal dilation.
+
+\paragraph{Definition 1.4 (finite Hankel data).}
+For finite word sets $\cP,\cS\subset\Sigma^*$ define
+\begin{align}
+ H_{(\lambda,s),(i,p)}&=y_{\lambda i}(sp),\label{eq:Hdef}\\
+ (H_a)_{(\lambda,s),(i,p)}&=y_{\lambda i}(sap),
+ \qquad a\in\Sigma,\label{eq:Hadef}\\
+ (c_i)_{(\lambda,s)}&=y_{\lambda i}(s),
+ & (r_\lambda)_{(i,p)}&=y_{\lambda i}(p).
+ \label{eq:boundarydef}
+\end{align}
+The $H_a$ are central one-letter shifts; $c_i$ and $r_\lambda$ are the empty-prefix columns and empty-suffix rows.
+
+\paragraph{Definition 1.5 (saturated flat core).}
+The finite data
+\begin{equation}
+ \cD=(H,\{H_a\}_{a\in\Sigma},\{c_i\}_{i\in I},
+ \{r_\lambda\}_{\lambda\in\Lambda})
+ \label{eq:data-core}
+\end{equation}
+form an exact saturated flat core of declared order $n_J$ when:
+\begin{enumerate}
+\item[(SF1)] $\rank H=n_J$;
+\item[(SF2)] for one, equivalently every, rank factorization $H=OR$ with $O$ full column rank and $R$ full row rank,
+\begin{equation}
+ \begin{gathered}
+ (I-OO^\dagger)H_a=0,
+ \qquad H_a(I-R^\dagger R)=0\quad\forall a,\\
+ (I-OO^\dagger)c_i=0,
+ \qquad r_\lambda(I-R^\dagger R)=0\quad\forall i,\lambda;
+ \end{gathered}
+ \label{eq:SF23}
+\end{equation}
+\item[(SF3)] every entry is tied to the declared ordered word semantics; phase-dependent links are separate letters and parameter-dependent effects enter through their dual derivatives.
+\end{enumerate}
+For exact data from $\cC(n_J)$, the subspace conditions follow once SF1 is attained; their residuals remain because they are falsifiable finite-data checks.  Here $O,R$ denote observability and reachability factors; $R$ is unrelated to the rotation $R_x$, and asymptotic order is written $\mathsf O(\cdot)$.
+
+\section{Exact extension theorem}
+\label{sec:exact-proof}
+
+\paragraph{Lemma 2.1 (functoriality and all insertion positions).}
+Let
+\begin{equation}
+ \bm A=\begin{pmatrix}A&0\\D_A&I_E\otimes A\end{pmatrix},
+ \qquad
+ \bm B=\begin{pmatrix}B&0\\D_B&I_E\otimes B\end{pmatrix}.
+\end{equation}
+Then
+\begin{equation}
+ \bm A\bm B=
+ \begin{pmatrix}
+ AB&0\\D_AB+(I_E\otimes A)D_B&I_E\otimes AB
+ \end{pmatrix}=J^1(A\circ B).
+ \label{eq:jet-functor}
+\end{equation}
+For $w=a_k\cdots a_1$,
+\begin{equation}
+ \bm A_w=
+ \begin{pmatrix}A_w^0&0\\D_w&I_E\otimes A_w^0\end{pmatrix},
+ \label{eq:word-jet}
+\end{equation}
+where
+\begin{equation}
+ D_w=\sum_{j=1}^k
+ \left(I_E\otimes A_{a_k}^0\cdots A_{a_{j+1}}^0\right)
+ D_{a_j}A_{a_{j-1}}^0\cdots A_{a_1}^0.
+ \label{eq:insertion-sum}
+\end{equation}
+
+\emph{Proof.---}
+Block multiplication gives Eq.~\eqref{eq:jet-functor}; its lower-left block is $d(AB)v=(dA)Bv+A(dB)v$.  Induction gives Eq.~\eqref{eq:insertion-sum}, whose $j$th term differentiates the $j$th occurrence.  For
+$p_{bi}(w;x)=e_b(x)A_w(x)s_i(x)$,
+\begin{equation}
+ dp=(de_b)A_ws_i+e_b(dA_w)s_i+e_bA_w(ds_i),
+ \label{eq:full-chain}
+\end{equation}
+which is exactly Eq.~\eqref{eq:jet-output}. \hfill$\square$
+
+\paragraph{Lemma 2.2 (infinite Hankel rank equals minimal order).}
+Let
+\begin{equation}
+ H_\infty[(\lambda,u),(i,v)]=y_{\lambda i}(uv).
+ \label{eq:infinite-H}
+\end{equation}
+Then
+\begin{equation}
+ \rank H_\infty=n(y).
+ \label{eq:hankel-rank-theorem}
+\end{equation}
+
+\emph{Proof.---}
+For any order-$n$ realization define
+\begin{align}
+ \cO_\infty x&=(f_\lambda A_ux)_{(\lambda,u)},\nonumber\\
+ \cR_\infty e_{(i,v)}&=A_vs_i.
+\end{align}
+Then $H_\infty=\cO_\infty\cR_\infty$, hence $\rank H_\infty\le n$ and, on the reachable/observable quotient, $\rank H_\infty\le n(y)$.
+
+Conversely, let $X_H$ be the span of the infinite columns $h_{i,v}=H_\infty[:,(i,v)]$ and set
+\begin{equation}
+ T_ah_{i,v}=h_{i,av}.
+ \label{eq:canonical-shift}
+\end{equation}
+This is well defined: if $\sum_jc_jh_{i_j,v_j}=0$, then for every $(\lambda,u)$,
+\begin{equation}
+ \left[\sum_jc_jh_{i_j,av_j}\right](\lambda,u)
+ =\sum_jc_jy_{\lambda i_j}(uav_j)
+ =\left[\sum_jc_jh_{i_j,v_j}\right](\lambda,ua)=0.
+\end{equation}
+Set $s_i^H=h_{i,\epsilon}$ and $f_\lambda^H(x)=x(\lambda,\epsilon)$.  Then $T_ws_i^H=h_{i,w}$ and $f_\lambda^HT_ws_i^H=y_{\lambda i}(w)$, giving a realization of order $\rank H_\infty$.  Thus $n(y)\le\rank H_\infty$. \hfill$\square$
+
+\paragraph{Lemma 2.3 (finite-dimensional order exhaustion).}
+For a realization of dimension $n$, define
+\begin{align}
+ \cR_k&=\operatorname{span}\{A_ws_i:|w|\le k,\ i\in I\},\nonumber\\
+ \cO_k&=\operatorname{span}\{f_\lambda A_w:|w|\le k,\ \lambda\in\Lambda\}.
+ \label{eq:ROchains}
+\end{align}
+Then
+\begin{equation}
+ \cR_{n-1}=\cR_\infty,
+ \qquad \cO_{n-1}=\cO_\infty.
+ \label{eq:order-exhaustion}
+\end{equation}
+
+\emph{Proof.---}
+The reachable chain is increasing.  If $\cR_k=\cR_{k+1}$, then $A_a\cR_k\subseteq\cR_k$ for every letter, so the chain remains closed under every later word.  Before equality, dimension rises by at least one and is at most $n$, so closure occurs by $n-1$; the dual argument gives observability.  Cayley--Hamilton alone controls repeated powers of one letter, whereas this invariant-span argument controls arbitrary mixed words. \hfill$\square$
+
+\paragraph{Lemma 2.4 (rank saturation exhausts the declared order).}
+If $y\in\cC(n_J)$ and a finite block satisfies $\rank H=n_J$, then
+\begin{equation}
+ n(y)=n_J,
+ \label{eq:rank-saturates}
+\end{equation}
+and the finite row and column spaces already have full infinite Hankel rank.
+
+\emph{Proof.---}
+Every finite block is a submatrix of $H_\infty$, so
+\begin{equation}
+ n_J=\rank H\le\rank H_\infty=n(y)\le n_J.
+\end{equation}
+All inequalities are equalities. \hfill$\square$
+
+\paragraph{Lemma 2.5 (rank factorization constructs the shifts).}
+Let $\mathfrak R_*=(X_*,A_a^*,s_i^*,f_\lambda^*)$ be a minimal realization of $y\in\cC(n_J)$ and assume $\rank H=n_J=:n$.  Define
+\begin{align}
+ (O_*x)_{(\lambda,s)}&=f_\lambda^*A_s^*x,\nonumber\\
+ R_*e_{(i,p)}&=A_p^*s_i^*.
+ \label{eq:finite-OR}
+\end{align}
+Then $H=O_*R_*$ and both factors have rank $n$.  If $H=OR$ is any rank factorization, there is $T\in GL(n,\F)$ with
+\begin{equation}
+ O=O_*T,
+ \qquad R=T^{-1}R_*.
+ \label{eq:factor-gauge}
+\end{equation}
+For $O^LO=I$ and $RR^R=I$, define
+\begin{equation}
+ X_a=O^LH_aR^R,
+ \qquad \widehat s_i=O^Lc_i,
+ \qquad \widehat f_\lambda=r_\lambda R^R.
+ \label{eq:recon-SM}
+\end{equation}
+Then
+\begin{equation}
+ X_a=T^{-1}A_a^*T,
+ \quad \widehat s_i=T^{-1}s_i^*,
+ \quad \widehat f_\lambda=f_\lambda^*T.
+ \label{eq:similarity-result}
+\end{equation}
+
+\emph{Proof.---}
+Since $H=O_*R_*$ has rank $n=\dim X_*$, $O_*$ is injective and $R_*$ surjective.  Equality of column spaces gives $O=O_*T$ for invertible $T$, and then $R=T^{-1}R_*$.  Since $H_a=O_*A_a^*R_*$,
+$O^LO_*=T^{-1}$ and $R_*R^R=T$, proving the shift identity; the boundary identities follow from $c_i=O_*s_i^*$ and $r_\lambda=f_\lambda^*R_*$. \hfill$\square$
+
+\paragraph{Lemma 2.6 (all-depth equality and uniqueness).}
+The reconstruction satisfies
+\begin{equation}
+ y_{\lambda i}(w)=\widehat f_\lambda X_w\widehat s_i
+ \quad\forall w\in\Sigma^*.
+ \label{eq:all-depth-SM}
+\end{equation}
+Every $y'\in\cC(n_J)$ with the same saturated data equals $y$ on all words; the minimal realization is unique up to simultaneous similarity.
+
+\emph{Proof.---}
+Equation~\eqref{eq:similarity-result} gives $X_w=T^{-1}A_w^*T$, so Eq.~\eqref{eq:all-depth-SM} follows.  For $y'$ with the same data, Lemma 2.4 forces $n(y')=n_J$ and Lemma 2.5 reconstructs the same realization up to factorization gauge. \hfill$\square$
+
+\paragraph{Lemma 2.7 (reachable/observable identification).}
+The reconstruction is isomorphic to the reachable/observable part of every physical realization of the same series.
+
+\emph{Proof.---}
+For any realization, $\cR$ is shift invariant.  The unobservable space is shift invariant because $f_\lambda A_wA_ax=f_\lambda A_{wa}x=0$ for $x\in\cN$.  Thus shifts descend to $\cR/(\cR\cap\cN)$, which realizes the same series and is reachable and observable.  Lemma 2.2 gives its dimension and Lemma 2.5 gives similarity. \hfill$\square$
+
+\paragraph{Lemma 2.8 (complete derivative kernel and finite generation).}
+Let $\Lambda_1$ be the tangent-coordinate readouts and write
+\begin{equation}
+ dp_{bi}(w;x_0)=\sum_{\mu=1}^p y_{(b,\mu),i}(w)e^\mu\in E.
+ \label{eq:derivative-covector}
+\end{equation}
+Then the reconstruction gives
+\begin{equation}
+ K_{\full}^{\mathcal I}=\bigcap_{w,b,i}\ker dp_{bi}(w;x_0),
+ \label{eq:full-kernel-SM}
+\end{equation}
+where $\mathcal I$ labels the declared intervention algebra, and the same intersection is obtained from reconstructed words of length at most $n_J-1$.
+
+\emph{Proof.---}
+Lemma 2.6 gives equality of every tangent-coordinate scalar and hence each covector in Eq.~\eqref{eq:derivative-covector}.  Lemma 2.3 expresses every reachable vector $X_u\widehat s_i$ as a combination of vectors $X_w\widehat s_j$ with $|w|\le n_J-1$.  Applying derivative readouts gives the same combination of covectors, so the joint kernels coincide. \hfill$\square$
+
+\paragraph{Lemma 2.9 (invariant filtration and cocycle).}
+Let $\Lambda_0$ be the zeroth-order readouts and define
+\begin{equation}
+ D_0=\bigcap_{\lambda\in\Lambda_0,w\in\Sigma^*}
+ \ker(\widehat f_\lambda X_w).
+ \label{eq:D0}
+\end{equation}
+Then $D_0$ is invariant under every $X_a$.  In any splitting $X_{\rm rec}\simeq B\oplus D_0$,
+\begin{equation}
+ X_a=\begin{pmatrix}B_a&0\\C_a&D_a\end{pmatrix}.
+ \label{eq:jet-filtration}
+\end{equation}
+The quotient $B=X_{\rm rec}/D_0$ is the minimal zeroth-order realization, $D_0$ is a module over the shift algebra, and
+\begin{equation}
+ C_{uv}=C_uB_v+D_uC_v.
+ \label{eq:cocycle}
+\end{equation}
+If the physical reachable/observable quotient is jet faithful---its zero-order-unobservable subspace is exactly the transported derivative subspace---then Eq.~\eqref{eq:jet-filtration} is similar to the canonical physical form of Eq.~\eqref{eq:lifted-letter}.
+
+\emph{Proof.---}
+If $x\in D_0$, then $\widehat f_\lambda X_wX_ax=\widehat f_\lambda X_{wa}x=0$ for every $w,\lambda,a$, proving invariance and the zero upper-right block.  The quotient is reachable and observable, hence minimal for the zeroth-order series.  Multiplying two block matrices gives Eq.~\eqref{eq:cocycle}.  A general similarity quotient need not preserve a literal $I_E\otimes B_a$ lower diagonal, which is why the final identification needs jet faithfulness. \hfill$\square$
+
+\paragraph{Lemma 2.10 (necessity of an order bound).}
+For every finite data horizon and finite collection of one-letter closure tests, there are two diagonal CPTP response series that agree on all tested values and derivatives, one of which has a new derivative mode later.  Therefore a sub-saturated finite plateau, $\rank H<n_J$, is inconclusive without an independent complete-basis certificate.
+
+\emph{Proof.---}
+Use the explicit delayed chain in Eqs.~\eqref{eq:delayed-map}--\eqref{eq:delayed-growth}, choosing $N$ larger than the greatest tested total word length.  It agrees with the visible rank-one series on all tested entries and shifts but differs at depth $N$. \hfill$\square$
+
+\begin{theorem}[Saturated first-derivative extension]
+\label{thm:flat-extension}
+Let $y\in\cC(n_J)$ and suppose $\cD$ is an exact saturated flat core.  Choose a rank factorization $H=OR$, left/right inverses $O^L,R^R$, and define Eq.~\eqref{eq:recon-SM}.  Then:
+\begin{enumerate}
+\item Eq.~\eqref{eq:all-depth-SM} holds for every word;
+\item every member of $\cC(n_J)$ with the same core has the same all-depth series;
+\item the reconstruction is isomorphic to the reachable/observable part of every physical first-derivative realization;
+\item its derivative components give Eq.~\eqref{eq:full-kernel-SM}, generated by words of length at most $n_J-1$;
+\item the invariant filtration and cocycle of Lemma 2.9 hold;
+\item without an order bound, or when $\rank H<n_J$ without an independent complete-basis certificate, the verdict is \texttt{INCONCLUSIVE\_NO\_ORDER\_EXHAUSTION}.
+\end{enumerate}
+\end{theorem}
+
+\emph{Proof.---}
+Items 1--5 are Lemmas 2.4--2.9; item 6 is Lemma 2.10. \hfill$\square$
+
+\subsection{Exhaustive all-words alternative}
+
+\begin{corollary}[All-words exhaustion]
+\label{cor:exhaustive}
+Suppose $y\in\cC(n_J)$, $\cP$ contains every word of length at most $n_J-1$ applied to every seed, and $\cS$ contains every word of length at most $n_J-1$ applied to every readout.  Then $r=\rank H=n(y)$ even if $r<n_J$, and Theorem~\ref{thm:flat-extension} holds with $r$ in place of $n_J$.
+\end{corollary}
+
+\emph{Proof.---}
+Lemma 2.3 makes the finite reachability and observability maps surjective and injective on the minimal realization; their product therefore has rank $n(y)$. \hfill$\square$
+
+This route is exact but generally exponential in $n_J$.  The polynomial resource statement uses the rank-saturation route $\rank H=n_J$ with a supplied or independently certified saturated basis.
+
+\subsection{From words to generated protocols}
+\label{sec:words-to-protocols}
+
+Let $\mathfrak P(\mathcal I)$ be the protocol class generated by the declared finite alphabet and controller convention.  Besides deterministic words, it permits finite randomization, summation of finitely many instrument-outcome branches, and finite classical feed-forward.  Feed-forward is represented by adjoining the finite controller state to the alphabet label, so each complete outcome history is an ordinary word in the enlarged alphabet.
+
+\begin{proposition}[Word/protocol kernel equivalence]
+\label{prop:word-protocol-kernel}
+Every scalar probability of a protocol $P\in\mathfrak P(\mathcal I)$ can be written
+\begin{equation}
+ p_P(x)=\sum_{\ell=1}^{L_P}c_{P\ell}\,
+ p_{b_{P\ell}i_{P\ell}}(w_{P\ell};x),
+ \label{eq:protocol-linear-combination}
+\end{equation}
+with finitely many declared words and protocol-fixed coefficients.  Consequently
+\begin{equation}
+ \bigcap_{P\in\mathfrak P(\mathcal I)}\ker dp_P(x_0)
+ =
+ \bigcap_{w,b,i}\ker dp_{bi}(w;x_0)
+ =K_{\full}^{\mathcal I}.
+ \label{eq:protocol-kernel-equivalence}
+\end{equation}
+Direct access to an undeclared environment is not an element of $\mathfrak P(\mathcal I)$.
+\end{proposition}
+
+\emph{Proof.---}
+For a deterministic protocol the branch sequence is a word.  A randomized protocol is a finite convex combination of deterministic protocols.  Coarse-graining an event sums the probabilities of the finitely many outcome histories in that event.  A finite-state adaptive protocol assigns a declared branch map to each controller state and observed outcome; after including the controller state in the alphabet, every complete history is again a word.  These three operations give Eq.~\eqref{eq:protocol-linear-combination}.  The protocol is fixed while differentiating the physical realization, so
+\begin{equation}
+ dp_P(x_0)=\sum_{\ell=1}^{L_P}c_{P\ell}\,
+ dp_{b_{P\ell}i_{P\ell}}(w_{P\ell};x_0).
+\end{equation}
+A tangent annihilating every word derivative therefore annihilates every generated protocol derivative.  Conversely, every deterministic word is itself a member of $\mathfrak P(\mathcal I)$, so a tangent annihilating every generated protocol annihilates every word.  The two intersections are equal. \hfill$\square$
+
+\section{Finite-error certification at declared dimension or stated resolution}
+\label{sec:perturbed}
+
+The exact extension theorem reconstructs exact word responses and their exact first derivatives.  A finite error ball cannot establish that a small singular value is exactly zero and therefore cannot infer an exact nullity.  The noisy certificate separates three conclusions:
+\begin{enumerate}
+\item coordinate-free rank, singular-subspace, and closure-residual bounds for the Hankel core;
+\item an optional bounded-angle comparison of response subspaces whose dimensions are fixed either by an external structural promise or by a preregistered nonzero resolution;
+\item coordinate-level shifts and predictions only when a separate common-gauge factor-alignment bound is supplied for the truncated noisy core.
+\end{enumerate}
+
+\subsection{Truncated core and coordinate-free closure bounds}
+
+Let $H,H_a,c_i,r_\lambda$ be exact data and let hats denote observations.  Assume operator-norm error bounds
+\begin{equation}
+ \|\widehat H-H\|\le\eps_H,
+ \quad \|\widehat H_a-H_a\|\le\eps_a,
+ \quad \|\widehat c_i-c_i\|\le\eps_{c,i},
+ \quad \|\widehat r_\lambda-r_\lambda\|\le\eps_{r,\lambda}.
+ \label{eq:data-errors}
+\end{equation}
+On the rank-saturation route set $n=n_J$.  Write a singular-value decomposition
+\begin{equation}
+ \widehat H=\widehat U\widehat\Sigma\widehat V^*,
+ \qquad
+ \widehat H_n=\widehat U_n\widehat\Sigma_n\widehat V_n^*,
+ \label{eq:H-truncation}
+\end{equation}
+where $\widehat H_n$ is the rank-$n$ truncated SVD.  The observation $\widehat H$ is generally full rank; only $\widehat H_n$ is factorized for reconstruction.  Since
+$\|\widehat H-\widehat H_n\|=\widehat\sigma_{n+1}$,
+\begin{equation}
+ \|\widehat H_n-H\|
+ \le \widehat\sigma_{n+1}+\eps_H
+ =:\overline\eps_H.
+ \label{eq:truncated-core-error}
+\end{equation}
+
+Define
+\begin{equation}
+ \Delta_H=\widehat\sigma_n-\widehat\sigma_{n+1}-\eps_H,
+ \qquad
+ b_H=\min\left\{1,\frac{\eps_H}{\Delta_H}\right\},
+ \label{eq:Hgap}
+\end{equation}
+where $b_H$ is used only when $\Delta_H>0$.  If an exact process belongs to $\cC(n)$, then $\rank H\le n$.  The condition $\Delta_H>0$ implies
+$\sigma_n(H)\ge\widehat\sigma_n-\eps_H>0$ by Weyl's inequality, hence $\rank H=n$.  Let $P_C,P_R$ project onto the exact rank-$n$ column and row spaces, and let
+\begin{equation}
+ \widehat P_C=\widehat U_n\widehat U_n^*,
+ \qquad
+ \widehat P_R=\widehat V_n\widehat V_n^*.
+\end{equation}
+The leading subspaces of $\widehat H$ and $\widehat H_n$ coincide.  Wedin's theorem~\cite{Wedin1972} therefore gives
+\begin{equation}
+ \|P_C-\widehat P_C\|\le b_H,
+ \qquad
+ \|P_R-\widehat P_R\|\le b_H.
+ \label{eq:subspace-bounds}
+\end{equation}
+The numerator in Eq.~\eqref{eq:Hgap} is the measurement error between $H$ and $\widehat H$; the larger radius $\overline\eps_H$ in Eq.~\eqref{eq:truncated-core-error} is the radius that must be propagated into coordinate reconstruction.
+
+For a shifted or boundary block $B$ with observation $\widehat B$ and direct error radius $\eps_B$, define
+\begin{equation}
+ \widehat\rho_C(B)=\|(I-\widehat P_C)\widehat B\|,
+ \qquad
+ \widehat\rho_R(B)=\|\widehat B(I-\widehat P_R)\|
+ \label{eq:observed-residuals}
+\end{equation}
+when the corresponding side is present.  The exact residuals satisfy
+\begin{align}
+ \rho_C(B)&\le\widehat\rho_C(B)+s(B),&
+ \rho_C(B)&\ge\max\{0,\widehat\rho_C(B)-s(B)\},\nonumber\\
+ \rho_R(B)&\le\widehat\rho_R(B)+s(B),&
+ \rho_R(B)&\ge\max\{0,\widehat\rho_R(B)-s(B)\},
+ \label{eq:res-bracket}
+\end{align}
+with
+\begin{equation}
+ s(B)=\eps_B+b_H(\|\widehat B\|+\eps_B).
+ \label{eq:res-slack}
+\end{equation}
+For example,
+\begin{align*}
+ \|(I-P_C)B-(I-\widehat P_C)\widehat B\|
+ &\le\|B-\widehat B\|+\|P_C-\widehat P_C\|\,\|B\|\\
+ &\le\eps_B+b_H(\|\widehat B\|+\eps_B).
+\end{align*}
+The row bound is identical.  Let $\rho_+$ be the largest upper endpoint and $\rho_-$ the largest lower endpoint over every shifted and boundary residual.  Let $\tau_{\rm model}\ge0$ be a preregistered admissible model-mismatch tolerance.
+
+\subsection{Declared-rank and threshold-resolved response subspaces}
+\label{sec:resolved-subspaces}
+
+Let $J_A,J_F$ be exact single-slot and full response matrices with the same parameter-space column dimension $p$, and let
+\begin{equation}
+ \|\widehat J_j-J_j\|\le\eps_j,
+ \qquad j\in\{A,F\}.
+ \label{eq:J-errors}
+\end{equation}
+A response-subspace comparison is issued only in one of the following two modes.
+
+\paragraph{Structural-rank mode.}
+The exact ranks $r_A,r_F$ are separately sourced promises of the declared model class.  They are not inferred from the observed small singular values.  For $j\in\{A,F\}$, let $\mathcal L_j$ be the exact right singular subspace of dimension $p-r_j$ below the promised active rank, and let $\widehat{\mathcal L}_j$ be the span of the bottom $p-r_j$ observed right singular vectors.  In this mode $\mathcal L_j=\ker J_j$ because the rank promise states that fact; the experiment has not proved it.
+
+\paragraph{Resolution mode.}
+Choose a nonzero resolution $\tau_j$ before inspecting the comparison.  Let $r_j$ satisfy
+\begin{equation}
+ \widehat\sigma_{r_j}(\widehat J_j)>\tau_j+\eps_j,
+ \qquad
+ \widehat\sigma_{r_j+1}(\widehat J_j)<\tau_j-\eps_j.
+ \label{eq:threshold-band}
+\end{equation}
+Then Weyl's inequality places exactly $r_j$ singular values of $J_j$ above $\tau_j$ and the remaining singular values below $\tau_j$.  Define $\mathcal L_j^{(\tau_j)}$ as the exact right singular subspace below $\tau_j$ and $\widehat{\mathcal L}_j^{(\tau_j)}$ as the corresponding observed bottom subspace.  This is a finite-resolution object, not an exact kernel.
+
+In either mode, write $\mathcal L_j$ and $\widehat{\mathcal L}_j$ for the specified subspaces and define
+\begin{equation}
+ \Delta_j=\widehat\sigma_{r_j}-\widehat\sigma_{r_j+1}-\eps_j,
+ \qquad
+ b_j=\min\left\{1,\frac{\eps_j}{\Delta_j}\right\}.
+ \label{eq:response-subspace-gaps}
+\end{equation}
+The trivial cases $r_j=0$ and $r_j=p$ are interpreted directly.  When $0<r_j<p$ and $\Delta_j>0$, Wedin's theorem gives
+\begin{equation}
+ \|P_{\mathcal L_j}-P_{\widehat{\mathcal L}_j}\|\le b_j.
+ \label{eq:response-subspace-wedin}
+\end{equation}
+Consequently, with
+\begin{equation}
+ \eta_{\obs}=\|P_{\widehat{\mathcal L}_A}-P_{\widehat{\mathcal L}_F}\|,
+ \qquad
+ \eta_{\cert}=\eta_{\obs}+b_A+b_F,
+ \label{eq:eta-two-matrix}
+\end{equation}
+the triangle inequality yields
+\begin{equation}
+ \|P_{\mathcal L_A}-P_{\mathcal L_F}\|\le\eta_{\cert}.
+ \label{eq:resolved-subspace-angle}
+\end{equation}
+If the two specified dimensions differ, the norm of the projector difference is one, so Eq.~\eqref{eq:resolved-subspace-angle} cannot give a nonvacuous bound below one.  No separate, data-inferred clause about matching kernel dimensions is used.
+
+\begin{theorem}[Finite-error saturated extension]
+\label{thm:P}
+For a declared class $\cC(n_J)$ and observations satisfying Eqs.~\eqref{eq:data-errors} and \eqref{eq:J-errors}, the state in Table~\ref{tab:status} is valid.  On the \texttt{CERTIFIED\_WITH\_BOUNDS} branch:
+\begin{enumerate}
+\item every exact member of the declared class consistent with the error balls has $\rank H=n_J$;
+\item the exact core row and column projectors obey Eq.~\eqref{eq:subspace-bounds};
+\item every exact shifted and boundary residual is at most $\tau_{\rm model}$;
+\item the rank-$n_J$ truncation obeys Eq.~\eqref{eq:truncated-core-error};
+\item if a structural-rank or threshold specification was requested and its gaps pass, the specified low-singular subspaces obey Eq.~\eqref{eq:resolved-subspace-angle}.
+\end{enumerate}
+The theorem never infers an exact nullity from finite data and never labels a resolution-defined subspace as a true kernel.  Coordinate-level reconstruction additionally requires the independent factor-alignment assumptions below.
+\end{theorem}
+
+\begin{table}[t]
+\caption{Certificate states, evaluated from top to bottom.}
+\label{tab:status}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\parbox[t]{0.29\linewidth}{Status} &
+\parbox[t]{0.63\linewidth}{Sufficient condition and meaning}\\
+\midrule
+\parbox[t]{0.29\linewidth}{\texttt{INCONCLUSIVE\_NO\_ORDER\_EXHAUSTION}} &
+\parbox[t]{0.63\linewidth}{No declared $n_J$, or a sub-saturated route without an all-words complete-basis certificate.  A finite plateau is not a pass.}\\[3pt]
+\parbox[t]{0.29\linewidth}{\texttt{INCONCLUSIVE\_RANK\_GAP}} &
+\parbox[t]{0.63\linewidth}{$\Delta_H\le0$; or a requested response comparison has neither a structural rank promise nor a resolved threshold band; or one of its $\Delta_j$ is nonpositive; or $\eta_{\cert}\ge1$.  The requested rank/subspace conclusion is unresolved.}\\[3pt]
+\parbox[t]{0.29\linewidth}{\texttt{FAILED\_MODEL\_CLASS}} &
+\parbox[t]{0.63\linewidth}{$\widehat\sigma_{n_J+1}-\eps_H>0$, which contradicts the declared order bound, or $\rho_->\tau_{\rm model}$, which certifies excessive closure mismatch.}\\[3pt]
+\parbox[t]{0.29\linewidth}{\texttt{INCONCLUSIVE\_FLATNESS}} &
+\parbox[t]{0.63\linewidth}{$\rho_-\le\tau_{\rm model}<\rho_+$; the residual interval does not separate agreement from violation.}\\[3pt]
+\parbox[t]{0.29\linewidth}{\texttt{CERTIFIED\_WITH\_BOUNDS}} &
+\parbox[t]{0.63\linewidth}{Order saturation is certified, $\Delta_H>0$, $\widehat\sigma_{n_J+1}\le\eps_H$, and $\rho_+\le\tau_{\rm model}$.  The output is the coordinate-free core bounds and, when separately specified, the declared-rank or threshold-resolved subspace-angle bound.}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The software uses these five upper-case states in noisy mode.  In exact mode it reports
+\begin{quote}\small\raggedright
+\texttt{certified\_for\_declared\_class},
+\texttt{growth\_detected},
+\texttt{inconclusive\_no\_order\_bound}, and
+\texttt{inconsistent\_with\_declared\_bound}.
+\end{quote}
+
+\subsection{Truncated-SVD reconstruction and prediction constants}
+\label{sec:truncated-reconstruction}
+
+Use the balanced factorization of the rank-$n$ truncation,
+\begin{equation}
+ \widehat H_n=\widehat O\widehat R,
+ \qquad
+ \widehat O=\widehat U_n\widehat\Sigma_n^{1/2},
+ \qquad
+ \widehat R=\widehat\Sigma_n^{1/2}\widehat V_n^*.
+ \label{eq:balanced-truncated-factorization}
+\end{equation}
+Let $H=OR$ be an exact rank-$n$ factorization.  A matrix factorization has a similarity gauge, and a bound on $\|\widehat H_n-H\|$ alone does not select one.  Coordinate-level claims therefore require a separate alignment analysis which is valid for the entire truncation ball
+\begin{equation}
+ \|\widehat H_n-H\|\le\overline\eps_H
+\end{equation}
+and supplies, in one common gauge,
+\begin{equation}
+ \|\widehat O-O\|\le\delta_O=\Phi_O(\overline\eps_H),
+ \qquad
+ \|\widehat R-R\|\le\delta_R=\Phi_R(\overline\eps_H).
+ \label{eq:factor-errors}
+\end{equation}
+The functions $\Phi_O,\Phi_R$ or the radii they return are independent certificate inputs.  If they are absent, Theorem~\ref{thm:P} stops at its coordinate-free conclusions.
+
+Define
+\begin{align}
+ \widehat o&=\sigma_{\min}(\widehat O),&
+ \underline o&=\widehat o-\delta_O,\nonumber\\
+ \widehat r&=\sigma_{\min}(\widehat R),&
+ \underline r&=\widehat r-\delta_R.
+ \label{eq:factor-gaps}
+\end{align}
+If either lower bound is nonpositive, coordinate reconstruction is inconclusive.  Otherwise the rank-preserving pseudoinverse perturbation inequality gives
+\begin{equation}
+ d_O:=\|\widehat O^\dagger-O^\dagger\|
+ \le\varphi\frac{\delta_O}{\widehat o\,\underline o},
+ \qquad
+ d_R:=\|\widehat R^\dagger-R^\dagger\|
+ \le\varphi\frac{\delta_R}{\widehat r\,\underline r},
+ \label{eq:pinv-bounds}
+\end{equation}
+where $\varphi=(1+\sqrt5)/2$.
+
+The reconstructed data are first compressed to the truncated core spaces:
+\begin{equation}
+ \widehat H_a^{\parallel}=\widehat P_C\widehat H_a\widehat P_R,
+ \qquad
+ \widehat c_i^{\parallel}=\widehat P_C\widehat c_i,
+ \qquad
+ \widehat r_\lambda^{\parallel}=\widehat r_\lambda\widehat P_R.
+ \label{eq:compressed-data}
+\end{equation}
+Let separately certified exact mismatch radii satisfy
+\begin{align}
+ \max\{\|(I-P_C)H_a\|,\|H_a(I-P_R)\|\}&\le\mu_a,\nonumber\\
+ \|(I-P_C)c_i\|&\le\mu_{c,i},&
+ \|r_\lambda(I-P_R)\|&\le\mu_{r,\lambda}.
+ \label{eq:model-mismatch-radii}
+\end{align}
+For an exact member of the saturated declared class these radii are zero.  On an approximate model branch they are bounded by the certified closure interval.  Equations~\eqref{eq:data-errors} and \eqref{eq:subspace-bounds} imply the conservative effective radii
+\begin{align}
+ \overline\eps_a
+ &=\eps_a+2b_H(\|\widehat H_a\|+\eps_a)+2\mu_a,
+ \label{eq:effective-shift-error}\\
+ \overline\eps_{c,i}
+ &=\eps_{c,i}+b_H(\|\widehat c_i\|+\eps_{c,i})+\mu_{c,i},
+ \label{eq:effective-seed-error}\\
+ \overline\eps_{r,\lambda}
+ &=\eps_{r,\lambda}+b_H(\|\widehat r_\lambda\|+\eps_{r,\lambda})+\mu_{r,\lambda}.
+ \label{eq:effective-readout-error}
+\end{align}
+For example, insert $P_CH_aP_R$ between the observed and exact compressed blocks, apply the two projector bounds, and use
+$\|H_a\|\le\|\widehat H_a\|+\eps_a$; the two sides contribute the factor two in Eq.~\eqref{eq:effective-shift-error}.
+
+Define
+\begin{align}
+ \widehat X_a&=\widehat O^\dagger\widehat H_a^{\parallel}\widehat R^\dagger,
+ &X_a&=O^\dagger H_aR^\dagger,\nonumber\\
+ \widehat s_i&=\widehat O^\dagger\widehat c_i^{\parallel},
+ &s_i&=O^\dagger c_i,\nonumber\\
+ \widehat f_\lambda&=\widehat r_\lambda^{\parallel}\widehat R^\dagger,
+ &f_\lambda&=r_\lambda R^\dagger.
+ \label{eq:truncated-reconstruction}
+\end{align}
+A three-term telescoping decomposition yields
+\begin{align}
+ \|\widehat X_a-X_a\|
+ &\le d_O\frac{\|\widehat H_a^{\parallel}\|}{\widehat r}
+ +\frac{\overline\eps_a}{\underline o\,\widehat r}
+ +\frac{\|\widehat H_a^{\parallel}\|+\overline\eps_a}{\underline o}d_R
+ =:\delta_{X,a},
+ \label{eq:shift-error}\\
+ \|\widehat s_i-s_i\|
+ &\le d_O\|\widehat c_i^{\parallel}\|
+ +\frac{\overline\eps_{c,i}}{\underline o}
+ =:\delta_{s,i},
+ \label{eq:seed-error}\\
+ \|\widehat f_\lambda-f_\lambda\|
+ &\le\frac{\overline\eps_{r,\lambda}}{\widehat r}
+ +(\|\widehat r_\lambda^{\parallel}\|+\overline\eps_{r,\lambda})d_R
+ =:\delta_{f,\lambda}.
+ \label{eq:readout-error}
+\end{align}
+Thus the discarded singular tail enters every coordinate-level constant through $\overline\eps_H$ and the factor radii in Eq.~\eqref{eq:factor-errors}; it may not be omitted by factorizing $\widehat H$ as though it had exact rank $n$.
+
+Set
+\begin{equation}
+ \delta_X=\max_a\delta_{X,a},
+ \qquad
+ M=\max_a\{\|X_a\|,\|\widehat X_a\|\}.
+ \label{eq:MX}
+\end{equation}
+For $w=a_L\cdots a_1$, replacing one factor at a time gives
+\begin{equation}
+ \|\widehat X_w-X_w\|\le L M^{L-1}\delta_X.
+ \label{eq:word-telescope}
+\end{equation}
+With $F_\lambda=\|\widehat f_\lambda\|+\delta_{f,\lambda}$,
+\begin{align}
+ &|\widehat f_\lambda\widehat X_w\widehat s_i-f_\lambda X_ws_i|\nonumber\\
+ &\quad\le
+ \delta_{f,\lambda}M^L\|\widehat s_i\|
+ +F_\lambda L M^{L-1}\delta_X\|\widehat s_i\|
+ +F_\lambda M^L\delta_{s,i}.
+ \label{eq:prediction-bound}
+\end{align}
+This bound is finite horizon unless a common dynamical norm is independently controlled.
+
+\begin{corollary}[Contractive all-depth bound]
+\label{cor:contractive}
+If one independently certified norm satisfies
+$\|X_a\|,\|\widehat X_a\|\le q<1$ for every letter, then
+\begin{equation}
+ |\widehat y_{\lambda i}(w)-y_{\lambda i}(w)|
+ \le \delta_{f,\lambda}\|\widehat s_i\|
+ +\frac{F_\lambda\delta_X\|\widehat s_i\|}{1-q}
+ +F_\lambda\delta_{s,i}
+ \label{eq:contractive-bound}
+\end{equation}
+uniformly in word length.
+\end{corollary}
+
+\emph{Proof.---}
+Use $q^L\le1$ and
+$Lq^{L-1}\le\sum_{j=0}^{L-1}q^j\le(1-q)^{-1}$. \hfill$\square$
+
+\section{Entry, depth, and sampling resources}
+\label{sec:resource}
+
+The entry count assumes supplied or independently certified saturated bases; it does not include blind worst-case basis discovery.  Sampling is stated only for an explicit bounded oracle for value-and-derivative entries.
+
+\paragraph{Lemma R.1 (existence and depth of saturated bases).}
+A minimal order-$n$ series has $n$ linearly independent reachable columns and $n$ linearly independent observable rows represented by words of length at most $n-1$.  With these bases, core entries have depth at most $2n-2$ and central shifts at most $2n-1$.
+
+\emph{Proof.---}
+Lemma 2.3 gives complete finite spanning families through length $n-1$.  Select bases.  An entry $y(sp)$ has length at most $2n-2$ and $y(sap)$ at most $2n-1$. \hfill$\square$
+
+\paragraph{Lemma R.2 (certificate entry count).}
+For $m=|\Sigma|$ and saturated bases of cardinality $n_J$,
+\begin{equation}
+ N_{\rm flat}\le(m+1)n_J^2+(|I|+|\Lambda|)n_J.
+ \label{eq:Nflat-SM}
+\end{equation}
+
+\emph{Proof.---}
+The core contributes $n_J^2$ entries, the $m$ central shifts contribute $mn_J^2$, the empty-prefix columns contribute $|I|n_J$, and the empty-suffix rows contribute $|\Lambda|n_J$. \hfill$\square$
+
+\paragraph{Lemma R.3 (affine dimension of a deterministic comb).}
+For a depth-$k$ deterministic comb with $d$-dimensional input and output at each slot,
+\begin{equation}
+ D_k=\frac{d^2(d^{4k}-1)}{d^2+1}.
+ \label{eq:Dk-SM}
+\end{equation}
+
+\emph{Proof.---}
+A Hermitian Choi operator for $k$ input--output pairs has real dimension $d^{4k}$.  The last causal constraint is
+\begin{equation}
+ \Tr_{\mathrm{out}_k}W_k=I_{\mathrm{in}_k}\otimes W_{k-1}.
+ \label{eq:comb-causal}
+\end{equation}
+The partial-trace kernel has dimension $d^{4k}-d^{4k-2}$ and the allowed right-hand sides vary over an affine set of dimension $D_{k-1}$.  Hence
+\begin{equation}
+ D_k=D_{k-1}+d^{4k}-d^{4k-2},
+ \qquad D_0=0.
+ \label{eq:Drecurrence}
+\end{equation}
+Summing the geometric series gives Eq.~\eqref{eq:Dk-SM}.  Positivity leaves a convex body with nonempty relative interior and does not alter the affine dimension. \hfill$\square$
+
+For $d=2,k=2$, $D_2=204$, while a conventional product operation basis contains $d^{4k}=256$ sequences; both are $\Theta(d^{4k})$ as entry counts.
+
+\paragraph{Lemma R.4 (scalar-coordinate lower bound).}
+Let $\mathcal U$ be a relative-interior neighborhood of the deterministic-comb set, identified by an affine chart with an open subset of $\R^{D_k}$.  If a continuous scalar-coordinate tomography map
+\begin{equation}
+ \mathcal T:\mathcal U\longrightarrow\R^N
+ \label{eq:scalar-tomography-map}
+\end{equation}
+is injective on a neighborhood of one point, then
+\begin{equation}
+ N\ge D_k.
+ \label{eq:scalar-entry-lower}
+\end{equation}
+
+\emph{Proof.---}
+Restrict to a neighborhood on which $\mathcal T$ is injective and use the affine chart.  If $N<D_k$, compose $\mathcal T$ with the standard linear embedding $\iota:\R^N\hookrightarrow\R^{D_k}$.  The map $\iota\circ\mathcal T$ is a continuous injection from an open subset of $\R^{D_k}$ into $\R^{D_k}$.  Brouwer's invariance-of-domain theorem makes its image open in $\R^{D_k}$, but the image lies in the $N$-dimensional linear subspace $\iota(\R^N)$, which has empty interior.  This contradiction proves Eq.~\eqref{eq:scalar-entry-lower}. \hfill$\square$
+
+This is a dimension-counting statement about the number of independent scalar coordinates needed for locally injective unrestricted tomography.  It is not a shot lower bound and is invariant under rescaling of the testers.
+
+\paragraph{Definition R.5 (bounded jet-entry oracle).}
+For each requested scalar value or first-derivative entry $y_\ell$, an oracle draw returns a random variable $Z_{\ell}$ such that
+\begin{equation}
+ a_\ell\le Z_\ell\le a_\ell+B_\ell,
+ \qquad
+ |\mathbb E Z_\ell-y_\ell|\le\beta_\ell.
+ \label{eq:jet-oracle}
+\end{equation}
+Draws are independent across repetitions.  Set
+\begin{equation}
+ B=\max_\ell B_\ell,
+ \qquad
+ \beta=\max_\ell\beta_\ell,
+\end{equation}
+and suppose one oracle draw consumes at most $q$ primitive circuit shots.
+
+Direct Bernoulli probabilities have $B=1$, $\beta=0$, and $q=1$.  If an exact parameter-shift identity has the form
+\begin{equation}
+ \partial_\mu p(x_0)=\sum_{s=1}^{Q}c_s p(x_0+\delta_s),
+ \label{eq:parameter-shift-oracle}
+\end{equation}
+then $Z=\sum_sc_sY_s$, with independent Bernoulli $Y_s$, is unbiased, uses $q=Q$ primitive shots, and has range width at most
+\begin{equation}
+ B\le\sum_{s=1}^{Q}|c_s|.
+\end{equation}
+For a central finite difference of a Bernoulli probability,
+\begin{equation}
+ Z_h=\frac{Y_+-Y_-}{2h},
+ \label{eq:finite-difference-oracle}
+\end{equation}
+uses $q=2$, has range width $B_h=1/h$, and has bias
+\begin{equation}
+ \beta_h\le\frac{M_3h^2}{6}
+ \label{eq:finite-difference-bias}
+\end{equation}
+provided $|\partial_\mu^3p|\le M_3$ on the interpolation interval.  Thus finite differences are consumed only with a declared step and smoothness-based bias bound.
+
+\paragraph{Lemma R.6 (matched-confidence sampling upper bound).}
+Let $N$ jet entries be queried through Definition R.5, and let $\epsilon>\beta$.  If each entry is averaged over
+\begin{equation}
+ s\ge
+ \frac{B^2}{2(\epsilon-\beta)^2}
+ \log\frac{2N}{\alpha}
+ \label{eq:oracle-repetitions}
+\end{equation}
+independent oracle draws, then
+\begin{equation}
+ \Pr\!\left[
+ \max_{1\le\ell\le N}|\widehat y_\ell-y_\ell|\le\epsilon
+ \right]\ge1-\alpha.
+ \label{eq:uniform-prob}
+\end{equation}
+The number of primitive shots obeys
+\begin{equation}
+ S_{\rm primitive}\le
+ qN\left\lceil
+ \frac{B^2}{2(\epsilon-\beta)^2}
+ \log\frac{2N}{\alpha}
+ \right\rceil.
+ \label{eq:hoeffding-upper}
+\end{equation}
+
+\emph{Proof.---}
+Hoeffding's inequality for an interval of width $B$ gives
+\begin{equation}
+ \Pr\!\left[
+ |\widehat y_\ell-\mathbb EZ_\ell|>\epsilon-\beta
+ \right]
+ \le2\exp\!\left[-\frac{2s(\epsilon-\beta)^2}{B^2}\right].
+\end{equation}
+Equation~\eqref{eq:jet-oracle} and the triangle inequality convert this to error at most $\epsilon$ relative to $y_\ell$.  A union bound over $N$ entries proves Eq.~\eqref{eq:uniform-prob}; multiplying the oracle draws by their maximum primitive-shot cost $q$ gives Eq.~\eqref{eq:hoeffding-upper}. \hfill$\square$
+
+\begin{theorem}[Entry and sampling resources]
+\label{thm:R}
+For a series in $\cC(n_J)$ with supplied or independently certified saturated bases:
+\begin{enumerate}
+\item the exact certificate uses at most Eq.~\eqref{eq:Nflat-SM} scalar entries and no word deeper than $2n_J-1$;
+\item any continuous scalar-coordinate tomography that is locally injective on a relative-interior neighborhood of an unrestricted depth-$k$ comb requires at least $D_k$ scalar coordinates;
+\item under the bounded jet-entry oracle of Definition R.5, the certificate obeys Eq.~\eqref{eq:hoeffding-upper} with $N=N_{\rm flat}$.
+\end{enumerate}
+No universal shot lower bound for unrestricted tomography follows from affine dimension alone.  Such a lower bound would require an additional normalized packing, frame, or minimum-contrast condition on the tester family.
+\end{theorem}
+
+Theorem~\ref{thm:R} compares the number of scalar entries needed by an order-conditioned certificate with the affine dimension required for locally injective unrestricted tomography, and supplies a sampling upper bound only for a declared oracle.  It is not a universal shot advantage and does not dominate structured low-memory identification; the executed structured comparator uses the same counts as the certificate.
+
+\section{Noise model, power analysis, and preregistration}
+\label{sec:benchmark}
+
+\subsection{Step-1 channel model}
+
+The Step-1 study is a literature-parameterized simulation, not a device result.  Starting from Eq.~(\ref{eq:comb}), it composes
+\begin{align}
+ \mathcal D_1^{(p)}(\rho)&=(1-p)\rho+pI/2,\nonumber\\
+ \mathcal D_2^{(p)}(\rho)&=(1-p)\rho+pI/4,\nonumber\\
+ \mathcal Z^{(p)}(\rho)&=(1-p)\rho+pZ\rho Z,
+ \label{eq:noise-channels}
+\end{align}
+with preparation/readout assignment noise, two-qubit depolarization after each entangler, one-qubit noise after local rotations, spectator dephasing through the inter-slot window, and an optional coherent $ZZ$ phase kick in the IBM sensitivity model.  All six channel components were numerically CP and TP: minimum Choi eigenvalue at least $-10^{-12}$ and trace-preservation defect at most $10^{-10}$.
+
+Table~\ref{tab:noise-provenance} records the defaults.  Primary-record quantities are used directly; quantities without a clean platform value are sensitivity parameters.  H2 data are from Refs.~\cite{Moses2023Racetrack,DeCross2025RCS}.  IBM context is from Ref.~\cite{AbuGhanem2025IBM}, a calibration snapshot embedded in Ref.~\cite{Polche2026KQRC}, the archived run snapshots, and IBM's official description of dynamically calibrated backend properties~\cite{IBMBackendDetails2026}.  Ref.~\cite{Polche2026KQRC} is a forecasting preprint containing a device snapshot, not an IBM calibration paper.
+
+\begin{table}[t]
+\caption{Step-1 model inputs.  ``Sensitivity'' means that the platform-specific value is swept rather than treated as measured.}
+\label{tab:noise-provenance}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\parbox[t]{0.23\linewidth}{Platform/input} &
+\parbox[t]{0.17\linewidth}{Value} &
+\parbox[t]{0.20\linewidth}{Status} &
+\parbox[t]{0.29\linewidth}{Use}\\
+\midrule
+\parbox[t]{0.23\linewidth}{H2 1Q error} & \parbox[t]{0.17\linewidth}{$2.5\times10^{-5}$} & \parbox[t]{0.20\linewidth}{verified~\cite{Moses2023Racetrack}} & \parbox[t]{0.29\linewidth}{local depolarization}\\
+\parbox[t]{0.23\linewidth}{H2 2Q error} & \parbox[t]{0.17\linewidth}{$1.83\times10^{-3}$} & \parbox[t]{0.20\linewidth}{verified~\cite{Moses2023Racetrack}} & \parbox[t]{0.29\linewidth}{each entangler}\\
+\parbox[t]{0.23\linewidth}{H2 SPAM} & \parbox[t]{0.17\linewidth}{$1.6\times10^{-3}$} & \parbox[t]{0.20\linewidth}{verified~\cite{Moses2023Racetrack}} & \parbox[t]{0.29\linewidth}{preparation/readout}\\
+\parbox[t]{0.23\linewidth}{H2 spectator dephasing} & \parbox[t]{0.17\linewidth}{$3.0\times10^{-4}$} & \parbox[t]{0.20\linewidth}{midpoint of verified range} & \parbox[t]{0.29\linewidth}{retained-$S_1$ coherence}\\
+\parbox[t]{0.23\linewidth}{H2 measurement crosstalk} & \parbox[t]{0.17\linewidth}{$5.0\times10^{-6}$} & \parbox[t]{0.20\linewidth}{rounded from Ref.~\cite{Moses2023Racetrack}} & \parbox[t]{0.29\linewidth}{spectator channel}\\
+\parbox[t]{0.23\linewidth}{IBM Heron-r2 1Q error} & \parbox[t]{0.17\linewidth}{$2.9\times10^{-4}$} & \parbox[t]{0.20\linewidth}{anchored sensitivity} & \parbox[t]{0.29\linewidth}{local depolarization}\\
+\parbox[t]{0.23\linewidth}{IBM $CZ$ error} & \parbox[t]{0.17\linewidth}{$2.334\times10^{-3}$} & \parbox[t]{0.20\linewidth}{archived snapshot~\cite{Polche2026KQRC,IBMBackendDetails2026}} & \parbox[t]{0.29\linewidth}{each entangler}\\
+\parbox[t]{0.23\linewidth}{IBM readout error} & \parbox[t]{0.17\linewidth}{$1.23\times10^{-3}$} & \parbox[t]{0.20\linewidth}{archived snapshot~\cite{Polche2026KQRC,IBMBackendDetails2026}} & \parbox[t]{0.29\linewidth}{assignment channel}\\
+\parbox[t]{0.23\linewidth}{IBM $T_2$} & \parbox[t]{0.17\linewidth}{$96.89\,\mu\mathrm{s}$} & \parbox[t]{0.20\linewidth}{archived snapshot~\cite{Polche2026KQRC,IBMBackendDetails2026}} & \parbox[t]{0.29\linewidth}{dephasing over $1.5\,\mu\mathrm{s}$}\\
+\parbox[t]{0.23\linewidth}{IBM $ZZ$ kick} & \parbox[t]{0.17\linewidth}{$\phi\in[0,0.1]$ rad} & \parbox[t]{0.20\linewidth}{sensitivity} & \parbox[t]{0.29\linewidth}{coherent spectator phase}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The statistic is a $\pm1$ correlator with ideal mean $C(\delta)=\sin\delta$.  The test is two sided with $\alpha=0.05$, target power $0.95$, $z_{1-\alpha/2}=1.959964$, and $z_{0.95}=1.644854$.  The exact binomial equation is inverted using the noisy contrast; 40,000 Monte Carlo trials with opaque reproducibility seed $20260721$ verify the power.  The eight-digit seeds used throughout are run identifiers, not calendar dates; UTC manifest and submission times below establish chronology.  The total budget is
+\begin{equation}
+ N_{\rm total}=N_{\rm corr}(1+48),
+ \label{eq:power-total}
+\end{equation}
+which allocates equal shots to the separator and all 48 single-slot baseline coordinates.
+
+\begin{table}[t]
+\caption{Selected Step-1 power results at zero IBM phase kick.}
+\label{tab:step1-power}
+\begin{ruledtabular}
+\begin{tabular}{lccccc}
+Model & $\delta_0$ & $C_1$ & $N_{\rm corr}$ & $N_{\rm total}$ & MC power\\
+\hline
+H2 & $0.05$ & $0.04947$ & $5{,}303$ & $259{,}847$ & $0.949$\\
+H2 & $0.10$ & $0.09883$ & $1{,}325$ & $64{,}925$ & $0.948$\\
+H2 & $0.20$ & $0.19666$ & $331$ & $16{,}219$ & $0.947$\\
+Heron r2 & $0.05$ & $0.04870$ & $5{,}474$ & $268{,}226$ & $0.948$\\
+Heron r2 & $0.10$ & $0.09728$ & $1{,}368$ & $67{,}032$ & $0.949$\\
+Heron r2 & $0.20$ & $0.19358$ & $341$ & $16{,}709$ & $0.950$\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+At $\delta_0=0.1$, the planning budgets are $64{,}925$ shots for H2 and $67{,}032$ for the zero-kick Heron-r2 model.  Sweeping the IBM kick to $0.1$ rad raises the latter to $67{,}718$; these are model-based planning numbers, not hardware observations.
+
+\subsection{Blind challenge and simulator dry run}
+
+The device protocol was frozen as follows.
+\begin{enumerate}
+\item A secret generator randomizes the non-gauge axis, insertion position, amplitude, and dark-versus-null label; only a hash of the answer key is public before execution.
+\item Estimator code, thresholds, prefix/suffix basis, order-bound justification, and all certificate states are frozen before unblinding.
+\item Positive, null, gauge, delayed-activation, and mismatch controls are interleaved; circuit order and drift probes are recorded.
+\item A held-out deeper-protocol family is excluded from the decision and used for confirmation.
+\item Counts and power are compared with marginal tomography, a restricted process-tensor estimator, full process-tensor tomography on tractable instances, and a matched-order low-memory realization comparator.
+\item Cross-vendor validation is required for portability claims; simulation is not device validation.
+\end{enumerate}
+
+The dry run uses seed $20260721$, 20 instances (7 dark, 13 null), and $\delta\in[0.2,0.4]$.  The complete hashes are
+\begin{quote}\small\raggedright
+sealed key:\quad \hashfour{5d9f37d9e6837640}{f70e7157bd213165}{d8626c06d9c13874}{959b91ad114a7599};\\
+frozen configuration:\quad \hashfour{87a1da0d424211ac}{18644432930b848d}{f704f3dcd9733b80}{1bdfdd557b9378c4};\\
+Step-1 artifact:\quad \hashfour{f1bff524ce759df8}{e30131f3071e8d78}{5fb34e4f2a41bff8}{3a3cd6fd24f88e1c}.
+\end{quote}
+Unblinding verification passed.  The run used $z_{\rm gate}=4.00$, 2048 shots per setting, and experimentwise $\alpha_{\rm exp}=0.01$.
+
+\begin{table}[t]
+\caption{Simulator dry run.  ``Ops'' is the declared operation-basis size.}
+\label{tab:dryrun}
+\begin{ruledtabular}
+\begin{tabular}{lcccccc}
+Method & Detection & FP & TP/dark & Settings & Shots/inst. & Ops\\
+\hline
+Certificate & $1.00$ & $0.00$ & $7/7$ & $9$ & $18{,}432$ & --\\
+Structured low-memory & $1.00$ & $0.00$ & $7/7$ & $9$ & $18{,}432$ & --\\
+Marginal QPT & $0.00$ & $0.00$ & $0/7$ & $36$ & $73{,}728$ & --\\
+Restricted PTT & $1.00$ & $0.00$ & $7/7$ & $324$ & $663{,}552$ & restricted\\
+Full PTT & $1.00$ & $0.00$ & $7/7$ & $144$ & $294{,}912$ & $256$\\
+Held-out depth 3 & $1.00$ & $0.00$ & $7/7$ & $9$ & $18{,}432$ & --\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+All methods had 13 nulls and $0/13$ false positives.  The structured comparator tied the certificate at nine settings, illustrating the scope of Theorem~\ref{thm:R}: the theorem gives an entry-dimension comparison with unrestricted scalar tomography and an oracle-based sampling upper bound, not an advantage over every model-aware learner.
+
+\section{Sealed run on \texttt{ibm\_marrakesh}}
+\label{sec:marrakesh}
+
+The challenge used opaque seed $20260725$.  Eight sealed instances contained three planted links and five nulls.  The complete digests are
+\begin{quote}\small\raggedright
+sealed key:\quad \hashfour{99baf933bd533f84}{469c2e8a9d049a8f}{365294fc8e04de5b}{79db026070bb1274};\\
+run plan:\quad \hashfour{fe6f3adcd2452c6e}{c1a0e6e90550b44b}{18724699010ad545}{086a3059edc7855c};\\
+estimator:\quad \hashfour{76296041f509bda0}{6a9d0e7433ee6312}{f1ba769bd70e39bb}{fb1956eada7e8543}.
+\end{quote}
+SHA-256 verification after unblinding returned true.  The decision family was $\{YX,ZX\}$ and $z_{\rm gate}=3.56$.
+
+\begin{table}[t]
+\caption{Marrakesh arms and resources.  A PUB is one Qiskit Runtime primitive unified block.}
+\label{tab:marrakesh-arms}
+\begin{ruledtabular}
+\begin{tabular}{lrrrrr}
+Arm & Instances & Settings & Shots/setting & PUBs & Shots\\
+\hline
+Certificate & 8 & 9 & 2048 & 72 & 147456\\
+Marginal-channel QPT & 8 & 36 & 512 & 288 & 147456\\
+Held-out depth 3 & 2 & 9 & 2048 & 18 & 36864\\
+\hline
+Total & -- & -- & -- & 378 & 331776\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+All three planted directions were detected and all five nulls stayed below threshold.  Marginal-channel QPT detected none of the three planted directions, as Proposition~\ref{prop:single-slot-invariance} predicts.  The held-out arm contained one dark and one null instance and classified both correctly.  Eight jobs consumed 106 recorded QPU-seconds.  The structured comparator reused the certificate counts and made the same calls with no extra shots; full PTT was not run on hardware.
+
+\begin{table}[t]
+\caption{Marrakesh per-instance certificate statistic and submission chronology.  Only the absolute maximizing component was archived, so its sign cannot be reconstructed.}
+\label{tab:marrakesh-instances}
+\scriptsize
+\begin{ruledtabular}
+\begin{tabular}{crrcccl}
+Inst. & Truth & $\max|z|$ & Argmax & Call & QPU-s & Submit UTC (2026-07-21)\\
+\hline
+0 & null & 2.12 & $YX$ & no & 17 & 14:19:05.084223\\
+1 & dark & 11.5 & $YX$ & yes & 17 & 14:41:55.686731\\
+2 & null & 3.10 & $YX$ & no & 12 & 14:42:38.673013\\
+3 & dark & 12.8 & $YX$ & yes & 12 & 14:44:52.956075\\
+4 & null & 3.32 & $YX$ & no & 12 & 14:45:19.970457\\
+5 & dark & 8.50 & $YX$ & yes & 12 & 14:48:52.594197\\
+6 & null & 2.75 & $YX$ & no & 12 & 14:50:00.508499\\
+7 & null & 0.751 & $ZX$ & no & 12 & 14:54:25.928160\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Four of five Marrakesh nulls maximize on $YX$ at smaller absolute amplitudes, a weak same-axis concentration compatible with the later Fez floor.  Because the archived verdict contains only $\max|z|$ and the maximizing label, no retrospective claim about a common negative sign is possible.
+
+\paragraph{Estimator-hardening chronology.---}
+Estimator v1 scanned all eight off-null Pauli pairs.  Before the real manifest was armed, a device-noise rehearsal using 0.99\% readout error produced one false positive among four nulls; the failed rehearsal remains archived.  Estimator v2 restricted the decision to the analytically predicted $\{YX,ZX\}$ signal plane and inflated the shot-noise gate $3.42$ by $1/\lambda=1.04$ to $3.56$.  Its configuration was frozen before two fresh-seed rehearsals ($8/8$ planted detections, $0/8$ false positives) and before the hardware run.  The calibration snapshot, deterministic PUB ordering, submission/result timestamps, and job usage were recorded before unblinding.
+
+\section{Cross-device replication and null-floor localization on \texttt{ibm\_fez}}
+\label{sec:fez}
+
+\subsection{Sealed replication run}
+
+The same frozen v2 estimator was reused on \texttt{ibm\_fez} at opaque seed $20260727$.  The complete digests are
+\begin{quote}\small\raggedright
+sealed key:\quad \hashfour{c0dcae2602da1873}{cb31106780808750}{dec16030224c2e61}{4b123e39df283918};\\
+run plan:\quad \hashfour{f9c14c2b65be3412}{a1f65ae415b42521}{fe4a2a94619e0dae}{0dbdbd8a49d01f14};\\
+estimator:\quad \hashfour{76296041f509bda0}{6a9d0e7433ee6312}{f1ba769bd70e39bb}{fb1956eada7e8543}.
+\end{quote}
+The gate remained $3.56$.  The run had the same resource plan as Table~\ref{tab:marrakesh-arms}: eight jobs, 378 PUBs, $331{,}776$ shots, and 106 QPU-seconds.
+
+All five planted directions were detected, marginal-channel QPT detected none, and the held-out null/dark pair was correct.  However, two of three nulls crossed the unreferenced gate.  The structured comparator made the same calls from the same counts.  Thus planted-signal sensitivity and marginal blindness transferred, while specificity of an absolute threshold did not.
+
+\begin{table}[t]
+\caption{Fez per-instance certificate statistic and submission chronology.  Every maximizing component was $YX$.}
+\label{tab:fez-instances}
+\scriptsize
+\begin{ruledtabular}
+\begin{tabular}{crrcccl}
+Inst. & Truth & $\max|z|$ & Gate & Call & QPU-s & Submit UTC (2026-07-21)\\
+\hline
+0 & null & 4.89 & 3.56 & yes (FP) & 17 & 15:02:56.373111\\
+1 & dark & 7.11 & 3.56 & yes & 17 & 15:03:20.644529\\
+2 & null & 2.30 & 3.56 & no & 12 & 15:03:44.588625\\
+3 & dark & 19.0 & 3.56 & yes & 12 & 15:04:14.656989\\
+4 & null & 4.40 & 3.56 & yes (FP) & 12 & 15:04:50.532413\\
+5 & dark & 7.39 & 3.56 & yes & 12 & 15:05:17.554755\\
+6 & dark & 17.9 & 3.56 & yes & 12 & 15:05:40.432889\\
+7 & dark & 9.77 & 3.56 & yes & 12 & 15:06:04.236561\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+The held-out arm used instances 0 and 1.  The null gave $\max|z|=2.21<3.78$ and the dark instance $4.93>3.78$, both at $YX$.
+
+\subsection{Preregistered null confirmation}
+
+A separate null-only experiment was sealed before execution to distinguish a reproducible device floor from transient drift.  It used opaque seed $20260728$.  The complete digests are
+\begin{quote}\small\raggedright
+manifest:\quad \hashfour{fc4ea351282cb323}{a69ff02df5b78afa}{5d9bee5fdbe3e942}{5ebde014a050f878};\\
+hypotheses:\quad \hashfour{c3c61c14f98c92f}{88fd7e22d56cf336}{3f9862c9f2029668}{453bab17fdca34e7a}.
+\end{quote}
+The chronology was
+\begin{quote}\small\raggedright
+manifest: \texttt{2026-07-21}\allowbreak\texttt{T15:21:57.440996Z};\\
+submission: \texttt{2026-07-21}\allowbreak\texttt{T15:21:59.376097Z}.
+\end{quote}
+Six fresh nulls used nine settings and 2048 shots each: 54 PUBs, $110{,}592$ shots, one job (\texttt{d9fosr9htsac739foad0}), and 31 QPU-seconds.
+
+The preregistered alternatives were: a device-intrinsic floor, diagnosed by common-sign $YX$ structure through either a majority of individual crossings or a decisive pooled statistic; drift, diagnosed by at most one crossing together with scattered signs or unstable half splits; or an inconclusive intermediate result.  The pooled/common-sign branch selected the first alternative.
+
+\begin{table}[t]
+\caption{Fresh Fez nulls.  Each 2048-shot PUB was split into first and second halves before inspection.  The $XX$ column checks the ideal null stabilizer $\langle XX\rangle=1$ and circuit coherence; it is not part of the decision.}
+\label{tab:fez-null-confirmation}
+\begin{ruledtabular}
+\begin{tabular}{crrrrrrc}
+Inst. & $\langle YX\rangle$ & $z_{YX}$ & $z_{YX}^{(1)}$ & $z_{YX}^{(2)}$ & $z_{ZX}$ & $\langle XX\rangle$ & $|z|>3.6$\\
+\hline
+0 & -0.0156 & -0.707 & -1.06 & +0.063 & +0.663 & 0.900 & no\\
+1 & -0.103 & -4.66 & -4.67 & -1.94 & -0.707 & 0.914 & yes\\
+2 & -0.0391 & -1.77 & -1.82 & -0.688 & -1.37 & 0.888 & no\\
+3 & -0.0615 & -2.79 & -3.52 & -0.438 & +0.530 & 0.904 & no\\
+4 & -0.0449 & -2.03 & -1.94 & -0.938 & -1.19 & 0.896 & no\\
+5 & -0.0713 & -3.23 & -1.75 & -2.82 & +0.398 & 0.906 & no\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+All $6/6$ $YX$ estimates were negative and passed the preregistered within-run stability check.  Pooling 12,288 shots gave
+\begin{equation}
+ \widehat C_{YX}=-0.0558,
+ \qquad z_{YX}=-6.20,
+ \qquad p\simeq10^{-9},
+ \label{eq:fez-pooled-yx}
+\end{equation}
+while
+\begin{equation}
+ \widehat C_{ZX}=-0.00618,
+ \qquad z_{ZX}=-0.686.
+ \label{eq:fez-pooled-zx}
+\end{equation}
+Only one individual null exceeded $3.6$; the floor magnitude varied between runs, and its sign and measurement axis were reproducible across these two windows, although a later window reversed the sign (protocol~v3 below).
+
+Deterministic transpilation placed every confirmation circuit on physical qubits $(S_1,E,S_2)=(0,1,2)$.  Table~\ref{tab:fez-qubits} gives the calibration snapshot archived before submission.
+\begin{table}[t]
+\caption{Physical-qubit properties for the Fez confirmation, retrieved through IBM's documented backend-property interface~\cite{IBMBackendDetails2026}.}
+\label{tab:fez-qubits}
+\begin{ruledtabular}
+\begin{tabular}{crrrr}
+Logical role & Qubit & $T_1$ ($\mu$s) & $T_2$ ($\mu$s) & Readout error\\
+\hline
+$S_1$ ($Y$ measured) & 0 & 54.1 & 11.8 & 1.18\%\\
+$E$ & 1 & 204 & 259 & 1.78\%\\
+$S_2$ & 2 & 191 & 157 & 0.525\%\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+For a genuine in-plane memory link, the ideal first-order signal vector is
+\begin{equation}
+ (C_{YX},C_{ZX})=\sin\delta\,(\cos\phi,-\sin\phi).
+ \label{eq:dark-signal-vector}
+\end{equation}
+An axis-aligned link can occupy one component, so anisotropy alone is not decisive.  The relevant evidence is instead the sealed null label, the same device-locked negative $YX$ direction across six fresh nulls, pooled $ZX$ consistent with zero, one deterministic layout, and the unusually short $T_2$ of the $Y$-measured $S_1$ qubit.  Together these data are consistent with a fixed single-axis readout bias on physical qubit 0, rather than a randomized planted memory link; they do not identify a unique microscopic noise channel.
+
+\subsection{Preregistered differential protocol v3}
+
+The absolute-gate classifier is not portable across devices without a local reference.  Protocol v3 interleaves each challenge with a matched null circuit using the same physical layout, compilation, measurement basis, and nearby execution window.  Its decision vector is
+\begin{equation}
+ \Delta\widehat{\bm C}=
+ \begin{pmatrix}
+ \widehat C_{YX}^{\rm challenge}-\widehat C_{YX}^{\rm null}\\
+ \widehat C_{ZX}^{\rm challenge}-\widehat C_{ZX}^{\rm null}
+ \end{pmatrix}.
+ \label{eq:differential-reference}
+\end{equation}
+For independent shot blocks, a conservative component variance is
+\begin{equation}
+ \widehat\sigma_{\Delta P}^2=
+ \frac{1-(\widehat C_P^{\rm challenge})^2}{N_{\rm challenge}}
+ +\frac{1-(\widehat C_P^{\rm null})^2}{N_{\rm null}},
+ \qquad P\in\{YX,ZX\}.
+ \label{eq:differential-variance}
+\end{equation}
+The family-wise differential gate, block order, and an \texttt{INCONCLUSIVE} rule for reference drift were preregistered before execution; Eq.~\eqref{eq:differential-reference} is not a post hoc rescore of the Fez data.
+
+\paragraph{Protocol-v3 result.---}
+On \texttt{ibm\_fez} the preregistered device-referenced differential protocol achieved full specificity and sensitivity---detecting all five sealed planted-dark instances with zero false positives among three sealed nulls (72 QPU-s)---by cancelling a device-locked single-axis $YX$ floor whose sign reversed between calibration windows (pooled reference-block $z=-6.20$ versus $+4.77$ four hours apart), drift that no once-calibrated absolute threshold can track; in this session's weak-floor window the absolute gate also remained clean, so the direct contrast between the two deciders rests on the injected-floor rehearsal and the original run.
+
+\begin{table}[t]
+\caption{Protocol-v3 per-instance device-referenced differential statistic on \texttt{ibm\_fez}.  The reported $z_{\rm diff}$ is the maximizing (argmax) component; the family-wise differential gate is $|z_{\rm diff}|=3.54$.  All five planted-dark instances are detected (\textsc{det}) and all three nulls fall clean below the gate.}
+\label{tab:fez-v3}
+\scriptsize
+\begin{ruledtabular}
+\begin{tabular}{clcrc}
+Inst. & Truth & Argmax & $z_{\rm diff}$ & Verdict\\
+\hline
+0 & null & $ZX$ & $+1.05$ & ---\\
+1 & null & $ZX$ & $+1.26$ & ---\\
+2 & dark & $ZX$ & $+6.04$ & \textsc{det}\\
+3 & dark & $ZX$ & $-8.30$ & \textsc{det}\\
+4 & null & $ZX$ & $-1.62$ & ---\\
+5 & dark & $YX$ & $-8.26$ & \textsc{det}\\
+6 & dark & $ZX$ & $-4.21$ & \textsc{det}\\
+7 & dark & $YX$ & $+10.19$ & \textsc{det}\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+The two-device record establishes reproducible planted-signal sensitivity and single-slot blindness, but not cross-device specificity of an unreferenced absolute gate.  Cross-vendor validation remains pending.  Neither device run discovers the saturated basis or supplies the response-order bound.
+
+\section{Honesty ledger}
+\label{sec:honesty}
+
+\begin{enumerate}
+\item[O1.] \textbf{Blind saturated-basis discovery is open.}  Theorem~\ref{thm:R} assumes supplied or independently certified prefix and suffix bases.  Existence is proved; a blind worst-case algorithm with the same $\mathsf O(|\Sigma|n_J^2)$ response cost is not.
+
+\item[O2.] \textbf{The response-order bound is external.}  The audit does not learn $n_J$ for free.  It can come from a verified memory/controller model or the exhaustive all-words route.  Without it, a finite plateau is
+\texttt{INCONCLUSIVE\_}\allowbreak\texttt{NO\_ORDER\_}\allowbreak\texttt{EXHAUSTION}.
+
+\item[O3.] \textbf{Spectral coordinates need not display complete positivity.}  The minimal response realization is unique up to similarity.  A generic spectral similarity need not make the reconstructed maps manifestly CP or provide a physical dilation.
+
+\item[O4.] \textbf{Literal derivative block form requires jet faithfulness.}  The reconstruction always has the invariant filtration of Lemma 2.9.  Identifying its lower diagonal with $I_{T^*M}\otimes B_a$ and its invariant subspace with the physical derivative fibre needs an additional hypothesis.
+
+\item[O5.] \textbf{No uniform noisy all-depth guarantee without contraction.}  Exact extension is all depth; perturbed predictions obey Eq.~\eqref{eq:prediction-bound}.  A uniform bound needs an independently certified common contractive norm.
+
+\item[O6.] \textbf{Entry-count and sampling caveat.}  Theorem~\ref{thm:R} compares the certificate entry count with the affine dimension required for locally injective unrestricted scalar tomography and gives a sampling upper bound for a declared bounded jet-entry oracle.  It gives no universal tomography shot lower bound.  The matched-order comparator ties the certificate on the executed counts.
+
+\item[O7.] \textbf{Stationarity and drift are experimental assumptions.}  Time-dependent drift, history-dependent calibration, and non-i.i.d. shots can mimic rank or closure changes.  Randomized ordering, local null references, drift probes, and an \texttt{INCONCLUSIVE} policy are required.
+
+\item[O8.] \textbf{Hardware scope is limited.}  Two IBM devices reproduce planted-signal sensitivity and marginal blindness, while Fez shows that unreferenced specificity is not portable.  The Fez $YX$ floor even reversed sign between calibration windows (pooled $z=-6.20$ versus $+4.77$), drift the device-referenced protocol v3 is designed to cancel; its sealed run scored $5/5$ darks and $0/3$ nulls in a weak-floor window, and cross-vendor validation remains pending.  Direct environment access lies outside the declared intervention algebra.
+\end{enumerate}
+
+\section{Scope and outlook}
+The theorem certifies a complete first-derivative response kernel only for a declared intervention algebra under an independently justified response-order bound.  Automatic basis discovery, higher derivative orders, and device-referenced cross-vendor validation remain open.  No claim is made about latent ontic structure beyond the minimal registered response quotient.
+
+\bibliography{references}
+\end{document}

@@ -1,0 +1,54 @@
+{
+  "config": {
+    "estimator": "c7_frozen_flat_extension_certificate",
+    "config_version": 2,
+    "decision_family": "depth2_signal_subspace_YX_ZX",
+    "correlator_null": {
+      "XX": 1.0,
+      "XY": 0.0,
+      "XZ": 0.0,
+      "YX": 0.0,
+      "YY": 0.0,
+      "YZ": 0.0,
+      "ZX": 0.0,
+      "ZY": 0.0,
+      "ZZ": 0.0
+    },
+    "offnull_pairs": [
+      "XY",
+      "XZ",
+      "YX",
+      "YY",
+      "YZ",
+      "ZX",
+      "ZY",
+      "ZZ"
+    ],
+    "signal_subspace_pairs": [
+      "YX",
+      "ZX"
+    ],
+    "m_signal": 2,
+    "target_platform": "ibm_heron_r2",
+    "min_detectable_delta": 0.2,
+    "n_inst_declared": 8,
+    "alpha_exp": 0.01,
+    "alpha_step1": 0.05,
+    "z_alpha_over_2_step1": 1.959963986120195,
+    "z_beta": 1.644853625133699,
+    "bonferroni_tests": 16,
+    "z_gate_shot": 3.4205266973186355,
+    "readout_assignment_error": 0.0098876953125,
+    "readout_correlator_qubits": 2,
+    "readout_attenuation_lambda": 0.9608402848243713,
+    "z_gate": 3.559932645771468,
+    "power_factor": 2.08467908126532,
+    "n_ref_step1": 341,
+    "n_shots": 2048,
+    "se_floor_var": 1e-06,
+    "step1_artifact_sha256": "f1bff524ce759df8e30131f3071e8d785fb34e4f2a41bff83a3cd6fd24f88e1c",
+    "step1_source": "artifact",
+    "changelog": "v2 (2026-07-23): hardened after the ibm_marrakesh dress rehearsal (research/results/blind_benchmark_hardware_rehearsal) produced 1 false positive on 4 nulls (0.25 FP rate): null instance 6's off-signal <XY> correlator hit z=4.17 vs the v1 frozen z_gate=3.78. Root cause: the v1 statistic scanned all 8 off-null Pauli pairs, but the device median readout error (0.99%, ~8x the dry-run assumption) inflates the off-signal noise floor. Fix 1 (signal-subspace decision): restrict the decision family to the 2 first-order-signal correlators {YX, ZX} (Bonferroni over 2, not 8). Fix 2 (device-aware gate): recalibrate z_gate for the readout assignment error (z_gate = z_gate_shot / (1-2 eps)^2) instead of the dry-run negligible-readout assumption, preserving the Step-1 power target."
+  },
+  "config_sha256": "76296041f509bda06a9d0e7433ee6312f1ba769bd70e39bbfb1956eada7e8543"
+}

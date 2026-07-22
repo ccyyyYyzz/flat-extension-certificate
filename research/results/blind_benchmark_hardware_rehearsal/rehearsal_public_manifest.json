@@ -1,0 +1,89 @@
+{
+  "protocol": "c7_blind_benchmark",
+  "master_seed": 20260723,
+  "n_inst": 8,
+  "n_slots": 2,
+  "delta_range": [
+    0.2,
+    0.4
+  ],
+  "dark_prob": 0.5,
+  "sealed_key_sha256": "eca687ff1bbd313ec6c4b187af5c9d2d76bd97aad5b7f5ff05fbdc3d96ca52b3",
+  "instances": [
+    {
+      "instance_id": 0,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 1,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 2,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 3,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 4,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 5,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 6,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 7,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    }
+  ],
+  "target_backend": "ibm_marrakesh",
+  "plan_sha256": "422e1ec76949be738016397a8420ee7e234ee77af4b327600777eff424b84c8d",
+  "armed": false
+}

@@ -1,0 +1,54 @@
+{
+  "hypotheses": {
+    "protocol": "fez_null_confirmation",
+    "question": "Is the ibm_fez elevated null YX floor (fez nulls 0,2,4: |z|=4.89,2.30,4.40, argmax YX) device-intrinsic coherent multitime structure or a drift fluke?",
+    "decision_threshold_abs_z": 3.6,
+    "reference_frozen_gate": 3.559932645771468,
+    "focus_correlator": "YX",
+    "signal_subspace_pairs": [
+      "YX",
+      "ZX"
+    ],
+    "null_value": 0.0,
+    "n_null_instances": 6,
+    "cert_shots_per_setting": 2048,
+    "majority_threshold": 4,
+    "physical_qubits_expected": {
+      "S1": 0,
+      "E": 1,
+      "S2": 2,
+      "note": "VF2 deterministic layout; verified in-run per instance"
+    },
+    "H_intrinsic": "null YX reproduces at |z|>3.6 on >=4 of 6 instances with consistent sign across the shared physical-qubit triple; equivalently pooled 12288-shot YX mean nonzero at high z with agreeing per-instance signs",
+    "H_drift": "excesses do not reproduce: |z|<3.6 on nearly all (<=1 of 6) instances, scattered signs, and/or first-half vs second-half split z crossing the gate within a single instance",
+    "H_inconclusive": "2-3 of 6 exceed, or majority exceed but signs inconsistent, or strong within-run half-split instability",
+    "half_split": "each 2048-shot PUB split 1024/1024 in shot order -> split z"
+  },
+  "hypotheses_sha256": "c3c61c14f98c92f88fd7e22d56cf3363f9862c9f2029668453bab17fdca34e7a",
+  "plan": {
+    "protocol": "fez_null_confirmation",
+    "target_backend": "ibm_fez",
+    "master_seed": 20260728,
+    "n_null_instances": 6,
+    "cert_settings": 9,
+    "cert_shots": 2048,
+    "total_shots": 110592,
+    "job_count": 1,
+    "decision_threshold_abs_z": 3.6,
+    "signal_subspace_pairs": [
+      "YX",
+      "ZX"
+    ],
+    "qpu_seconds_estimate": {
+      "low_s": 6.5296,
+      "high_s": 19.5888,
+      "budget_s": 60,
+      "under_budget": true,
+      "note": "empirical fez usage ran ~1.5x this high estimate; 2048-shot plan stays comfortably under 60 QPU-s"
+    },
+    "armed": false
+  },
+  "sealed_before_execution": true,
+  "date": "2026-07-21T15:21:17.753278+00:00",
+  "manifest_sha256": "c2adc0d9c84cb9dee64349534ef9c5c05580ec0e07a1608614f267b3b630dc19"
+}

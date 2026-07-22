@@ -1,0 +1,194 @@
+{
+  "protocol": "c7_blind_benchmark",
+  "master_seed": 20260721,
+  "n_inst": 20,
+  "n_slots": 2,
+  "delta_range": [
+    0.2,
+    0.4
+  ],
+  "dark_prob": 0.5,
+  "sealed_key_sha256": "5d9f37d9e6837640f70e7157bd213165d8626c06d9c13874959b91ad114a7599",
+  "instances": [
+    {
+      "instance_id": 0,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 1,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 2,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 3,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 4,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 5,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 6,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 7,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 8,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 9,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 10,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 11,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 12,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 13,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 14,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 15,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 16,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 17,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 18,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    },
+    {
+      "instance_id": 19,
+      "n_slots": 2,
+      "families": [
+        "atomic",
+        "depth2",
+        "heldout_depth3"
+      ]
+    }
+  ]
+}

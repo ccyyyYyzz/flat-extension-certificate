@@ -1,0 +1,34 @@
+{
+  "protocol": "blind_benchmark_v3_device_referenced_differential",
+  "target_backend": "ibm_fez",
+  "master_seed": 20260729,
+  "n_inst": 8,
+  "dark_prob": 0.5,
+  "delta_range": [
+    0.2,
+    0.4
+  ],
+  "cert_shots_per_block": 1536,
+  "cert_settings": 9,
+  "total_shots": 221184,
+  "job_count": 8,
+  "sealed_key_sha256": "2b9325a556cfbd2f286c17b15bb1d5c8d5dcc45fad3dad0cdb61fc34274a9395",
+  "v3_config_sha256": "253ece5e799edf8935bc33e8d552daa0806a70cbea5baf074077e8005e891b9e",
+  "hypotheses_sha256": "79de57ab9517357297abc31dad74519de4735380d620c4c68813a0c956634f5e",
+  "qpu_seconds_estimate": {
+    "low_s": 19.0592,
+    "high_s": 57.1776,
+    "empirical_s": 77.6000512,
+    "budget_s": 80,
+    "under_budget": true,
+    "note": "empirical fit from the two prior fez runs (0.0002568 s/shot + 2.6 s/job) is the authoritative estimate; both it and the model high estimate stay < 80"
+  },
+  "armed": false,
+  "rehearsal_injected_floors_corr": [
+    -0.056,
+    -0.12
+  ],
+  "sealed_before_execution": true,
+  "date": "2026-07-21T17:45:19.831024+00:00",
+  "manifest_sha256": "921a4d4df90c5c75e454c08fc13a00ff6c85a5b48962b2157367de610a420494"
+}

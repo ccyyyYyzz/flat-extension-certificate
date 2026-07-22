@@ -1,0 +1,367 @@
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (0) allowed
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{27}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{https://doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Pollock}\ \emph {et~al.}(2018)\citenamefont
+  {Pollock}, \citenamefont {Rodr{\'i}guez-Rosario}, \citenamefont {Frauenheim},
+  \citenamefont {Paternostro},\ and\ \citenamefont
+  {Modi}}]{Pollock2018ProcessTensor}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.~A.}\ \bibnamefont
+  {Pollock}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Rodr{\'i}guez-Rosario}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Frauenheim}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Paternostro}},\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Modi}},\ }\bibfield  {title} {\bibinfo {title} {Non-markovian quantum
+  processes: Complete framework and efficient characterization},\ }\href
+  {https://doi.org/10.1103/PhysRevA.97.012127} {\bibfield  {journal} {\bibinfo
+  {journal} {Physical Review A}\ }\textbf {\bibinfo {volume} {97}},\ \bibinfo
+  {pages} {012127} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {White}\ \emph {et~al.}(2020)\citenamefont {White},
+  \citenamefont {Hill}, \citenamefont {Pollock}, \citenamefont {Hollenberg},\
+  and\ \citenamefont {Modi}}]{White2020ProcessControl}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~A.~L.}\
+  \bibnamefont {White}}, \bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont
+  {Hill}}, \bibinfo {author} {\bibfnamefont {F.~A.}\ \bibnamefont {Pollock}},
+  \bibinfo {author} {\bibfnamefont {L.~C.~L.}\ \bibnamefont {Hollenberg}},\
+  and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Modi}},\ }\bibfield
+  {title} {\bibinfo {title} {Demonstration of non-markovian process
+  characterisation and control on a quantum processor},\ }\href
+  {https://doi.org/10.1038/s41467-020-20113-3} {\bibfield  {journal} {\bibinfo
+  {journal} {Nature Communications}\ }\textbf {\bibinfo {volume} {11}},\
+  \bibinfo {pages} {6301} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {White}\ \emph {et~al.}(2022)\citenamefont {White},
+  \citenamefont {Pollock}, \citenamefont {Hollenberg}, \citenamefont {Modi},\
+  and\ \citenamefont {Hill}}]{White2022ProcessTomography}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~A.~L.}\
+  \bibnamefont {White}}, \bibinfo {author} {\bibfnamefont {F.~A.}\ \bibnamefont
+  {Pollock}}, \bibinfo {author} {\bibfnamefont {L.~C.~L.}\ \bibnamefont
+  {Hollenberg}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Modi}},\
+  and\ \bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont {Hill}},\
+  }\bibfield  {title} {\bibinfo {title} {Non-markovian quantum process
+  tomography},\ }\href {https://doi.org/10.1103/PRXQuantum.3.020344} {\bibfield
+   {journal} {\bibinfo  {journal} {PRX Quantum}\ }\textbf {\bibinfo {volume}
+  {3}},\ \bibinfo {pages} {020344} (\bibinfo {year} {2022})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Giarmatzi}\ \emph {et~al.}(2025)\citenamefont
+  {Giarmatzi}, \citenamefont {Jones}, \citenamefont {Gilchrist}, \citenamefont
+  {Pakkiam}, \citenamefont {Fedorov},\ and\ \citenamefont
+  {Costa}}]{Giarmatzi2025Multitime}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Giarmatzi}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Jones}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Gilchrist}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Pakkiam}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Fedorov}},\ and\ \bibinfo {author}
+  {\bibfnamefont {F.}~\bibnamefont {Costa}},\ }\bibfield  {title} {\bibinfo
+  {title} {Multi-time quantum process tomography on a superconducting qubit},\
+  }\href {https://doi.org/10.22331/q-2025-12-18-1952} {\bibfield  {journal}
+  {\bibinfo  {journal} {Quantum}\ }\textbf {\bibinfo {volume} {9}},\ \bibinfo
+  {pages} {1952} (\bibinfo {year} {2025})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {White}\ \emph {et~al.}(2025)\citenamefont {White},
+  \citenamefont {Pollock}, \citenamefont {Hollenberg}, \citenamefont {Hill},\
+  and\ \citenamefont {Modi}}]{White2025UnitarySequences}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~A.~L.}\
+  \bibnamefont {White}}, \bibinfo {author} {\bibfnamefont {F.~A.}\ \bibnamefont
+  {Pollock}}, \bibinfo {author} {\bibfnamefont {L.~C.~L.}\ \bibnamefont
+  {Hollenberg}}, \bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont
+  {Hill}},\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Modi}},\
+  }\bibfield  {title} {\bibinfo {title} {What can unitary sequences tell us
+  about multi-time physics?},\ }\href
+  {https://doi.org/10.22331/q-2025-04-08-1695} {\bibfield  {journal} {\bibinfo
+  {journal} {Quantum}\ }\textbf {\bibinfo {volume} {9}},\ \bibinfo {pages}
+  {1695} (\bibinfo {year} {2025})},\ \Eprint {https://arxiv.org/abs/2107.13934}
+  {arXiv:2107.13934} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Taranto}\ \emph {et~al.}(2019)\citenamefont
+  {Taranto}, \citenamefont {Pollock}, \citenamefont {Milz}, \citenamefont
+  {Tomamichel},\ and\ \citenamefont {Modi}}]{Taranto2019MarkovOrder}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Taranto}}, \bibinfo {author} {\bibfnamefont {F.~A.}\ \bibnamefont
+  {Pollock}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Milz}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Tomamichel}},\ and\
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Modi}},\ }\bibfield
+  {title} {\bibinfo {title} {Quantum markov order},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.122.140401} {\bibfield  {journal}
+  {\bibinfo  {journal} {Physical Review Letters}\ }\textbf {\bibinfo {volume}
+  {122}},\ \bibinfo {pages} {140401} (\bibinfo {year} {2019})},\ \Eprint
+  {https://arxiv.org/abs/1805.11341} {arXiv:1805.11341} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Brunner}\ \emph {et~al.}(2008)\citenamefont
+  {Brunner}, \citenamefont {Pironio}, \citenamefont {Ac{\'i}n}, \citenamefont
+  {Gisin}, \citenamefont {M{\'e}thot},\ and\ \citenamefont
+  {Scarani}}]{Brunner2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Brunner}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Pironio}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Ac{\'i}n}}, \bibinfo
+  {author} {\bibfnamefont {N.}~\bibnamefont {Gisin}}, \bibinfo {author}
+  {\bibfnamefont {A.~A.}\ \bibnamefont {M{\'e}thot}},\ and\ \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Scarani}},\ }\bibfield  {title} {\bibinfo
+  {title} {Testing the dimension of hilbert spaces},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.100.210503} {\bibfield  {journal}
+  {\bibinfo  {journal} {Physical Review Letters}\ }\textbf {\bibinfo {volume}
+  {100}},\ \bibinfo {pages} {210503} (\bibinfo {year} {2008})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Gallego}\ \emph {et~al.}(2010)\citenamefont
+  {Gallego}, \citenamefont {Brunner}, \citenamefont {Hadley},\ and\
+  \citenamefont {Ac{\'i}n}}]{Gallego2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Gallego}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Brunner}},
+  \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Hadley}},\ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Ac{\'i}n}},\ }\bibfield  {title}
+  {\bibinfo {title} {Device-independent tests of classical and quantum
+  dimensions},\ }\href {https://doi.org/10.1103/PhysRevLett.105.230501}
+  {\bibfield  {journal} {\bibinfo  {journal} {Physical Review Letters}\
+  }\textbf {\bibinfo {volume} {105}},\ \bibinfo {pages} {230501} (\bibinfo
+  {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sone}\ and\ \citenamefont
+  {Cappellaro}(2017)}]{SoneCappellaro2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Sone}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Cappellaro}},\ }\bibfield  {title} {\bibinfo {title} {Hamiltonian
+  identifiability assisted by a single-probe measurement},\ }\href
+  {https://doi.org/10.1103/PhysRevA.95.022335} {\bibfield  {journal} {\bibinfo
+  {journal} {Physical Review A}\ }\textbf {\bibinfo {volume} {95}},\ \bibinfo
+  {pages} {022335} (\bibinfo {year} {2017})},\ \Eprint
+  {https://arxiv.org/abs/1609.09446} {arXiv:1609.09446} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Carlyle}\ and\ \citenamefont
+  {Paz}(1971)}]{CarlylePaz1971}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~W.}\ \bibnamefont
+  {Carlyle}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Paz}},\
+  }\bibfield  {title} {\bibinfo {title} {Realizations by stochastic finite
+  automata},\ }\href {https://doi.org/10.1016/S0022-0000(71)80005-3} {\bibfield
+   {journal} {\bibinfo  {journal} {Journal of Computer and System Sciences}\
+  }\textbf {\bibinfo {volume} {5}},\ \bibinfo {pages} {26} (\bibinfo {year}
+  {1971})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Arbib}\ and\ \citenamefont
+  {Manes}(1980)}]{ArbibManes1980}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
+  {Arbib}}\ and\ \bibinfo {author} {\bibfnamefont {E.~G.}\ \bibnamefont
+  {Manes}},\ }\bibfield  {title} {\bibinfo {title} {Generalized hankel matrices
+  and system realization},\ }\href {https://doi.org/10.1137/0511038} {\bibfield
+   {journal} {\bibinfo  {journal} {SIAM Journal on Mathematical Analysis}\
+  }\textbf {\bibinfo {volume} {11}},\ \bibinfo {pages} {405} (\bibinfo {year}
+  {1980})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hsu}\ \emph {et~al.}(2012)\citenamefont {Hsu},
+  \citenamefont {Kakade},\ and\ \citenamefont {Zhang}}]{Hsu2012HMM}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Hsu}}, \bibinfo {author} {\bibfnamefont {S.~M.}\ \bibnamefont {Kakade}},\
+  and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Zhang}},\ }\bibfield
+   {title} {\bibinfo {title} {A spectral algorithm for learning hidden markov
+  models},\ }\href {https://doi.org/10.1016/j.jcss.2011.12.025} {\bibfield
+  {journal} {\bibinfo  {journal} {Journal of Computer and System Sciences}\
+  }\textbf {\bibinfo {volume} {78}},\ \bibinfo {pages} {1460} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Boots}\ \emph {et~al.}(2011)\citenamefont {Boots},
+  \citenamefont {Siddiqi},\ and\ \citenamefont {Gordon}}]{Boots2011PSR}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Boots}}, \bibinfo {author} {\bibfnamefont {S.~M.}\ \bibnamefont {Siddiqi}},\
+  and\ \bibinfo {author} {\bibfnamefont {G.~J.}\ \bibnamefont {Gordon}},\
+  }\bibfield  {title} {\bibinfo {title} {Closing the learning-planning loop
+  with predictive state representations},\ }\href
+  {https://doi.org/10.1177/0278364911404092} {\bibfield  {journal} {\bibinfo
+  {journal} {The International Journal of Robotics Research}\ }\textbf
+  {\bibinfo {volume} {30}},\ \bibinfo {pages} {954} (\bibinfo {year}
+  {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Balle}\ and\ \citenamefont
+  {Mohri}(2012)}]{BalleMohri2012WFA}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Balle}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Mohri}},\
+  }\bibfield  {title} {\bibinfo {title} {Spectral learning of general weighted
+  automata via constrained matrix completion},\ }in\ \href@noop {} {\emph
+  {\bibinfo {booktitle} {Advances in Neural Information Processing Systems
+  25}}}\ (\bibinfo {year} {2012})\ pp.\ \bibinfo {pages} {2168--2176},\
+  \bibinfo {note} {official NeurIPS record; no DOI assigned}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Balle}\ \emph {et~al.}(2014)\citenamefont {Balle},
+  \citenamefont {Carreras}, \citenamefont {Luque},\ and\ \citenamefont
+  {Quattoni}}]{Balle2014WFA}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Balle}}, \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Carreras}},
+  \bibinfo {author} {\bibfnamefont {F.~M.}\ \bibnamefont {Luque}},\ and\
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Quattoni}},\ }\bibfield
+  {title} {\bibinfo {title} {Spectral learning of weighted automata: A
+  forward-backward perspective},\ }\href
+  {https://doi.org/10.1007/s10994-013-5416-x} {\bibfield  {journal} {\bibinfo
+  {journal} {Machine Learning}\ }\textbf {\bibinfo {volume} {96}},\ \bibinfo
+  {pages} {33} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Balle}\ and\ \citenamefont
+  {Mohri}(2018)}]{BalleMohri2018WFA}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Balle}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Mohri}},\
+  }\bibfield  {title} {\bibinfo {title} {Generalization bounds for learning
+  weighted automata},\ }\href {https://doi.org/10.1016/j.tcs.2017.11.023}
+  {\bibfield  {journal} {\bibinfo  {journal} {Theoretical Computer Science}\
+  }\textbf {\bibinfo {volume} {716}},\ \bibinfo {pages} {89} (\bibinfo {year}
+  {2018})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bennink}\ and\ \citenamefont
+  {Lougovski}(2019)}]{BenninkLougovski2019QPI}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~S.}\ \bibnamefont
+  {Bennink}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Lougovski}},\ }\bibfield  {title} {\bibinfo {title} {Quantum process
+  identification: A method for characterizing non-markovian quantum dynamics},\
+  }\href {https://doi.org/10.1088/1367-2630/ab3598} {\bibfield  {journal}
+  {\bibinfo  {journal} {New Journal of Physics}\ }\textbf {\bibinfo {volume}
+  {21}},\ \bibinfo {pages} {083013} (\bibinfo {year} {2019})},\ \bibinfo {note}
+  {arXiv:1803.02438}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Monr{\`a}s}\ and\ \citenamefont
+  {Winter}(2016)}]{MonrasWinter2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Monr{\`a}s}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Winter}},\ }\bibfield  {title} {\bibinfo {title} {Quantum learning of
+  classical stochastic processes: The completely positive realization
+  problem},\ }\href {https://doi.org/10.1063/1.4936935} {\bibfield  {journal}
+  {\bibinfo  {journal} {Journal of Mathematical Physics}\ }\textbf {\bibinfo
+  {volume} {57}},\ \bibinfo {pages} {015219} (\bibinfo {year}
+  {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gu{\c t}{\u a}}\ and\ \citenamefont
+  {Yamamoto}(2016)}]{GutaYamamoto2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Gu{\c t}{\u a}}}\ and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Yamamoto}},\ }\bibfield  {title} {\bibinfo {title} {System identification
+  for passive linear quantum systems},\ }\href
+  {https://doi.org/10.1109/TAC.2015.2448491} {\bibfield  {journal} {\bibinfo
+  {journal} {IEEE Transactions on Automatic Control}\ }\textbf {\bibinfo
+  {volume} {61}},\ \bibinfo {pages} {921} (\bibinfo {year} {2016})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Curto}\ and\ \citenamefont
+  {Fialkow}(1998)}]{CurtoFialkow1998}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~E.}\ \bibnamefont
+  {Curto}}\ and\ \bibinfo {author} {\bibfnamefont {L.~A.}\ \bibnamefont
+  {Fialkow}},\ }\href {https://doi.org/10.1090/memo/0648} {\emph {\bibinfo
+  {title} {Flat Extensions of Positive Moment Matrices: Recursively Generated
+  Relations}}},\ \bibinfo {series} {Memoirs of the American Mathematical
+  Society}, Vol.\ \bibinfo {volume} {136}\ (\bibinfo {year} {1998})\ pp.\
+  \bibinfo {pages} {1--54}\BibitemShut {NoStop}%
+\bibitem [{Sup()}]{SupplementalMaterial}%
+  \BibitemOpen
+  \href@noop {} {}\bibinfo {note} {See Supplemental Material for complete
+  proofs, perturbation and resource bounds, counterexamples, and hardware
+  records}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wedin}(1972)}]{Wedin1972}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.-{\AA}.}\
+  \bibnamefont {Wedin}},\ }\bibfield  {title} {\bibinfo {title} {Perturbation
+  bounds in connection with singular value decomposition},\ }\href
+  {https://doi.org/10.1007/BF01932678} {\bibfield  {journal} {\bibinfo
+  {journal} {BIT Numerical Mathematics}\ }\textbf {\bibinfo {volume} {12}},\
+  \bibinfo {pages} {99} (\bibinfo {year} {1972})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Moses}\ \emph {et~al.}(2023)\citenamefont {Moses}
+  \emph {et~al.}}]{Moses2023Racetrack}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont
+  {Moses}} \emph {et~al.},\ }\bibfield  {title} {\bibinfo {title} {A race-track
+  trapped-ion quantum processor},\ }\href
+  {https://doi.org/10.1103/PhysRevX.13.041052} {\bibfield  {journal} {\bibinfo
+  {journal} {Physical Review X}\ }\textbf {\bibinfo {volume} {13}},\ \bibinfo
+  {pages} {041052} (\bibinfo {year} {2023})},\ \Eprint
+  {https://arxiv.org/abs/2305.03828} {arXiv:2305.03828} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {DeCross}\ \emph {et~al.}(2025)\citenamefont {DeCross}
+  \emph {et~al.}}]{DeCross2025RCS}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {DeCross}} \emph {et~al.},\ }\bibfield  {title} {\bibinfo {title}
+  {Computational power of random quantum circuits in arbitrary geometries},\
+  }\href {https://doi.org/10.1103/PhysRevX.15.021052} {\bibfield  {journal}
+  {\bibinfo  {journal} {Physical Review X}\ }\textbf {\bibinfo {volume} {15}},\
+  \bibinfo {pages} {021052} (\bibinfo {year} {2025})},\ \Eprint
+  {https://arxiv.org/abs/2406.02501} {arXiv:2406.02501} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {AbuGhanem}(2025)}]{AbuGhanem2025IBM}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {AbuGhanem}},\ }\bibfield  {title} {\bibinfo {title} {Ibm quantum computers:
+  Evolution, performance, and future directions},\ }\href
+  {https://doi.org/10.1007/s11227-025-07047-7} {\bibfield  {journal} {\bibinfo
+  {journal} {The Journal of Supercomputing}\ }\textbf {\bibinfo {volume}
+  {81}},\ \bibinfo {pages} {687} (\bibinfo {year} {2025})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Polch{\'e}}\ \emph {et~al.}(2026)\citenamefont
+  {Polch{\'e}}, \citenamefont {Puram}, \citenamefont {Lal}, \citenamefont
+  {Golletz}, \citenamefont {Arrow}, \citenamefont {Sahgal}, \citenamefont
+  {Ghosh}, \citenamefont {Cortiana},\ and\ \citenamefont
+  {O'Meara}}]{Polche2026KQRC}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Polch{\'e}}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Puram}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Lal}}, \bibinfo {author}
+  {\bibfnamefont {W.}~\bibnamefont {Golletz}}, \bibinfo {author} {\bibfnamefont
+  {J.~{\'E}.}\ \bibnamefont {Arrow}}, \bibinfo {author} {\bibfnamefont
+  {V.}~\bibnamefont {Sahgal}}, \bibinfo {author} {\bibfnamefont
+  {K.}~\bibnamefont {Ghosh}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Cortiana}},\ and\ \bibinfo {author} {\bibfnamefont
+  {C.}~\bibnamefont {O'Meara}},\ }\href@noop {} {\bibinfo {title} {Hybrid
+  quantum-classical machine learning algorithms for multi-output time-series
+  forecasting at utility scale}} (\bibinfo {year} {2026}),\ \Eprint
+  {https://arxiv.org/abs/2605.24252} {arXiv:2605.24252 [quant-ph]} \BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {{IBM Quantum}}(2026)}]{IBMBackendDetails2026}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {{IBM Quantum}}},\
+  }\href@noop {} {\bibinfo {title} {View backend details}},\ \bibinfo
+  {howpublished} {IBM Quantum Documentation} (\bibinfo {year} {2026}),\
+  \bibinfo {note} {accessed 2026-07-21; no DOI assigned}\BibitemShut {NoStop}%
+\end{thebibliography}%

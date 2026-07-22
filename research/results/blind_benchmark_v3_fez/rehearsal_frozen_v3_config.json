@@ -1,0 +1,65 @@
+{
+  "config": {
+    "estimator": "c7_v3_device_referenced_differential",
+    "config_version": 3,
+    "decision_family": "differential_signal_subspace_YX_ZX",
+    "signal_subspace_pairs": [
+      "YX",
+      "ZX"
+    ],
+    "m_signal": 2,
+    "n_inst_declared": 8,
+    "alpha_exp": 0.01,
+    "bonferroni_tests": 16,
+    "z_gate_shot": 3.4205266973186355,
+    "readout_source": "ibm_fez calibration snapshot (median measure error)",
+    "readout_assignment_error_fez": 0.00872802734375,
+    "readout_per_qubit_012": {
+      "0": 0.0118408203125,
+      "1": 0.017822265625,
+      "2": 0.0052490234375
+    },
+    "readout_correlator_qubits": 2,
+    "readout_attenuation_lambda_fez": 0.965392604470253,
+    "z_gate_diff": 3.5431457434828872,
+    "z_gate_diff_units": "z_diff = DeltaC / sqrt(var_ch + var_ref)",
+    "z_gate_diff_singleblock_sigma_units": 5.010764763898003,
+    "cert_shots_per_block": 1536,
+    "se_floor_var": 1e-06,
+    "component_variance": "var_diff_p = (1-(C_ch_p)^2)/N_ch + (1-(C_ref_p)^2)/N_ref  (paper Eq. differential-variance)",
+    "inconclusive_rule": "reference-drift guard: |<XX>_ref| < 0.5 -> INCONCLUSIVE",
+    "xx_ref_inconclusive_floor": 0.5,
+    "derivation": "z_gate_shot = Phi^-1(1 - alpha_exp/(2*m_signal*n_inst)); lambda_fez = (1-2*eps_fez)^k, k=2; differential gate = z_gate_shot/lambda_fez in z_diff units, equivalently sqrt(2)*z_gate_shot/lambda_fez in single-block-sigma units. The sqrt(2) is the combined-variance factor in the z_diff denominator; eps_fez is fez's own median readout error (no marrakesh constant)."
+  },
+  "config_sha256": "253ece5e799edf8935bc33e8d552daa0806a70cbea5baf074077e8005e891b9e",
+  "hypotheses": {
+    "protocol": "blind_benchmark_v3_device_referenced_differential",
+    "target_backend": "ibm_fez",
+    "question": "Does device-referenced differential decision restore specificity on ibm_fez (whose fixed single-axis YX null floor breaks the unreferenced absolute gate)?",
+    "master_seed": 20260729,
+    "n_inst": 8,
+    "dark_prob": 0.5,
+    "delta_range": [
+      0.2,
+      0.4
+    ],
+    "cert_shots_per_block": 1536,
+    "decision": "per instance, per pair p in {YX,ZX}: z_diff_p = (C_ch_p - C_ref_p)/sqrt(var_ch_p+var_ref_p); detect iff max_p |z_diff_p| > z_gate_diff = 3.543146",
+    "z_gate_diff": 3.5431457434828872,
+    "z_gate_shot": 3.4205266973186355,
+    "readout_assignment_error_fez": 0.00872802734375,
+    "v2_absolute_gate": 3.559932645771468,
+    "H_v3_specific": "v3 differential: power 1.00 on darks AND FP 0.00 on nulls -- the fixed floor cancels in the difference",
+    "H_v2_fails": "the unreferenced absolute gate (3.5599) false-positives on >= 1 null under a device-locked floor at its v2-breaking magnitude",
+    "rehearsal_injected_floors_corr": [
+      -0.056,
+      -0.12
+    ],
+    "rehearsal_floor_provenance": {
+      "-0.056": "confirmation-day pooled floor (task-specified)",
+      "-0.12": "worst-case strong-floor day >= the -0.097/-0.108 that broke v2 on hardware"
+    },
+    "submit_gate": "submit real fez ONLY if rehearsal shows v3 power 1.00 / FP 0.00 in BOTH floor conditions AND v2-absolute FPs on >=1 null in the strong-floor condition"
+  },
+  "hypotheses_sha256": "79de57ab9517357297abc31dad74519de4735380d620c4c68813a0c956634f5e"
+}
